@@ -59,3 +59,7 @@ float:right;
 padding:0px;;
 margin:0px;
 border-sizing:border-box;
+
+#video-info {
+float:left;
+}
