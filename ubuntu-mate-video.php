@@ -7,5 +7,9 @@ echo '<div id="content">
 <p>here\'s a quick video showing the accessibility features of ubuntumate 16.04 lts.</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yCfBoCzOoEE" frameborder="0" allowfullscreen></iframe></div>
+<div id="video-info">
+<p>Published on 12 Oct 2016<p>
+<p>A quite long, rambling, keybord thwacking video showing the features linux provides for blind and visually impared users. We cover compiz negative and zoom features, firefox settings to make it easier to see your web pages and the orca screen reader.</p>
+</div>
 </body></html>';
 ?>
