@@ -1,7 +1,7 @@
 <?php
 include("includes/nav.inc.php");
 echo '
-<html>
+<div id="content"><html>
 <head>
 	<title>braillenote touch vs esytime - after hands on report</title>
 	<meta name="generator" content="LibreOffice 5.1.4.2 (Linux)"/>
@@ -46,7 +46,19 @@ published here.</b></u></p>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
+<<<<<<< HEAD
 <h2>Similarities between both units</h2>
+=======
+<h2>Contents</h2>
+<ol>
+<li><a href="#similarities">similarities between both devices</a></li>
+<li><a href="#bntnotes">notes on the braillenote touch</a></li>
+<li><a href="#esynotes">Notes on the esytime</a></li>
+<li><a href="#summery">summery</a></li>
+</ol>
+
+<h2 id="similarities">Similarities between both units</h2>
+>>>>>>> notetakers
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
@@ -83,7 +95,7 @@ published here.</b></u></p>
 	the display to another computer and enter/read text.</p>
 </ol>
 
-<h2>Notes on the braillenote touch</h2>
+<h2 id="bntnotes">Notes on the braillenote touch</h2>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
@@ -144,7 +156,7 @@ published here.</b></u></p>
 	things, but by default, both act as the arrow keys).</p>
 </ol>
 
-<h2>Notes on the esytime</h2>
+<h2 id="esynotes">Notes on the esytime</h2>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
@@ -214,7 +226,7 @@ published here.</b></u></p>
 	consideration  non the less.</p>
 </ol>
 
-<h2>Summery</h2>
+<h2 id="summery">Summery</h2>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
@@ -241,6 +253,6 @@ Thanks for reading this epic of a report.</p>
 <p align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%; text-decoration: none">
 Mikey</p>
 </body>
-</html>
+</html></div>
 ';
 ?>
