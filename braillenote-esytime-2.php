@@ -46,7 +46,7 @@ published here.</b></u></p>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
-<h2>Sililarities between both units</h2>
+<h2>Similarities between both units</h2>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
