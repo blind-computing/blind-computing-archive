@@ -1,15 +1,12 @@
 <?php
 include("includes/nav.inc.php");
 echo '
-<div id="content"><html>
-<head>
+<div id="content">
 	<title>braillenote touch vs esytime - after hands on report</title>
 	<meta name="generator" content="LibreOffice 5.1.4.2 (Linux)"/>
 	<meta name="created" content="2016-11-18T19:49:10.436728878"/>
 	<meta name="changed" content="2016-11-18T20:43:21.303458526"/>
 <link rel="stylesheet" type="text/css" href="css/report.css">
-</head>
-<body lang="en-GB" dir="ltr">
 <center><h1>Braillenote Touch VS Esytime - After Hands On</h1></center>
 <h2>Introduction</h2>
 <p align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%; text-decoration: none">
@@ -46,9 +43,6 @@ published here.</b></u></p>
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
-<<<<<<< HEAD
-<h2>Similarities between both units</h2>
-=======
 <h2>Contents</h2>
 <ol>
 <li><a href="#similarities">similarities between both devices</a></li>
@@ -58,7 +52,6 @@ published here.</b></u></p>
 </ol>
 
 <h2 id="similarities">Similarities between both units</h2>
->>>>>>> notetakers
 <p align="left" style="margin-bottom: 0cm; line-height: 100%"><br/>
 
 </p>
