@@ -17,6 +17,7 @@ echo '<!doctype html>
 <li class="nav-item"><a href="notetakers.php">braille notetakers and devices</a></li>
 <li class="nav-item"><a href="operating-systems.php">operating system accessibility</a></li>
 <li class="nav-item"><a href="software.php">accessible software</a></li>
+<li class="nav-item"><a href="blog.php">blog</a></li>
 </ul>
 </aside>';
 ?>
