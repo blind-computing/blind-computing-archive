@@ -1,10 +1,10 @@
 <?php
 include("includes/nav.inc.php");
 echo '
-<h2>the state of linux accessability</h2>
-<i>Saturday, 9 April 2016</i>
+<h2>the state of linux accessibility</h2>
+<i>Saturday, 9 April 2016 (editted Tuesday, May 2nd 2017)</i>
 
-<h3>The state of accessability under linux</h3>
+<h3>Introduction</h3>
 <p>I am writing this article because there is barely any documentation or even reviews like this about linux accessability. 
 I spent ages going through forum posts and old documentation that didn\'t really apply anymore and came up with this. </p>
 <p>Now, before I start, I don\'t mean to bash the linux community in any way because of the lack of documentation, mainly because I can see exactly why there isn\'t much documentation online about this. First of all, how many developers are blind or visually impared? and secondly, How many people who are blind or visually impaired run linux?</p>
