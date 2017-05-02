@@ -2,7 +2,6 @@
 echo '<!doctype html>
 <html>
 <head>
-<title>blind computing - documenting the termoil between blind computer users and computers</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head><body lang="en-GB">
 <div id="headerbar">
