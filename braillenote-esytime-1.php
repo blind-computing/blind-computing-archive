@@ -1,6 +1,8 @@
 <?php
 include("includes/nav.inc.php");
-echo '<div id="content">
+echo '
+<title>blind computing | braillenote touch vs esytime report 1</title>
+<div id="content">
 <article>
 <center>
 <h1>braillenote touch vs esytime</h1>
@@ -10,7 +12,7 @@ echo '<div id="content">
 <ul>
 	<li/>
 <p class="western" style="margin-bottom: 0cm; line-height: 100%">
-	It is posible to trade in an old braillenote in order to make use of
+	It is possible to trade in an old braillenote in order to make use of
 	a disscount.</p>
 	<li/>
 <p class="western" style="margin-bottom: 0cm; line-height: 100%">

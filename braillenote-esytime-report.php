@@ -1,6 +1,8 @@
 <?php
 include("includes/nav.inc.php");
-echo '<div id="content">
+echo '
+<title>blind computing | braillenote touch vs esytime report 2</title>
+<div id="content">
 <article>
 <center>
 <h1>braillenote touch vs esytime</h1>

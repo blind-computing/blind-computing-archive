@@ -1,6 +1,7 @@
 <?php
 include("includes/nav.inc.php");
 echo '
+<title>blind computing | braillenote touch vs esytime report 2</title>
 <div id="content">
 	<title>braillenote touch vs esytime - after hands on report</title>
 	<meta name="generator" content="LibreOffice 5.1.4.2 (Linux)"/>

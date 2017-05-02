@@ -1,6 +1,7 @@
 <?php
 include("includes/nav.inc.php");
 echo '
+<title>blind computing | linux accessibility</title>
 <h2>the state of linux accessibility</h2>
 <i>Saturday, 9 April 2016 (editted Tuesday, May 2nd 2017)</i>
 
@@ -47,5 +48,6 @@ I was glad to descover that, not only were the accessability settings set correc
 <p>To some up, I honestly think that linux is more accessible than windows. I can\'t, as far as I know, install windows with a screen reader. Also, the gtk standard is pretty common, so I think that most applications are accessable, whereas on windows or mac, some software providers (microsoft office for mac) decide to use a none standard way of laying out widgets. Therefor, I have more of a chance of either getting accessability support out of the box with linux apps, or somehow being able to modify settings to get it to work.</p>
 
 <p>I hope you enjoyed reading this, but that\'s all for now. I may publish more articles about this subject in the future, especially how to get things working articles, but you\'ll just have to wait and see. Linux command line accessibility is quite high up on the list right now</p>
-<b>Mikey</b>';
+<b>Mikey</b>
+</div></body></html>';
 ?>
