@@ -5,8 +5,8 @@ echo '<!doctype html>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head><body lang="en-GB">
 <div id="headerbar">
-<strong style="float:left;"><a href="index.php" title="go to the home page">/</a></strong>
-<center style="float:right;" class="main-header"><strong>blind-computing | site for blind computer users</strong></center>
+<h1><strong style="float:left;"><a href="index.php" title="go to the home page">/</a></strong>
+<center style="float:right;" class="main-header"><strong>blind-computing | site for blind computer users</strong></center></h1>
 </div>
 <aside id="sidebar">
 <strong style="float:left;">navigation</strong>
