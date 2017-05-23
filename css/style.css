@@ -76,3 +76,9 @@ hr {
 background-color:black;
 height:2px;
 }
+.video-embed {
+max-width:60%;
+width:640px;
+height:480px;
+float:left;
+}

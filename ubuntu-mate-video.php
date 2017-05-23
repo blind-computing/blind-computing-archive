@@ -8,7 +8,7 @@ echo '
 <p>  Actually, the answer looks very promissing</p>
 <p>here\'s a quick video showing the accessibility features of ubuntu mate 16.04 lts.</p>
 
-<iframe style="max-width:60%;width:640px;height:480px;float:left;" src="https://www.youtube.com/embed/yCfBoCzOoEE" frameborder="0" allowfullscreen></iframe>
+<iframe class="video-embed" src="https://www.youtube.com/embed/yCfBoCzOoEE" frameborder="0" allowfullscreen></iframe>
 <div id="video-info">
 <h3>youtube video description</h3>
 <p>Published on 12 Oct 2016<p>
