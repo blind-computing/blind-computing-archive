@@ -12,7 +12,12 @@ echo '
 <div id="video-info">
 <h3>youtube video description</h3>
 <p>Published on 12 Oct 2016<p>
-<p>A quite long, rambling, keybord thwacking video showing the features linux provides for blind and visually impared users. We cover compiz negative and zoom features, firefox settings to make it easier to see your web pages and the orca screen reader.</p>
+<p>A quite long, rambling, keybord thwacking video showing the features linux provides for blind and visually impared users. We cover:</p> 
+<ul>
+<li>Compiz negative and zoom features,</li>
+<li>Firefox settings to make it easier to see your web pages,</li>
+<li>The orca screen reader</li>
+</ul>
 </div>
 </div></body></html>';
 ?>
