@@ -1,6 +1,8 @@
 <?php
-include('includes/nav.inc.php');
-echo '<h1>Braillenote Touch VS Esytime noteTakers</h1>
+include("includes/nav.inc.php");
+echo "<h1>
+Bra
+illenote Touch VS Esytime noteTakers</h1>
 <h2>Pros of the Braillenote Touch</h2>
 <ol>
 <li>It is possible to trade in an old Braillenote in order to make use of a discount.</li>
@@ -71,5 +73,5 @@ practically, I feel as though the touch will do better for me,
 at least at school. It’s making me choose between open hardware,
 which is very important to me and practicallity, which obviously
 is crucial.</p>
-</div></body></html>';
+</div></body></html>";
 ?>
