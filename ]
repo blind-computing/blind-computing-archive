@@ -1,0 +1,19 @@
+               hostid, hostname, httpd, hwclock, id, ifconfig, ifdown, ifup, ini
+               t,
+                              insmod, ionice, ip, ipcalc, kill, killall, klogd, last, less, ln,
+                                             loadfont, loadkmap, logger, login, logname, logread, losetup, ls,
+                                                            lsmod, lzcat, lzma, lzop, lzopcat, md5sum, mdev, microcom, mkdir,
+                                                                           mkfifo, mknod, mkswap, mktemp, modinfo, modprobe, more, mount, mt,
+                                                                                          mv, nameif, nc, netstat, nslookup, od, openvt, passwd, patch, pidof,
+                                                                                                         ping, ping6, pivot_root, poweroff, printf, ps, pwd, rdate, readlink,
+                                                                                                                        realpath, reboot, renice, reset, rev, rm, rmdir, rmmod, route, rpm,
+                                                                                                                                       rpm2cpio, run-parts, sed, seq, setkeycodes, setsid, sh, sha1sum,
+                                                                                                                                                      sha256sum, sha512sum, sleep, sort, start-stop-daemon, stat,
+                                                                                                                                                                     static-sh, strings, stty, su, sulogin, swapoff, swapon, switch_root,
+                                                                                                                                                                                    sync, sysctl, syslogd, tac, tail, tar, taskset, tee, telnet,
+                                                                                                                                                                                                   telnetd, test, tftp, time, timeout, top, touch, tr, traceroute,
+                                                                                                                                                                                                                  traceroute6, true, tty, tunctl, udhcpc, udhcpd, umount, uname,
+                                                                                                                                                                                                                                 uncompress, unexpand, uniq, unix2dos, unlzma, unlzop, unxz, unzip,
+                                                                                                                                                                                                                                                uptime, usleep, uudecode, uuencode, vconfig, vi, watch, watchdog,
+                                                                                                                                                                                                                                                 Manual page busybox(1) line 89 (press h for help or q to quit)
+                                                                                                                                                                                                                                                 
