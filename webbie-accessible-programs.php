@@ -4,7 +4,7 @@ echo '
 <title>blind computing | webbie web browser and accessible programs review</title>
 <div id="content">
 <h2>the webbie web browser and related tools</h2>
-<p>  These days, we all need a web browser, mainly to visit blind-computing,! Ok, really though, the internet\'s world wide web is becomming one of the biggest things in all of our lives (it\'s up there with chocolate and watching netflicks). So, how do blind computer users access the internet?</p>
+<p>  These days, we all need a web browser, mainly to visit blind-computing,! Ok, really though, the internet\'s world wide web is becoming one of the biggest things in all of our lives (it\'s up there with chocolate and watching netflicks). So, how do blind computer users access the internet?</p>
 <p>  Of course, blind computer users could use one of the mainstream offerings for most tasks, such as google\'s chrome browser or mozilla\'s firefox, but these have their accessible limmits. For example, I personally find it very fidgity to use google chrome. That\'s where webbie comes in.</p>
 <h3>the webbie web browser</h3>
 <p>  The webbie web browser is a dot net application written in visual basic that uses the internet explorer frame work to render pages. It will strip out all images and graphical content, leaving the user with a list of items on the page. This layout is a sinch to use when you\'re scrolling down it with a screen reader (just press the up and down arrow keys), which makes it way easier than using chrome all ready. Clicking on a link does what you think it would do, and clicking on a form field will pop up a dialog box where that field can be filled out. Screen readers work extremely well with this way of navigation (it\'s just standart windows dialogs and fields).</p>
