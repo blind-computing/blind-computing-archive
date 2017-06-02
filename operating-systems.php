@@ -9,6 +9,7 @@ echo '
 <ul>
 <li>  Michael Buchan made <a href="ubuntu-mate-video.php"> a video showing the main accessibility features of ubuntu mate 16.04</a>.</li>
 <li>Michael Buchan also wrote <a href="linux-accessibility.php">an article going into great detail about using linux with a screen reader, zoom and negative features</a>.</li>
+<li>He also made <a href="mac-os-video.php" title="view the video showing the main accessibility features of the mac os, with a quick overview of the voice over screen reader">A video showing the main accessibility features of the Mac OS X 10.12 desktop</a>.
 </ul>
 </div>
 </body></html>
