@@ -3,6 +3,11 @@ height:100%;
 width:100%;
 }
 
+a:hover {
+background-color:black;
+color:white;
+}
+
 #sidebar {
 width:15%;
 height:93%;
@@ -12,6 +17,10 @@ padding:7px;
 background-color:lightgray;
 border-sizing:border-box;
 border-right:2px solid black;
+}
+
+#skiptocontent {
+float:right;
 }
 
 #headerbar {
@@ -24,8 +33,15 @@ border-bottom:2px solid black;
 background-color:lightgray;
 }
 
+#headerhome {
+margin-left:20px;
+float:left;
+text-align:left;
+}
+
 h1.main-header {
-text-align:center;
+text-align:right;
+float:right;
 }
 
 #content {
