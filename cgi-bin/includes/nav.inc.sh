@@ -38,7 +38,7 @@ do
     done
 cat <<END-OF-CAT
 </ul>
-<hr style="width:15%;">
+<hr class="nav-separater">
 </div>
 <div id="content">
 END-OF-CAT
