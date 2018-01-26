@@ -87,13 +87,17 @@ float:right;
 padding:0px;;
 margin:0px;
 border-sizing:border-box;
-
-#video-info {
-float:right;
-min-width:30%;
-width:35%;
 }
 
+.video-info {
+position:relative;
+display:inline;
+width:62%;
+overflow:show;
+float:right;
+margin:0px;
+padding:0px;
+}
 
 .feedburnerFeedBlock {
 background-color:white;
@@ -104,9 +108,13 @@ hr {
 background-color:black;
 height:2px;
 }
+
 .video-embed {
-max-width:60%;
-width:640px;
-height:480px;
+display:inline;
+width:37%;
+overflow:show;
+min-height:360px;
+margin:0px;
+padding:0px;
 float:left;
 }
