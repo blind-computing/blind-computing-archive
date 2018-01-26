@@ -1,4 +1,7 @@
-home,a brief introduction to the site and the project as a whole~ as well as information on how to contribute,index.sh
+Home,a brief introduction to the site and the project as a whole~ as well as information on how to contribute,index.sh
 
-devices,we cover various braille note takers~ magnifiers~ book readers and any other devices useful for the blind/vi,devices.sh
-blog,the blind computing blog~ where we ask questions and talk about random projects we're working on,blog.sh
+Devices,we cover various braille note takers~ magnifiers~ book readers and any other devices useful for the blind/vi,devices.sh
+Operating Systems,We talk about different operating systems~ how accessible they are and which one is the best for blind/vi users~ be it mobile~ desktop or even cloud,operating-systems.sh
+Software,A page dedicated to software programs on both mobile and desktop and how useful/accessible they are to blind/vi users,software.sh
+
+Blog,the blind computing blog~ where we ask questions and talk about random projects we're working on,blog.sh
