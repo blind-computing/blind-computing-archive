@@ -60,11 +60,17 @@ margin:10px 0px;
 
 .nav-item {
 margin:1px 0px;
+width:14%;
 }
 
 .nav-item:hover {
 background-color:black;
 color:white;
+}
+
+.nav-separater {
+width:14%;
+color:black;
 }
 
 #forum_embed {

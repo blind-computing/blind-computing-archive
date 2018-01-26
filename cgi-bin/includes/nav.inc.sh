@@ -25,12 +25,17 @@ cat <<END-OF-CAT
 END-OF-CAT
 cat includes/nav-items.csv | while read line
 do
-name="$(echo $line | cut -d, -f1 -)"
-comment="$(echo $line | cut -d, -f2 - | sed 's/~/,/g')"
-page="$(echo $line | cut -d, -f3 -)"
-printline="<li class=\"nav-item\"><a href=\"${page}\" title=\"${comment}\">${name}</a></li>"
-echo "$printline"
-done
+    if [ "$line" = "" ]
+    then
+        echo "<hr class=\"nav-separater\">"
+    else
+        name="$(echo $line | cut -d, -f1 -)"
+        comment="$(echo $line | cut -d, -f2 - | sed 's/~/,/g')"
+        page="$(echo $line | cut -d, -f3 -)"
+        printline="<li class=\"nav-item\"><a href=\"${page}\" title=\"${comment}\">${name}</a></li>"
+        echo "$printline"
+    fi
+    done
 cat <<END-OF-CAT
 </ul>
 <hr style="width:15%;">
