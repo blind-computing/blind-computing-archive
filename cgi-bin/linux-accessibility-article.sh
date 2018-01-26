@@ -2,7 +2,7 @@
 echo "Content-type:text/html"
 echo
 
-. ./includes/nav.inc.sh "home page"
+. ./includes/nav.inc.sh "the state of linux accessibility"
 cat <<END-OF-CAT
 <h2>the state of linux accessibility</h2>
 <i>Saturday, 9 April 2016 (editted Tuesday, May 2nd 2017)</i>
