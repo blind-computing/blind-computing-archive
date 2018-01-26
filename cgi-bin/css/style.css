@@ -1,6 +1,12 @@
 html,body {
 height:100%;
 width:100%;
+backgroundd-color:white;
+color:black;
+}
+
+a {
+color:darkblue;
 }
 
 a:hover {
