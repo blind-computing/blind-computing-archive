@@ -45,9 +45,9 @@ float:right;
 }
 
 #content {
-overflow:auto;
 height:93%;
 width:81%;
+overflow:auto;
 float:right;
 padding:0px;;
 margin:0px;
