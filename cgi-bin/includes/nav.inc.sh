@@ -26,7 +26,7 @@ END-OF-CAT
 cat includes/nav-items.csv | while read line
 do
 name="$(echo $line | cut -d, -f1 -)"
-comment="$(echo $line | cut -d, -f2 -)"
+comment="$(echo $line | cut -d, -f2 - | sed 's/~/,/g')"
 page="$(echo $line | cut -d, -f3 -)"
 printline="<li class=\"nav-item\"><a href=\"${page}\" title=\"${comment}\">${name}</a></li>"
 echo "$printline"
