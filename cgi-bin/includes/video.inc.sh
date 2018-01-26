@@ -1,4 +1,4 @@
-echo "<iframe class=\"video-embed\" src=\"${1}\" frameborder=\"0\" allowfullscreen></iframe>"
+echo "<iframe class=\"video-embed\" src=\"${1}\" frameborder=\"0\" allow=\"encrypted-media\" allowfullscreen>Loading...</iframe>"
 cat <<END-OF-CAT
 <div class="video-info">
 <h3>youtube video description</h3>
