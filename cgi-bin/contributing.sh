@@ -2,7 +2,7 @@
 echo "Content-type:text/html"
 echo
 
-. ./includes/nav.inc.sh "home page"
+. ./includes/nav.inc.sh "Contributing"
 cat <<END-OF-CAT
 <h2>How to Contribute to Blind Computing</h1>
 <h3 id="byemail">By Email</h3>
