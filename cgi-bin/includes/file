@@ -1,2 +1,0 @@
-test.sh: command substitution: line 5: syntax error near unexpected token `newline'
-test.sh: command substitution: line 5: `echo <'
