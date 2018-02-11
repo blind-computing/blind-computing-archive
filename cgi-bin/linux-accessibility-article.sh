@@ -10,7 +10,7 @@ cat <<END-OF-CAT
 <h3>Introduction</h3>
 <p>I am writing this article because there is barely any documentation or even reviews like this about linux accessability. 
 I spent ages going through forum posts and old documentation that didn't really apply anymore and came up with this. </p>
-<p>Now, before I start, I don't mean to bash the linux community in any way because of the lack of documentation, mainly because I can see exactly why there isn't much documentation online about this. First of all, how many developers are blind or visually impared? and secondly, How many people who are blind or visually impaired run linux?</p>
+<p>Now, before I start, I don't mean to bash the linux community in any way because of the lack of documentation, mainly because I can see exactly why there isn't much documentation online about this. First of all, how many developers are blind or visually impaired? and secondly, How many people who are blind or visually impaired run linux?</p>
 
 <p>I myself have had blindness from birth, as well as light sensitivity all my life, so when I got interested in computers, I was quickly dissapointed in the level of accessability that they provided. </p>
 

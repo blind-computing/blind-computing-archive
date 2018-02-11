@@ -15,7 +15,7 @@ cat <<END-OF-CAT
 <p>So, now you know what linux is. But what is ubuntu then? Ot debian, arch, linux mint? These are called distributions (distros). They're essentially different versions of linux. Since the code is out in the open, anyone is free to create their own version of linux with their own tools and way of doing things. Consequently, distros can be <strong>based</strong> off of other distros, so ubuntu for example is based off of the code created by debian. All of this comes together to create a very flexible strue (you choose the distro that best suits your needs, or if you're feeling adventurous, you create your own).</p>
 <h3>The downsides</h3>
 <p>  Yes. As much as I don't want them to exist, this open model has its flaws. For example, if anyone can look at the code, anyone can find a security flaw. And while security researchers are constantly doing this to fix these holes, some people aren't like that and will take advantage of this opertunity. Now, I believe with enough community support that this can be overcome (in fact it allready has really), but it's a matter of opinion at this point.</p>
-<p>  And that's linux. I wrote this specifically to give blind and visually impared users a hint as to what I talk about alot on this site, so that they can make sense of it for themselves and choose which OS they want to use.</p>
+<p>  And that's linux. I wrote this specifically to give blind and visually impaired users a hint as to what I talk about alot on this site, so that they can make sense of it for themselves and choose which OS they want to use.</p>
 <p>Thanks for reading.</p>
 <i>Mikey</i>
 </div></body></html>
