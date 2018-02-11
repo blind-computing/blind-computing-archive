@@ -5,7 +5,7 @@ END-OF-CAT
 filename="includes/${1}-items.csv"
 if ! [ -f "$filename" ]
 then
-    echo '<strong><p>No resources yet, check back later or <a href="https://github.com/mcb2003/blind-computing">submit a pull request to get your content here</a>.</p></strong>'
+    echo '<strong><p>No resources yet, check back later or <a href="contributing.sh">contribute to get your content here</a>.</p></strong>'
 fi
 cat $filename | while read line
 do
