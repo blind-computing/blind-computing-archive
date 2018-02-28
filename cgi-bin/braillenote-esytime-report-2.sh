@@ -220,5 +220,5 @@ than a tablet.</p>
 <p>Thanks for reading this epic of a report.</p>
 
 <p>Mikey</p>
-</div></body></html
+</section></body></html
 END-OF-CAT

@@ -9,5 +9,5 @@ cat <<END-OF-CAT
 <h3>how to contribute</h3>
 <p>The code for this project is up on github. You can <a href="https://github.com/mcb2003/blind-installer">visit the github page</a> if you would like to contribute.</p>
 <p>Right now, this software is in the concept stage and we're still trying to figure out what we want to implement and how we want to implement it. If you would like to help with this, please see the <a href="https://github.com/mcb2003/blind-installer/issues">Github issues page</a>.</p>
-</div></body></html>
+</section></body></html>
 END-OF-CAT

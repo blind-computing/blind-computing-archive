@@ -11,5 +11,5 @@ cat <<END-OF-CAT
 <p>Please see the <a href="contributing.sh">contributing page</a> for more information.</p>
 <h2>Note</h2>
 <p>We reccommend you view this site in mozilla firefox, found at <a href="https://firefox.com/download">the firefox download page</a>, if you're on a computer. Other browsers might work, but in general, firefox is more accessible anyway.</p>
-</div></body></html>
+</section></body></html>
 END-OF-CAT

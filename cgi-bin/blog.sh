@@ -11,5 +11,5 @@ cat <<END-OF-CAT
 <p><a href="http://bit.ly/2oTj1ZW">subscribe here</a> or <a href="https://blind-computing.blogspot.com">view the website</a></p>
 <hr>
 <script src="http://feeds.feedburner.com/Blind-computingBlog?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Blind-computingBlog"></a><br/>Powered by FeedBurner</p> </noscript>
-</div></body></html>
+</section></body></html>
 END-OF-CAT

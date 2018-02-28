@@ -8,5 +8,5 @@ cat <<END-OF-CAT
 <p>This page lists some interesting downloads, whether created by any one of our contributers or external (created by someone else entirely and just software that we all love).</p>
 END-OF-CAT
 . ./includes/resources.inc.sh downloads
-echo "</div></body></html>
+echo "</section></body></html>
 "

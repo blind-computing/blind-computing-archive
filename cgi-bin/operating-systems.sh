@@ -9,5 +9,5 @@ cat <<END-OF-CAT
 <p>Oh and once you've got an operating system you can use, you'll probably want some <a href="software.sh">accessible software to go with it</a>.</p>
 END-OF-CAT
 . ./includes/resources.inc.sh operating-systems
-echo "</div></body></html>
+echo "</section></body></html>
 "

@@ -18,5 +18,5 @@ cat <<END-OF-CAT
 <p>  And that's linux. I wrote this specifically to give blind and visually impaired users a hint as to what I talk about alot on this site, so that they can make sense of it for themselves and choose which OS they want to use.</p>
 <p>Thanks for reading.</p>
 <i>Mikey</i>
-</div></body></html>
+</section></body></html>
 END-OF-CAT

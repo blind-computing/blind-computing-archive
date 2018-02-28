@@ -75,5 +75,5 @@ practically, I feel as though the touch will do better for me,
 at least at school. It's making me choose between open hardware,
 which is very important to me and practicallity, which obviously
 is crucial.</p>
-</div></body></html
+</section></body></html
 END-OF-CAT

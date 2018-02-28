@@ -9,5 +9,5 @@ cat <<END-OF-CAT
 END-OF-CAT
 . ./includes/video.inc.sh "https://www.youtube.com/embed?v=mQTrnzkVkmk" "23 Oct 2017" "ubuntu-17.10"
 cat <<END-OF-CAT
-</div></body></html>
+</section></body></html>
 END-OF-CAT

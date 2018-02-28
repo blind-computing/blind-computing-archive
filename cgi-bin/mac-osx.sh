@@ -9,5 +9,5 @@ cat <<END-OF-CAT
 END-OF-CAT
 . ./includes/video.inc.sh "https://www.youtube.com/embed/rYpm0LxRJfo" "28 May 2017" "mac-os10.12"
 cat <<END-OF-CAT
-</div></body></html>
+</section></body></html>
 END-OF-CAT

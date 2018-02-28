@@ -11,5 +11,5 @@ cat <<END-OF-CAT
 END-OF-CAT
 . ./includes/video.inc.sh "https://www.youtube.com/embed/yCfBoCzOoEE" "12 Oct 2016" "ubuntu-mate-16.04"
 cat <<END-OF-CAT
-</div></body></html>
+</section></body></html>
 END-OF-CAT

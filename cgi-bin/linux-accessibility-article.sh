@@ -51,5 +51,5 @@ I was glad to descover that, not only were the accessability settings set correc
 
 <p>I hope you enjoyed reading this, but that's all for now. I may publish more articles about this subject in the future, especially how to get things working articles, but you'll just have to wait and see. Linux command line accessibility is quite high up on the list right now</p>
 <b>Mikey</b>
-</div></body></html>
+</section></body></html>
 END-OF-CAT
