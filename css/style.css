@@ -82,3 +82,7 @@ width:640px;
 height:480px;
 float:left;
 }
+
+.small-header {
+font-size:18px;
+}
