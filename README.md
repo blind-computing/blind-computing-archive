@@ -17,3 +17,5 @@ You can visit the blind computing website by (clicking here)[http://blindcomputi
     but. I couldn't even use apache freaking 2 to host the pages and had to resort to httpd from busybox, all because of bash!
 
       So, I'm screwing this whole thing and moving back to php, except this time it's going to be implemented correctly.
+
+*mikey*
