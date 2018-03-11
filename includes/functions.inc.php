@@ -10,6 +10,7 @@ function create_resource_list($category, $header = "List of Resources") {
     }
     $results = $db->prepare("select title,description,uri,contributer from pages where category=? order by id asc;");
     $results->execute([$category]);
+    if($results->rowCount()) {
     $output = $formatted_header."<ul>";
     while($row = $results->fetchObject()) {
         if($row->title === "-") {
@@ -29,6 +30,21 @@ function create_resource_list($category, $header = "List of Resources") {
         }
     }
     $output = $output.'</ul>';
+    } else {
+        $output = $formatted_header.'<p>No resources yet, check back later or <a href="contributing.php">Submit some content to get it here</a>.</p>';
+    }
+    return $output;
+}
+
+
+function create_category_page($title, $description, $category, $header = "List of Resources") {
+    $output = 
+        '<h1>'.
+        $title.
+        '</h1> <article id="description">'.
+        $description.
+        '</article>';
+    $output = $output.create_resource_list($category, $header);
     return $output;
 }
 ?>
