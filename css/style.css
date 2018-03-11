@@ -12,6 +12,7 @@ padding:7px;
 background-color:lightgray;
 border-sizing:border-box;
 border-right:2px solid black;
+overflow:auto;
 }
 
 #headerbar {
@@ -22,10 +23,15 @@ padding:auto;
 border-sizing:border-box;
 border-bottom:2px solid black;
 background-color:lightgray;
+overflow:hide;
 }
 
 h1.main-header {
 text-align:center;
+display:inline;
+float:right;
+margin:5px;20px;
+padding:0px;
 }
 
 #content {
@@ -43,7 +49,9 @@ margin:10px 0px;
 }
 
 .nav-item {
-margin:1px 0px;
+margin:5px 0px;
+background-color:transparent;
+color:black;
 }
 
 .nav-item:hover {
@@ -76,6 +84,7 @@ hr {
 background-color:black;
 height:2px;
 }
+
 .video-embed {
 max-width:60%;
 width:640px;
