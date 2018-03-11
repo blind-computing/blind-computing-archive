@@ -2,7 +2,7 @@
 require_once("db.connect.inc.php");
 ?>
 <div id="headerbar">
-<a href="/" title="go  to the home page"><strong>/</strong></a>
+<a href="/" title="go  to the home page" id="home-link"><strong>/</strong></a>
 <h1 class="main-header">Blind Computing | <?php echo $TITLE; ?></h1>
 </div><div id="sidebar">
 <h2 class="small-header">Navigation</h2> <a href="#content">Skip to Content</a>

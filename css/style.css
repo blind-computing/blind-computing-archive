@@ -26,6 +26,13 @@ background-color:lightgray;
 overflow:hide;
 }
 
+#home-link {
+display:inline;
+float:right;
+margin:5px;20px;
+padding:0px;
+}
+
 h1.main-header {
 text-align:center;
 display:inline;
