@@ -1,5 +1,5 @@
 <?php
-require("db.connect.inc.php");
+require_once("db.connect.inc.php");
 ?>
 <div id="headerbar">
 <a href="/" title="go  to the home page"><strong>/</strong></a>

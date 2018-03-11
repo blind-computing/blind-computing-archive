@@ -3,7 +3,7 @@
 <head>
 <?php
 $TITLE = "Home";
-include("includes/headers.inc.php");
+include_once("includes/headers.inc.php");
 ?>
 </head><body>
 <?php
