@@ -10,8 +10,12 @@ require("db.connect.inc.php");
 <ul id="navigation">
 <?php
 if($result = $db->query("select title,description,uri from pages where category='main';")) {
-    while($row = $result->fetch_object()) {
-        echo '<li class="nav-item"><a href="', $row->uri, '" title="', $row->description, '">', $row->title, '</a></li>';
+    while($row = $result->fetchObject()) {
+        if($row->title === "-") {
+            echo '<hr>';
+        } else {
+            echo '<li class="nav-item"><a href="', $row->uri, '" title="', $row->description, '">', $row->title, '</a></li>';
+        }
     }
 } else {
     die($db->error);
