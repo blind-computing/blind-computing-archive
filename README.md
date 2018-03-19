@@ -7,7 +7,7 @@ This website is the hub of content for blind and visually impaired users that us
 
 ## How to Access the Site
 
-You can visit the blind computing website by (clicking here)[http://blindcomputing.org] . The address is blindcomputing.org. 
+You can visit the blind computing website by [clicking here](http://blindcomputing.org).
 
 ## Why all the ReWrites?
 
