@@ -26,7 +26,7 @@ function create_resource_list($category, $header = "List of Resources") {
                 $row->contributer.
                 '">'.
                 $row->title.
-                '</a></li>';
+                '</a>.</li>';
         }
     }
     $output = $output.'</ul>';
