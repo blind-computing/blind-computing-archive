@@ -39,9 +39,9 @@ function create_resource_list($category, $header = "List of Resources") {
 
 function create_category_page($title, $description, $category, $header = "List of Resources") {
     $output = 
-        '<h1>'.
+        '<h2>'.
         $title.
-        '</h1> <article id="description">'.
+        '</h2> <article id="description">'.
         $description.
         '</article>';
     $output = $output.create_resource_list($category, $header);
