@@ -9,7 +9,7 @@ include_once("includes/headers.inc.php");
 <?php
 include("includes/nav.inc.php");
 ?>
-<div id="content">
+<article id="content"
 <?php
 include_once("includes/functions.inc.php");
 echo create_category_page(
@@ -17,4 +17,4 @@ echo create_category_page(
         "<p>Whether it's braille notetakers, embossers, mainstream accessible gadgets or otherwise, this page covers a range of devices that can help out the blind and visually impaired. It includes thoughts, reviews, hand's on, rambling and much more!</p>",
         "devices");
 ?>
-</div></body></html>
+</article></body></html>

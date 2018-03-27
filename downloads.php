@@ -9,7 +9,7 @@ include_once("includes/headers.inc.php");
 <?php
 include("includes/nav.inc.php");
 ?>
-<div id="content">
+<article id="content"
 <?php
 include_once("includes/functions.inc.php");
 echo create_category_page(
@@ -18,4 +18,4 @@ echo create_category_page(
         "downloads",
         "List of Downloads");
 ?>
-</div></body></html>
+</article></body></html>
