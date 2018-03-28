@@ -18,5 +18,5 @@ include("includes/nav.inc.php");
 <tr><td><strong>Port: </strong></td><td>6697</td></tr>
 <tr><td><strong>Channel: </strong></td><td>#blindcomputing</td></tr>
 </table>
-</article>
+</main>
 </body></html>

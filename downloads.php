@@ -18,4 +18,4 @@ echo create_category_page(
         "downloads",
         "List of Downloads");
 ?>
-</article></body></html>
+</main></body></html>

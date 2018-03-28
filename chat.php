@@ -18,5 +18,5 @@ echo create_category_page(
         "chat",
         "");
 ?>
-</article>
+</main>
 </body></html>

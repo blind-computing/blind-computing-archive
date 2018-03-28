@@ -18,4 +18,4 @@ echo create_category_page(
         "blog",
         "");
 ?>
-</article></body></html>
+</main></body></html>
