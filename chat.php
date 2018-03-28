@@ -9,7 +9,7 @@ include_once("includes/headers.inc.php");
 <?php
 include("includes/nav.inc.php");
 ?>
-<article id="content"
+<main id="content"
 <?php
 include_once("includes/functions.inc.php");
 echo create_category_page(
