@@ -7,9 +7,9 @@ include_once("includes/headers.inc.php");
 ?>
 </head><body>
 <?php
-include("includes/nav.inc.php");
+include_once("includes/nav.inc.php");
 ?>
-<main id="content"
+<main id="content">
 <?php
 include_once("includes/functions.inc.php");
 echo create_category_page(
