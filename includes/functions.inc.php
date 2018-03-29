@@ -47,4 +47,32 @@ function create_category_page($title, $description, $category, $header = "List o
     $output = $output.create_resource_list($category, $header);
     return $output;
 }
+
+// this function generates a video widget with a youtube embedded player and a description area where the description and published date are shown.
+function create_video_widget($id, $header = "Video Info") {
+    global $db;
+    if($header === "") {
+        $formatted_header = "";
+    } else {
+        $formatted_header = "<h3>".$header."</h3>";
+    }
+    $results = $db->prepare("select published, description, uri, contributer from videos where id=? limit 1");
+    $results->execute([$id]);
+    $row = $results->fetchObject();
+    if($results->rowCount()) {
+        $output = 
+            "<aside><h3>".
+            $formatted_header.
+            "</h3><table><tr><td><strong>Published on:</strong></td><td>".
+            $row->published.
+            "</td></tr><tr><td><strong>Contributer:</strong></td><td>".
+            $row->contributer.
+            "</td></tr></table><section>".
+            $row->description.
+            "</section>";
+    } else {
+        $output = $output."<aside><p>Looks like we don't have any info on this video. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>";
+    }
+    return $output;
+}
 ?>
