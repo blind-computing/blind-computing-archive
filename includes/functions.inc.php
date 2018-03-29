@@ -83,9 +83,9 @@ function create_video_page($title, $description, $id, $header = "Video Info") {
     $output = 
         '<h2>'.
         $title.
-        '</h2> <section id="description">'.
+        '</h2>\n<section id="description">'.
         $description.
-        '</section>';
+        '</section>\n';
     $output = $output.create_video_widget($id, $header);
     return $output;
 }
