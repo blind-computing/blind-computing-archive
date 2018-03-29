@@ -61,6 +61,9 @@ function create_video_widget($id, $header = "Video Info") {
     $row = $results->fetchObject();
     if($results->rowCount()) {
         $output = 
+            '<section><iframe class="video-embed" src="'.
+            $row->uri.
+            '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe></section>'.
             '<aside class="video-info">'.
             $formatted_header.
             '<table><tr><td><strong>Published on:</strong></td><td>'.
@@ -73,6 +76,17 @@ function create_video_widget($id, $header = "Video Info") {
     } else {
         $output = $output.'<aside class="video-info"><p>Looks like we don\'t have any info on this video. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
     }
+    return $output;
+}
+
+function create_video_page($title, $description, $header = "List of Resources", $id) {
+    $output = 
+        '<h2>'.
+        $title.
+        '</h2> <section id="description">'.
+        $description.
+        '</section>';
+    $output = $output.create_video_widget($id, $header);
     return $output;
 }
 ?>
