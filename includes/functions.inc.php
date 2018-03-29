@@ -61,17 +61,17 @@ function create_video_widget($id, $header = "Video Info") {
     $row = $results->fetchObject();
     if($results->rowCount()) {
         $output = 
-            "<aside><h3>".
+            '<aside class="video-info">'.
             $formatted_header.
-            "</h3><table><tr><td><strong>Published on:</strong></td><td>".
+            '<table><tr><td><strong>Published on:</strong></td><td>'.
             $row->published.
-            "</td></tr><tr><td><strong>Contributer:</strong></td><td>".
+            '</td></tr><tr><td><strong>Contributer:</strong></td><td>'.
             $row->contributer.
-            "</td></tr></table><section>".
+            '</td></tr></table><section>'.
             $row->description.
-            "</section>";
+            '</section></aside>';
     } else {
-        $output = $output."<aside><p>Looks like we don't have any info on this video. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>";
+        $output = $output.'<aside class="video-info"><p>Looks like we don\'t have any info on this video. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
     }
     return $output;
 }
