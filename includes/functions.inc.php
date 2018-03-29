@@ -79,7 +79,7 @@ function create_video_widget($id, $header = "Video Info") {
     return $output;
 }
 
-function create_video_page($title, $description, $header = "List of Resources", $id) {
+function create_video_page($title, $description, $id, $header = "Video Info") {
     $output = 
         '<h2>'.
         $title.
