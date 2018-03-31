@@ -1,17 +1,6 @@
 html,body {
 height:100%;
 width:100%;
-backgroundd-color:white;
-color:black;
-}
-
-a {
-color:darkblue;
-}
-
-a:hover {
-background-color:black;
-color:white;
 }
 
 #sidebar {
@@ -23,10 +12,7 @@ padding:7px;
 background-color:lightgray;
 border-sizing:border-box;
 border-right:2px solid black;
-}
-
-#skiptocontent {
-float:right;
+overflow:auto;
 }
 
 #headerbar {
@@ -37,23 +23,28 @@ padding:auto;
 border-sizing:border-box;
 border-bottom:2px solid black;
 background-color:lightgray;
+overflow:hide;
 }
 
-#headerhome {
-margin-left:20px;
-float:left;
-text-align:left;
+#home-link {
+display:inline;
+float:right;
+margin:5px;20px;
+padding:0px;
 }
 
 h1.main-header {
-text-align:right;
+text-align:center;
+display:inline;
 float:right;
+margin:5px;20px;
+padding:0px;
 }
 
 #content {
-height:93%;
-width:80%;
 overflow:auto;
+height:93%;
+width:82%;
 float:right;
 padding:0px;;
 margin:0px;
@@ -65,18 +56,14 @@ margin:10px 0px;
 }
 
 .nav-item {
-margin:1px 0px;
-width:#95%;
+margin:5px 0px;
+background-color:transparent;
+color:black;
 }
 
 .nav-item:hover {
 background-color:black;
 color:white;
-}
-
-.nav-separater {
-width:100%;
-color:black;
 }
 
 #forum_embed {
@@ -87,17 +74,13 @@ float:right;
 padding:0px;;
 margin:0px;
 border-sizing:border-box;
+
+#video-info {
+float:right;
+min-width:30%;
+width:35%;
 }
 
-.video-info {
-position:relative;
-display:inline;
-width:62%;
-overflow:show;
-float:right;
-margin:0px;
-padding:0px;
-}
 
 .feedburnerFeedBlock {
 background-color:white;
@@ -110,11 +93,12 @@ height:2px;
 }
 
 .video-embed {
-display:inline;
-width:37%;
-overflow:show;
-min-height:360px;
-margin:0px;
-padding:0px;
+max-width:60%;
+width:640px;
+height:480px;
 float:left;
+}
+
+.small-header {
+font-size:18px;
 }
