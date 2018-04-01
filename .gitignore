@@ -1,2 +1,4 @@
 #always ignore any testing files
 test.*
+# Don't update the database file, as it points to the beta database
+includes/db.connect.inc.php
