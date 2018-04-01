@@ -31,7 +31,7 @@ function create_resource_list($category, $header = "List of Resources") {
     }
     $output = $output.'</ul></nav>';
     } else {
-        $output = $formatted_header.'<p>No resources yet, check back later or <a href="contributing.php">Submit some content to get it here</a>.</p>';
+        $output = $formatted_header.'<p>No resources yet, check back later or <a href="/contributing.php">Submit some content to get it here</a>.</p>';
     }
     return $output;
 }
