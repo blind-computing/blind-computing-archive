@@ -97,9 +97,9 @@ function create_article_info($id) {
     $row = $results->fetchObject();
     if($results->rowCount()) {
         $output =
-             '<section class="article-info">'.
+             '<section class="article-info"><h2>'.
             $row->title.
-            '<table><tr><td><strong>Published on:</strong></td><td>'.
+            '</h2><table><tr><td><strong>Published on:</strong></td><td>'.
             $row->published.
             '</td></tr><tr><td><strong>Author:</strong></td><td>'.
             $row->contributer.
