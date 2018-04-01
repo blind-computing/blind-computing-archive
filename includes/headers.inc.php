@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <meta charset="UTF-8">
 <meta name="description" content="<?php echo $DESCRIPTION; ?>">
 <meta name="keywords" content="blind,visually impaired, computing,IT,ICT,devices,partially sited,programs,VI,TheFakeVIP">
