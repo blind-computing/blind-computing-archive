@@ -1,6 +1,0 @@
-		@page { margin: 2cm }
-		p { margin-bottom: 0.25cm; direction: ltr; color: #000000; line-height: 120%; orphans: 2; widows: 2 }
-		p.western { font-family: "Liberation Serif", "Times New Roman", serif; font-size: 12pt; so-language: en-GB }
-		p.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 12pt; so-language: zh-CN }
-		p.ctl { font-family: "FreeSans"; font-size: 12pt; so-language: hi-IN }
-
