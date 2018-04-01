@@ -28,7 +28,7 @@ overflow:hide;
 
 #home-link {
 display:inline;
-float:right;
+float:left;
 margin:5px;20px;
 padding:0px;
 }
@@ -39,6 +39,7 @@ display:inline;
 float:right;
 margin:5px;20px;
 padding:0px;
+width:85%;
 }
 
 #content {
@@ -46,7 +47,7 @@ overflow:auto;
 height:93%;
 width:82%;
 float:right;
-padding:0px;;
+padding:10px;;
 margin:0px;
 border-sizing:border-box;
 }
@@ -76,10 +77,9 @@ margin:0px;
 border-sizing:border-box;
 
 .video-info {
-display:inline block;
-float:right;
-min-width:25%;
+display:inline;
 width:30%;
+float:right;
 }
 
 
@@ -94,11 +94,10 @@ height:2px;
 }
 
 .video-embed {
-display:inline block;
+display:inline;
 overflow:show;
-max-width:60%;
-width:640px;
-height:480px;
+width:60%;
+height:auto;
 float:left;
 }
 
