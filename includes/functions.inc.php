@@ -101,7 +101,7 @@ function create_article_info($id) {
             $row->title.
             '<table><tr><td><strong>Published on:</strong></td><td>'.
             $row->published.
-            '</td></tr><tr><td><strong>Contributer:</strong></td><td>'.
+            '</td></tr><tr><td><strong>Author:</strong></td><td>'.
             $row->contributer.
             '</td></tr></table><hr></section>';
     } else {
