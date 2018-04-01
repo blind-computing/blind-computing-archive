@@ -66,9 +66,9 @@ function create_video_widget($id, $header = "Video Info") {
             '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe></section>'.
             '<aside class="video-info">'.
             $formatted_header.
-            '<table><tr><td><strong>Published on:</strong></td><td>'.
+            '<table><tr><td><strong>Published on: </strong></td><td>'.
             $row->published.
-            '</td></tr><tr><td><strong>Contributer:</strong></td><td>'.
+            '</td></tr><tr><td><strong>Contributer: </strong></td><td>'.
             $row->contributer.
             '</td></tr></table><section>'.
             $row->description.
@@ -92,18 +92,25 @@ function create_video_page($title, $description, $id, $header = "Video Info") {
 
 function create_article_info($id) {
     global $db;
-    $results =$db->prepare("select title, published, contributer from articles where id=? limit 1");
+    $results =$db->prepare("select title, published, contributer, editted from articles where id=? limit 1");
     $results->execute([$id]);
     $row = $results->fetchObject();
     if($results->rowCount()) {
         $output =
              '<section class="article-info"><h2>'.
             $row->title.
-            '</h2><table><tr><td><strong>Published on:</strong></td><td>'.
+            '</h2><table><tr><td><strong>Published on: </strong></td><td>'.
             $row->published.
-            '</td></tr><tr><td><strong>Author:</strong></td><td>'.
+            '</td></tr><tr><td><strong>Author: </strong></td><td>'.
             $row->contributer.
-            '</td></tr></table><hr></section>';
+            '</td></tr>';
+        if($row->editted != NULL) {
+            $output = $output.
+            '<tr><td><strong>Editted on: </strong></td><td>'.
+            $row->editted.
+            '</td></tr>';
+        }
+        $output = $output.'</table><hr></section>';
     } else {
         $output = $output.'<aside class="article-info"><p>Looks like we don\'t have any info on this article. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
     }
