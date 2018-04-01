@@ -89,4 +89,24 @@ function create_video_page($title, $description, $id, $header = "Video Info") {
     $output = $output.create_video_widget($id, $header);
     return $output;
 }
+
+function create_article_info($id) {
+    global $db;
+    $results =$db->prepare("select title, published, contributer from articles where id=? limit 1");
+    $results->execute([$id]);
+    $row = $results->fetchObject();
+    if($results->rowCount()) {
+        $output =
+             '<section class="article-info">'.
+            $row->title.
+            '<table><tr><td><strong>Published on:</strong></td><td>'.
+            $row->published.
+            '</td></tr><tr><td><strong>Contributer:</strong></td><td>'.
+            $row->contributer.
+            '</td></tr></table><hr></section>';
+    } else {
+        $output = $output.'<aside class="article-info"><p>Looks like we don\'t have any info on this article. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
+    }
+    return $output;
+}
 ?>
