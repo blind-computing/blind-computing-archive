@@ -9,7 +9,7 @@ height:93%;
 float:left;
 margin:0px;
 padding:7px;
-background-color:lightgray;
+background-color:rgb(235, 235, 235);
 border-sizing:border-box;
 border-right:2px solid black;
 overflow:auto;
@@ -22,7 +22,7 @@ margin:0px;
 padding:auto;
 border-sizing:border-box;
 border-bottom:2px solid black;
-background-color:lightgray;
+background-color:rgb(235, 235, 235);
 overflow:hide;
 }
 
