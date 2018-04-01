@@ -101,9 +101,14 @@ function create_article_info($id) {
             $row->title.
             '</h2><table><tr><td><strong>Published on: </strong></td><td>'.
             $row->published.
-            '</td></tr>
-';
-        $output = $outpu.'<tr><td><strong>Author: </strong></td><td>'.
+            '</td></tr>';
+        if($row->editted != NULL) {
+            $output = $output.
+                '<tr><td><strong>Editted on: </strong></td><td>'.
+                $row->editted.
+                '</td></tr>';
+        }
+        $output = $output.'<tr><td><strong>Author: </strong></td><td>'.
             $row->contributer.
             '</td></tr></table><hr></section>';
     } else {
