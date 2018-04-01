@@ -39,7 +39,6 @@ display:inline;
 float:right;
 margin:5px;20px;
 padding:0px;
-width:85%;
 }
 
 #content {
@@ -47,7 +46,7 @@ overflow:auto;
 height:93%;
 width:82%;
 float:right;
-padding:10px;;
+padding-top:10px;
 margin:0px;
 border-sizing:border-box;
 }
