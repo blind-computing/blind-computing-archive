@@ -3,7 +3,6 @@
   <head>
     <?php
       $TITLE = "Home";
-      $DESCRIPTION = "This is a description";
       include_once("includes/headers.inc.php");
     ?>
   </head>

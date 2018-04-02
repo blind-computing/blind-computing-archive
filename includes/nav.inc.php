@@ -13,7 +13,9 @@
               	if($row->title === "-") {
                 	echo '';
               	} else {
-                	echo '<a href="', $row->uri, '" title="', $row->description, '"><li class="navItem">', $row->title ,'</li></a>';
+              		$isActivePage = "";
+              		if($TITLE == $row->title) { $isActivePage = "activePage";}
+                	echo '<a href="', $row->uri, '" title="', $row->description, '"><li class="navItem ', $isActivePage ,'">', $row->title ,'</li></a>';
           		}
           	}
         } else {
