@@ -1,109 +1,92 @@
-html,body {
-height:100%;
-width:100%;
+body {
+	margin: 0px;
+	font-family: Helvetica;
 }
 
-#sidebar {
-width:15%;
-height:93%;
-float:left;
-margin:0px;
-padding:7px;
-background-color:rgb(235, 235, 235);
-border-sizing:border-box;
-border-right:2px solid black;
-overflow:auto;
+.navbar {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #ebebeb;
+	width: 100%;
+	text-align: center;
+	color: black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.navItem {
+	display: inline-block;
+	color: black;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 12pt;
+  	margin: 0px;
+}
+
+.navItem:hover{
+	background-color: #bababa
 }
 
 #headerbar {
-width:100%;
-height:7%;
-margin:0px;
-padding:auto;
-padding-right:0px;
-border-sizing:border-box;
-border-bottom:2px solid black;
-background-color:rgb(235, 235, 235);
-overflow:hide;
+	width: 90%;
+	margin: auto;
 }
 
-#home-link {
-display:inline;
-float:left;
-margin:5px;20px;
-padding:0px;
-}
-
-h1.main-header {
-text-align:center;
-width:82%;
-display:inline;
-float:right;
-margin:5px;20px;
-margin-right:0px;
-padding:0px;
+.main-header {
+	text-align: center;
+	margin:10px;
 }
 
 #content {
-overflow:auto;
-height:93%;
-width:82%;
-float:right;
-padding-top:10px;
-margin:0px;
-border-sizing:border-box;
+	width: 95%;
+	margin: auto;
+	overflow:auto;
+	padding-top:10px;
+	border-sizing: border-box;
 }
 
 #navigation {
-margin:10px 0px;
-}
-
-.nav-item {
-margin:5px 0px;
-background-color:transparent;
-color:black;
-}
-
-.nav-item:hover {
-background-color:black;
-color:white;
+	margin:10px 0px;
 }
 
 #forum_embed {
-overflow:auto;
-height:93%;
-width:82%;
-float:right;
-padding:0px;;
-margin:0px;
-border-sizing:border-box;
+	overflow:auto;
+	height:93%;
+	width:82%;
+	float:right;
+	padding:0px;;
+	margin:0px;
+	border-sizing:border-box;
 }
 
 .video-info {
-display:inline;
-width:30%;
-float:right;
+	display:inline;
+	width:30%;
+	float:right;
 }
 
 
 .feedburnerFeedBlock {
-background-color:white;
-color:black;
+	background-color:white;
+	color:black;
 }
 
 hr {
-background-color:black;
-height:2px;
+	background-color:black;
+	height:2px;
 }
 
 .video-embed {
-display:inline;
-overflow:show;
-width:60%;
-height:auto;
-float:left;
+	display:inline;
+	overflow:show;
+	width:60%;
+	height:auto;
+	float:left;
 }
 
 .small-header {
-font-size:18px;
+	font-size:18px;
 }
