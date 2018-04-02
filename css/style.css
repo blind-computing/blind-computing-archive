@@ -35,9 +35,11 @@ padding:0px;
 
 h1.main-header {
 text-align:center;
+width:82%;
 display:inline;
 float:right;
 margin:5px;20px;
+margin-right:0px;
 padding:0px;
 }
 
