@@ -4,7 +4,7 @@
 	<h1 class="main-header">Blind Computing | <?php echo $TITLE; ?></h1>
 <hr class="headerstyle-hr">
 <nav><ul class="navbar">
-	<!-- <a href="#content"><li class="navItem">SkipToContent</li></a> ->>
+	<!-- <a href="#content"><li class="navItem">SkipToContent</li></a> -->
     <?php
         if($result = $db->query("select title,description,uri from pages where category='main';")) {
           	while($row = $result->fetchObject()) {
