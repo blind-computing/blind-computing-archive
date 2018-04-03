@@ -37,7 +37,7 @@
 <li><a href="#summery">summery</a></li>
 </ol> 
 
-<h2 id="similarities">Similarities between both units</h3>
+<h3 id="similarities">Similarities between both units</h3>
 
 <ol> 
 	<li>
@@ -72,7 +72,7 @@
 	the display to another computer and enter/read text.</p>
  </li>
 </ol>
-<h2 id="bntnotes">Notes on the braillenote touch</h3>
+<h3 id="bntnotes">Notes on the braillenote touch</h3>
 
  <ol>
 	<li>
@@ -131,7 +131,7 @@
 	things, but by default, both act as the arrow keys).</p>
  </li>
 </ol>
-<h2 id="esynotes">Notes on the esytime</h3>
+<h3 id="esynotes">Notes on the esytime</h3>
 
  <ol>
 	<li>
@@ -199,7 +199,7 @@
 	consideration  non the less.</p>
  </li>
 </ol>
-<h2 id="summery">Summery</h3>
+<h3 id="summery">Summery</h3>
 <p>  I'm still not sure which unit is better for me. Mainly because of the computing work I'll have to do, I think the esytime is the better braille device. But then again, the braillenote is already solid state, requires somewhat less adjusting to and has touch braille. One thing is for sure, they are both well designed, good products. It's just a matter of do you want a braille tablet or a braille computer. Most geeks, at least, would immediately say the latter, but then again, a computer has more parts and is more complex than a tablet.</p>
 <p>Thanks for reading this epic of a report.</p>
 <i>Mikey</i>      </article>
