@@ -11,4 +11,3 @@ try {
 //  echo "Connection failed: ", $e->getMessage();
     die("<center><h1>Oops, we've hit a road block!</h1><p>Sorry, we're currently experiencing database connection issues. Check back later.</center>");
 }
-?>
