@@ -21,7 +21,7 @@ You can visit the blind computing website by [clicking here](https://blindcomput
 
 ## How to Contribute
 
-  If you're a programmer, you're allreadty in the right place. Currently, the site uses the _php-rewrite_ branch to get its files, as we are rewriting it. This will change in the future, so please submit a pull request if you find that this readme is out of date.
+  If you're a programmer, you're allready in the right place. Currently, the site uses the _php-rewrite_ branch to get its files, as we are rewriting it. This will change in the future, so please submit a pull request if you find that this readme is out of date.
 
 ### List of Branches
 
@@ -32,4 +32,4 @@ Master | _Currently_ holds the older shell version of Blind Computing. This will
 old-version | Holds the extremely old PHP version of the site before the first rewrite. This is a __protected branch__ and should _not_ be tampered with.
 rewrite-2018-01-9 | The old __bash based__ version of the site. This is also a protected branch that should _not_ be messed with.
 
-__note:__ any other branches are topic branches. Their names should convey what they are, but iff not,, _feel free to look at the changes_. If there are any stale branches not mentioned above, please contact me to remind me to remove them.
+__note:__ any other branches are topic branches. Their names should convey what they are, but if not,, _feel free to look at the changes_. If there are any stale branches not mentioned above, please contact me to remind me to remove them.
