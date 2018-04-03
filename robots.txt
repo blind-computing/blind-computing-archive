@@ -1,2 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /category
+Disallow: /robots.txt
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /LICENSE
+Disallow: /README.MD
