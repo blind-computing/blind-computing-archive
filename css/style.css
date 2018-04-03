@@ -79,6 +79,10 @@ hr {
 	height:2px;
 }
 
+.headerstyle-hr {
+	background-color:black;
+	height:1px;
+}
 .video-embed {
 	display:inline;
 	overflow:show;

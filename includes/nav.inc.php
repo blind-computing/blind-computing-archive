@@ -1,12 +1,9 @@
-<?php
-	require_once("db.connect.inc.php");
-?>
+<?php 	require_once("db.connect.inc.php"); ?>
 
 <header id="headerbar">
 	<h1 class="main-header">Blind Computing | <?php echo $TITLE; ?></h1>
-</header>
-
-<ul class="navbar">
+<hr class="headerstyle-hr">
+<nav><ul class="navbar">
     <?php
         if($result = $db->query("select title,description,uri from pages where category='main';")) {
           	while($row = $result->fetchObject()) {
@@ -20,4 +17,6 @@
           	die($db->error);
         }
     ?>
-</ul>
+</ul></nav>
+<hr class="headerstyle-hr">
+</header>
