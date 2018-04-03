@@ -14,7 +14,7 @@ You can visit the blind computing website by [clicking here](https://blindcomput
 
   I know, I know. I litterally just rewrote the entire site in __bash__, but come on, it's __bash__! Of course I wasn't going to stick with it.
 
-    Now, before you start _BASHING_ (Ha Ha) your keyboard unnecessarily, bash is a good language. But with what I want to do, it's a major pain in the 
+    Now, before you start BASHING (Ha Ha) your keyboard unnecessarily, bash is a good language. But with what I want to do, it's a major pain in the 
     but. I couldn't even use apache __freakin'__ 2 to host the pages and had to resort to httpd from busybox, all because of bash!
 
       So, I'm screwing this whole thing and moving back to php, except this time it's going to be implemented correctly.
