@@ -13,7 +13,6 @@
     ?>
     <main id="content">
       <center>
-      	<hr>
         <h2>We're Undergoing a Rewrite!</h2>
         <p>Currently, I'm working on completely redoing the site <strong>for the second time</strong> to make it much more robust and easier to manage. Much help is needed to get this done faster, so if you can, please <a href="https://github.com/mcb2003/blind-computing" title="opens the github page">help us rewrite the site in PHP with mysql</a>. If not, don't worry. The site will be finished soon and you can <a href="http://bit.ly/2oTj1ZW" title="opens the blind computing blog RSS feed">subscribe to the blog with your favourite rss news reader</a> to get alerted when it's ready. You can also check back at this page.</p>
         <p>Thanks for reading</p>
