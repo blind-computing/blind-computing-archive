@@ -27,7 +27,9 @@ body {
 }
 
 .navItem:hover, .activePage{
-	background-color: #bababa
+	background-color: #bababa;
+	color: white;
+	font-weight: bold;
 }
 
 #headerbar {
