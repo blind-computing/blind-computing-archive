@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Chat and Contact";
+$TITLE = "Chat/Contact";
 include_once("includes/headers.inc.php");
 ?>
 </head><body>
