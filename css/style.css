@@ -81,6 +81,7 @@ body,html {
 hr {
 	background-color:black;
 	height:2px;
+	width: 100%;
 }
 
 .headerstyle-hr {
