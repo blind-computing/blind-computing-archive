@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "Home";
+      $id = 1;
       include_once("includes/headers.inc.php");
     ?>
   </head>

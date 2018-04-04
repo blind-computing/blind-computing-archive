@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Ubuntu Mate 16.04";
+$id = 19;
 include_once("../includes/headers.inc.php");
 ?>
 </head><body>

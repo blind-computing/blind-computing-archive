@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Devices";
+$id = 3;
 include_once("../includes/headers.inc.php");
 ?>
 </head><body>

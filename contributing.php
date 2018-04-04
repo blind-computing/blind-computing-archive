@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "How to Contribute";
+$id = 27;
 include_once("includes/headers.inc.php");
 ?>
 </head><body>

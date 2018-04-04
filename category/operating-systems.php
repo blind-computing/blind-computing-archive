@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Operating Systems";
+$id = 7;
 include_once("../includes/headers.inc.php");
 ?>
 </head><body>

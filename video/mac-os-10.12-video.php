@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "OS10.12";
+$id = 18;
 include_once("../includes/headers.inc.php");
 ?>
 </head><body>

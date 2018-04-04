@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "What Is Linux?";
+      $id = 26;
       include_once("../includes/headers.inc.php");
     ?>
   </head>

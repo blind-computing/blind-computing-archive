@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "BrailleNote Touch VS EsyTime (1)?";
+      $id = 25;
       include_once("../includes/headers.inc.php");
     ?>
     <meta name="generator" content="LibreOffice 5.1.4.2 (Linux)"/>

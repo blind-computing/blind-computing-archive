@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Ubuntu 17.10";
+$id = 20;
 include_once("../includes/headers.inc.php");
 ?>
 </head><body>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "Chat/Contact";
+$id = 12;
 include_once("includes/headers.inc.php");
 ?>
 </head><body>

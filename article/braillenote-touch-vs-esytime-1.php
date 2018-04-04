@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "BrailleNote Touch VS EsyTime (1)?";
+      $id = 23;
       include_once("../includes/headers.inc.php");
     ?>
   </head>

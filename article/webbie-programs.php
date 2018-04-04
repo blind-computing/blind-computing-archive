@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "The Webbie Browser and Tools";
+      $id = 22;
       include_once("../includes/headers.inc.php");
     ?>
   </head>

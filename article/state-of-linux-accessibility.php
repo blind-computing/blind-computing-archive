@@ -2,7 +2,7 @@
 <html>
   <head>
     <?php
-      $TITLE = "State of Linux Accessibility";
+      $id = 24;
       include_once("../includes/headers.inc.php");
     ?>
   </head>

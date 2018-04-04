@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-$TITLE = "IRC";
+$id = 15;
 include_once("includes/headers.inc.php");
 ?>
 </head><body>
