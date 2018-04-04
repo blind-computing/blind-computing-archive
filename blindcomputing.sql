@@ -32,7 +32,7 @@ CREATE TABLE `articles` (
   UNIQUE KEY `id` (`id`),
   UNIQUE KEY `title` (`title`),
   UNIQUE KEY `id_2` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `articles` (
 
 LOCK TABLES `articles` WRITE;
 /*!40000 ALTER TABLE `articles` DISABLE KEYS */;
-INSERT INTO `articles` VALUES (1,'What is linux?','2018-04-01',NULL,'TheFakeVIP'),(2,'The Webbie Web Browser and Accessible Programs','2018-04-01',NULL,'TheFakeVIP'),(3,'The CurrentState of Linux Accessibility on the Desktop','2016-04-09','2018-04-01','TheFakeVIP'),(4,'The BrailleNote Touch VS The Esytime | Braille NoteTaker Battle Part 1','2018-04-01',NULL,'TheFakeVIP');
+INSERT INTO `articles` VALUES (1,'What is linux?','2018-04-01',NULL,'TheFakeVIP'),(2,'The Webbie Web Browser and Accessible Programs','2018-04-01',NULL,'TheFakeVIP'),(3,'The CurrentState of Linux Accessibility on the Desktop','2016-04-09','2018-04-01','TheFakeVIP'),(4,'The BrailleNote Touch VS The Esytime | Braille NoteTaker Battle Part 1','2018-04-01',NULL,'TheFakeVIP'),(5,'BrailleNote Touch VS EsyTime - After Hands On','2018-04-01',NULL,'TheFakeVIP');
 /*!40000 ALTER TABLE `articles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04 11:38:35
+-- Dump completed on 2018-04-04 11:54:55
