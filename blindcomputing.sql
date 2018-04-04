@@ -46,6 +46,38 @@ INSERT INTO `articles` VALUES (1,'What is linux?','2018-04-01',NULL,'TheFakeVIP'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `contributers`
+--
+
+DROP TABLE IF EXISTS `contributers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contributers` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) DEFAULT NULL,
+  `fname` varchar(32) DEFAULT NULL,
+  `mname` varchar(32) DEFAULT NULL,
+  `lname` varchar(32) DEFAULT NULL,
+  `email` text,
+  `github` text,
+  `youtube` text,
+  `twitter` text,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contributers`
+--
+
+LOCK TABLES `contributers` WRITE;
+/*!40000 ALTER TABLE `contributers` DISABLE KEYS */;
+INSERT INTO `contributers` VALUES (1,'TheFakeVIP','Michael','Connor','Buchan',NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `contributers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pages`
 --
 
@@ -112,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04 11:54:55
+-- Dump completed on 2018-04-04 12:29:58
