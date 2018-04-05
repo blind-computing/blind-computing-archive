@@ -55,13 +55,12 @@ DROP TABLE IF EXISTS `contributers`;
 CREATE TABLE `contributers` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(32) DEFAULT NULL,
-  `fname` varchar(32) DEFAULT NULL,
-  `mname` varchar(32) DEFAULT NULL,
-  `lname` varchar(32) DEFAULT NULL,
   `email` text,
   `github` text,
   `youtube` text,
   `twitter` text,
+  `fullName` varchar(96) DEFAULT NULL,
+  `description` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -73,7 +72,7 @@ CREATE TABLE `contributers` (
 
 LOCK TABLES `contributers` WRITE;
 /*!40000 ALTER TABLE `contributers` DISABLE KEYS */;
-INSERT INTO `contributers` VALUES (1,'TheFakeVIP','Michael','Connor','Buchan',NULL,NULL,NULL,NULL);
+INSERT INTO `contributers` VALUES (1,'TheFakeVIP','mikeybuchan@hotmail.co.uk','https://github.com/mcb2003','https://www.youtube.com/channel/UCRUCCRK2TY0Ns0MlX0qVhYg','https://twitter.com/BuchanMichael','Michael Connor Buchan','\n<p><strong>TheFakeVIP</strong> was the original creater of this website. He was unsatisfied with the lack of information out there on the internet for blind and visually impaired computer users and saw an opertunity to change that</p>\n<p>In the past, any information pertaining to blind/VI computing on the internet was scattered, not wide spread and far from widely documented. BlindComputing was set up as a result of this, providing one central place for the often overlooked community of blind computer users to get the informatio they needed.</p>\n<p><strong>And look at where we are now ...</p>');
 /*!40000 ALTER TABLE `contributers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,4 +143,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04 12:29:58
+-- Dump completed on 2018-04-05 18:13:44
