@@ -29,7 +29,18 @@
               echo '<tr><td><strong>Full Name: </strong></td><td>'.$user->fullName.'</td></tr>';
             }
             if($user->email != NULL) {
-              echo '<tr><td><strong>Email: </strong></td><td><a href="mailto:'.$user->email.'" title="Email '.$user->username.'">'.$user->email.'</a></td></tr>';
+              echo '<tr><td><strong>Email: </strong></td><td><a target="blank" href="mailto:'.$user->email.'" title="Go to the GitHub profile for '.$user->username.'">'.$user->email.'</a></td></tr>';
+            }
+            if($user->github != NULL) {
+              $githubUsername = substr(parse_url($user->github,PHP_URL_PATH),1);
+              echo '<tr><td><strong>GitHub: </strong></td><td><a href="'.$user->github.'" title="Email '.$user->username.'">@'.$githubUsername.'</a></td></tr>';
+            }
+            if($user->twitter != NULL) {
+              $twitterUsername = substr(parse_url($user->twitter,PHP_URL_PATH),1);
+              echo '<tr><td><strong>Twitter: </strong></td><td><a href="'.$user->twitter.'" title="Go to the Twitter Profile for '.$user->username.'">@'.$twitterUsername.'</a></td></tr>';
+            }
+            if($user->youtube != NULL) {
+              echo '<tr><td><strong>YouTube: </strong></td><td><a href="'.$user->youtube.'" title="Go to '.$user->username.'\'s YouTube Channel">'.$user->username.'\'s Channel</a></td></tr>';
             }
             echo '</table></aside>';
           } else
