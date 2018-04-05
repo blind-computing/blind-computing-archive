@@ -99,3 +99,11 @@ hr {
 .small-header {
 	font-size:18px;
 }
+
+.contributer-info {
+	width: 20%;
+	float: left;
+	display: inline;
+	margin:0px;
+	margin-right: 20px;
+}
