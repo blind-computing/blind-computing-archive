@@ -7,6 +7,7 @@
       ?>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <meta name="keywords" content="profile contributer author blindcomputing info information <?php echo $_GET['username']; ?>">
+    <title>BlindComputing | Profile: <?php echo $_GET['username']; ?></title>
   </head>
     
   <body>
