@@ -23,7 +23,15 @@
           $userResults->execute([$username]);
           if($userResults->rowCount()) {
             $user = $userResults->fetchObject();
-            echo '<aside class="contributer-info"><h2>'.$user->username.'</h2></aside>';
+            echo '<aside class="contributer-info"><h2>'.$user->username.'</h2>';
+            echo '<table>';
+            if($user->fullName != NULL) {
+              echo '<tr><td><strong>Full Name: </strong></td><td>'.$user->fullName.'</td></tr>';
+            }
+            if($user->email != NULL) {
+              echo '<tr><td><strong>Email: </strong></td><td><a href="mailto:'.$user->email.'" title="Email '.$user->username.'">'.$user->email.'</a></td></tr>';
+            }
+            echo '</table></aside>';
           } else
             echo $contributerError;
         }
