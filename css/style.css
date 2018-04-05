@@ -105,5 +105,10 @@ hr {
 	float: left;
 	display: inline;
 	margin:0px;
-	margin-right: 20px;
+}
+
+.contributer-description {
+	width:80%;
+	float:right;
+	display:inline;
 }

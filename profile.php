@@ -29,9 +29,11 @@
         }
       ?>
 <!-- some test text where the contributer's description will go. -->
+<section id="contributer-description">
 <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit vitae massa habitant, tristique mus odio curae. Lectus ornare egestas curae turpis congue dis bibendum pretium eu, facilisi accumsan urna senectus lacus convallis rutrum inceptos, potenti magna mauris ante justo sem viverra eleifend. Phasellus morbi ullamcorper vel litora dis eleifend accumsan, luctus nisi et tristique cum metus eu curae, habitasse cras class venenatis pellentesque senectus. Mauris a nam ullamcorper ridiculus habitasse sociosqu semper, aenean tellus nisi mi commodo id maecenas rutrum, sodales imperdiet sed integer aptent vitae. Pulvinar natoque nullam aliquet tincidunt pharetra tortor lectus cubilia, sed et eleifend commodo mattis conubia lacus, nam nisl a turpis integer ullamcorper posuere.</p>
 
 <p>Justo convallis vitae nisi vulputate etiam pretium mauris himenaeos, donec inceptos eget penatibus vestibulum augue nostra varius feugiat, mollis phasellus tempor purus interdum ut metus. Suspendisse risus sagittis pretium lectus nascetur ornare dapibus litora, est pellentesque malesuada sem commodo congue dictumst euismod fusce, pharetra imperdiet tempus interdum conubia ridiculus phasellus. Tempor vitae porttitor conubia et massa platea eu habitant, semper magnis aptent vivamus congue integer venenatis mi, sem facilisis accumsan diam nibh dis morbi. Aliquet fringilla nibh euismod ut natoque gravida dictumst auctor magna praesent, duis lobortis nunc parturient potenti mus enim nec platea nisl fames, velit torquent cursus sapien justo cum magnis venenatis erat. Suscipit pharetra suspendisse iaculis tortor sociis vehicula vivamus sapien, maecenas tincidunt elementum morbi et lobortis senectus non porttitor, placerat donec neque condimentum accumsan purus ante. Ac lacinia diam erat habitasse felis parturient urna nostra, mattis malesuada pellentesque cras scelerisque interdum cum, consequat aptent metus massa arcu maecenas nam. Nam congue cursus neque enim molestie nisl auctor risus interdum tristique tincidunt nascetur curae, taciti viverra purus magna facilisi aptent aliquet vehicula faucibus malesuada rhoncus accumsan.</p>
+</section>
     </main>
   </body>
 </html>
