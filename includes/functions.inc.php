@@ -78,9 +78,11 @@ function create_video_widget($id, $header = "Video Info")
             $formatted_header .
             '<table><tr><td><strong>Published on: </strong></td><td>' .
             $row->published .
-            '</td></tr><tr><td><strong>Contributer: </strong></td><td>' .
+            '</td></tr><tr><td><strong>Contributer: </strong></td><td><a href="/profile/' .
             $row->contributer .
-            '</td></tr></table><section>' .
+            '" title="View this contributer\'s profile">'.
+            $row->contributer .
+            '</a></td></tr></table><section>' .
             $row->description .
             '</section></aside>';
     } else {
@@ -142,9 +144,11 @@ function create_article_info($id)
                 $row->editted .
                 '</td></tr>';
         }
-        $output .= '<tr><td><strong>Author: </strong></td><td>' .
+        $output .= '<tr><td><strong>Author: </strong></td><td><a href="/profile/' .
             $row->contributer .
-            '</td></tr></table><hr></section>';
+            '" title="View this contributer\'s profile">'.
+            $row->contributer .
+            '</a></td></tr></table><hr></section>';
     } else {
         $output = '<aside class="article-info"><p>Looks like we don\'t have any info on this article. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
     }
