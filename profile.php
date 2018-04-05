@@ -31,7 +31,7 @@
             }
 
             if($user->email != NULL) {
-              echo '<tr><td><strong>Email: </strong></td><td><a target="blank" href="mailto:'.$user->email.'" title="Go Email '.$user->username.'">'.$user->email.'</a></td></tr>';
+              echo '<tr><td><strong>Email: </strong></td><td><a target="blank" href="mailto:'.$user->email.'" title="Email '.$user->username.'">'.$user->email.'</a></td></tr>';
             }
             if($user->github != NULL) {
               $githubUsername = substr(parse_url($user->github,PHP_URL_PATH),1);
