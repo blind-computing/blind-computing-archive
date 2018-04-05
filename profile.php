@@ -29,12 +29,13 @@
             if($user->fullName != NULL) {
               echo '<tr><td><strong>Full Name: </strong></td><td>'.$user->fullName.'</td></tr>';
             }
+
             if($user->email != NULL) {
-              echo '<tr><td><strong>Email: </strong></td><td><a target="blank" href="mailto:'.$user->email.'" title="Go to the GitHub profile for '.$user->username.'">'.$user->email.'</a></td></tr>';
+              echo '<tr><td><strong>Email: </strong></td><td><a target="blank" href="mailto:'.$user->email.'" title="Go Email '.$user->username.'">'.$user->email.'</a></td></tr>';
             }
             if($user->github != NULL) {
               $githubUsername = substr(parse_url($user->github,PHP_URL_PATH),1);
-              echo '<tr><td><strong>GitHub: </strong></td><td><a href="'.$user->github.'" title="Email '.$user->username.'">@'.$githubUsername.'</a></td></tr>';
+              echo '<tr><td><strong>GitHub: </strong></td><td><a href="'.$user->github.'" title="Go to the GitHub profile for '.$user->username.'">@'.$githubUsername.'</a></td></tr>';
             }
             if($user->twitter != NULL) {
               $twitterUsername = substr(parse_url($user->twitter,PHP_URL_PATH),1);
