@@ -61,6 +61,7 @@ CREATE TABLE `contributers` (
   `twitter` text,
   `fullName` varchar(96) DEFAULT NULL,
   `description` text,
+  `imguri` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -72,7 +73,7 @@ CREATE TABLE `contributers` (
 
 LOCK TABLES `contributers` WRITE;
 /*!40000 ALTER TABLE `contributers` DISABLE KEYS */;
-INSERT INTO `contributers` VALUES (1,'TheFakeVIP','mikeybuchan@hotmail.co.uk','https://github.com/mcb2003','https://www.youtube.com/channel/UCRUCCRK2TY0Ns0MlX0qVhYg','https://twitter.com/BuchanMichael','Michael Connor Buchan','\n<p><strong>TheFakeVIP</strong> was the original creater of this website. He was unsatisfied with the lack of information out there on the internet for blind and visually impaired computer users and saw an opertunity to change that</p>\n<p>In the past, any information pertaining to blind/VI computing on the internet was scattered, not wide spread and far from widely documented. BlindComputing was set up as a result of this, providing one central place for the often overlooked community of blind computer users to get the information they needed.</p>\n<p><strong>And look at where we are now ...</p>');
+INSERT INTO `contributers` VALUES (1,'TheFakeVIP','mikeybuchan@hotmail.co.uk','https://github.com/mcb2003','https://www.youtube.com/channel/UCRUCCRK2TY0Ns0MlX0qVhYg','https://twitter.com/BuchanMichael','Michael Connor Buchan','\n<p><strong>TheFakeVIP</strong> was the original creater of this website. He was unsatisfied with the lack of information out there on the internet for blind and visually impaired computer users and saw an opertunity to change that</p>\n<p>In the past, any information pertaining to blind/VI computing on the internet was scattered, not wide spread and far from widely documented. BlindComputing was set up as a result of this, providing one central place for the often overlooked community of blind computer users to get the information they needed.</p>\n<p><strong>And look at where we are now ...</p>',NULL);
 /*!40000 ALTER TABLE `contributers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-05 18:13:44
+-- Dump completed on 2018-04-07 21:59:14
