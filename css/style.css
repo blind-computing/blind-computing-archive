@@ -47,7 +47,6 @@ body,html {
 #content {
 	width: 95%;
 	margin: auto;
-	overflow:auto;
 	padding-top:10px;
 	border-sizing: border-box;
 }
