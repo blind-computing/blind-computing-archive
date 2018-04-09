@@ -173,7 +173,9 @@ function create_contributer_list() {
             if($row->imguri != NULL) {
                 $output = $output.'<img src="'.
                     $row->imguri.
-                    '" class="profile-img-small">';
+                    '" class="profile-img-small" alt="profile picture for '.
+                    $row->username.
+                    '"> ';
             }
                 $output = $output.'<a href="/profile/'.
                 $row->username.
