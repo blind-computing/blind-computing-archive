@@ -169,17 +169,17 @@ function create_contributer_list() {
         $output = '<table class="contributer-list"><strong><tr><td>UserName</td><td>FullName</td></tr></strong>';
        while($row = $results->fetchObject()) {
             $output = $output.
-                '<tr class="table-row-hilight"><td>';
+                '<tr class="table-row-hilight"><td><a href="/profile/'.
+                $row->username.
+                '"> ';
             if($row->imguri != NULL) {
                 $output = $output.'<img src="'.
                     $row->imguri.
                     '" class="profile-img-small" alt="profile picture for '.
                     $row->username.
-                    '"> ';
+                    '."> ';
             }
-                $output = $output.'<a href="/profile/'.
-                $row->username.
-                '" class="profile-img-small"> '.
+                $output = $output.
                 $row->username.
                 '</a></td><td>'.
                 $row->fullName.
