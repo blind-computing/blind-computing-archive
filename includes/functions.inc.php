@@ -80,7 +80,7 @@ function create_video_widget($id, $header = "Video Info")
             $row->published .
             '</td></tr><tr><td><strong>Contributer: </strong></td><td><a href="/profile/' .
             $row->contributer .
-            '" title="View this contributer\'s profile">'.
+            '" title="View this contributer\'s profile"> '.
             $row->contributer .
             '</a></td></tr></table><section>' .
             $row->description .
@@ -154,3 +154,37 @@ function create_article_info($id)
     }
     return $output;
 }
+
+/**
+ * Generates HTML for a list of contributers with an optional search term.
+ *
+ * @param string $searchTerm
+ * @return string
+ */
+function create_contributer_list() {
+    global $db;
+    $results = $db->prepare("select username, fullName, imguri from contributers;");
+    $results->execute([]);
+    if($results->rowCount()) {
+        $output = '<table class="contributer-list"><strong><tr><td>UserName</td><td>FullName</td></tr></strong>';
+       while($row = $results->fetchObject()) {
+            $output = $output.
+                '<tr class="table-row-hilight"><td>';
+            if($row->imguri != NULL) {
+                $output = $output.'<img src="'.
+                    $row->imguri.
+                    '" class="profile-img-small">';
+            }
+                $output = $output.'<a href="/profile/'.
+                $row->username.
+                '">'.
+                $row->username.
+                '</a></td><td>'.
+                $row->fullName.
+                '</td></tr>';
+        }
+        $output = $output.'</table>';
+    }
+    return $output;
+}
+?>
