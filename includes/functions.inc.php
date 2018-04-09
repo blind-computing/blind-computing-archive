@@ -177,7 +177,7 @@ function create_contributer_list() {
             }
                 $output = $output.'<a href="/profile/'.
                 $row->username.
-                '">'.
+                '" class="profile-img-small"> '.
                 $row->username.
                 '</a></td><td>'.
                 $row->fullName.

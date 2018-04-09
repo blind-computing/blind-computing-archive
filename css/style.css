@@ -111,3 +111,28 @@ hr {
 	float:right;
 	display:inline;
 }
+
+.contributer-list {
+	width: 100%;
+	margin: 2px;
+	padding: auto;
+}
+
+.table-row-hilight {
+	height: 20px;
+padding:2px 0px 10px 2px;
+	overflow: show;
+}
+
+.table-row-hilight:hover {
+	background-color: black;
+	color: white;
+}
+
+.profile-img-small {
+	width: 16px;
+	height: 16px;
+	float: left;
+	display: inline;
+	border-radius: 3px;
+}
