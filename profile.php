@@ -24,8 +24,11 @@
           $userResults->execute([$username]);
           if($userResults->rowCount()) {
             $user = $userResults->fetchObject();
-            echo '<aside class="contributer-info"><center><h2 class="contributer-header">'.$user->username.'</h2></center><br>';
-            echo '<hr><table>';
+            echo '<aside class="contributer-info"><center><h2 class="contributer-header">'.$user->username.'</h2>';
+            if($user->imguri != NULL) {
+              echo '<img alt="profile picture for '.$user->username.'." src="'.$user->imguri.'" class="profile-img-sidebar" width="128px" height="128px">';
+            }
+            echo '</center><hr><table>';
             if($user->fullName != NULL) {
               echo '<tr><td><strong>Full Name: </strong></td><td>'.$user->fullName.'</td></tr>';
             }

@@ -136,3 +136,8 @@ padding:2px 0px 10px 2px;
 	display: inline;
 	border-radius: 3px;
 }
+
+.profile-img-sidebar {
+	width: 1px;
+	height: 1px;
+}
