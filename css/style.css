@@ -99,20 +99,20 @@ hr {
 	font-size:18px;
 }
 
-.contributer-info {
+.contributor-info {
 	width: 20%;
 	float: left;
 	display: inline;
 	margin:0px;
 }
 
-.contributer-description {
+.contributor-description {
 	width:80%;
 	float:right;
 	display:inline;
 }
 
-.contributer-list {
+.contributor-list {
 	width: 100%;
 	margin: 2px;
 	padding: auto;
