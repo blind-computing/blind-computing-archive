@@ -6,7 +6,7 @@
         $TITLE = 'Profile: '.$_GET['username'];
       ?>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <meta name="keywords" content="profile contributer author blindcomputing info information <?php echo $_GET['username']; ?>">
+    <meta name="keywords" content="profile contributor author blindcomputing info information <?php echo $_GET['username']; ?>">
     <title>BlindComputing | Profile: <?php echo $_GET['username']; ?></title>
   </head>
     
@@ -16,15 +16,15 @@
     ?>
     <main id="content">
       <?php
-        $contributerError = '<h1>404 - Contributer Not Found</h2><p>Sorry, the contributer you\'re looking for does not appear to exist. Make sure you:</p><ol><li>Provided a username to this page</li><li>Spelled the username correctly</li></ol>';
+        $contributorError = '<h1>404 - Contributer Not Found</h2><p>Sorry, the contributor you\'re looking for does not appear to exist. Make sure you:</p><ol><li>Provided a username to this page</li><li>Spelled the username correctly</li></ol>';
         if(isset($_GET['username'])) {
           $username = $_GET['username'];
           // set up the database query and run it.
-          $userResults = $db->prepare("select * from contributers where username=? limit 1;");
+          $userResults = $db->prepare("select * from contributors where username=? limit 1;");
           $userResults->execute([$username]);
           if($userResults->rowCount()) {
             $user = $userResults->fetchObject();
-            echo '<aside class="contributer-info"><center><h2 class="contributer-header">'.$user->username.'</h2>';
+            echo '<aside class="contributor-info"><center><h2 class="contributor-header">'.$user->username.'</h2>';
             if($user->imguri != NULL) {
               echo '<img alt="profile picture for '.$user->username.'." src="'.$user->imguri.'" class="profile-img-sidebar" width="128px" height="128px">';
             }
@@ -49,16 +49,16 @@
             }
             echo '</table><hr></aside>';
           } else
-            echo $contributerError;
+            echo $contributorError;
         }
       ?>
-      <section id="contributer-description">
+      <section id="contributor-description">
         <?php
           if($user->description != NULL) {
             echo '<h3>Description</h3>';
             echo $user->description;
           } else
-            echo '<p>This contributer has not submitted a description yet.</p>';
+            echo '<p>This contributor has not submitted a description yet.</p>';
         ?>
       </section>
     </main>
