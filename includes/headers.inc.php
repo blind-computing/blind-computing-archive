@@ -3,7 +3,7 @@
         $id = 1;
     }
     include_once("db.connect.inc.php");
-    $results = $db->prepare("select pageTitle,pageDescription,contributer from pages where id=? limit 1;");
+    $results = $db->prepare("select pageTitle,pageDescription,contributor from pages where id=? limit 1;");
     $results->execute([$id]);
     if($results->rowCount()) {
         $row = $results->fetchObject();
@@ -17,8 +17,8 @@
         } else {
             $DESCRIPTION = "A website for blind/visually impared computing related news.";
         }
-        if($row->contributer) {
-            $CONTRIBUTER = $row->contributer;
+        if($row->contributor) {
+            $CONTRIBUTER = $row->contributor;
         } else {
             $CONTRIBUTER = "TheFakeVIP";
         }

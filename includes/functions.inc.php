@@ -16,7 +16,7 @@ function create_resource_list($category, $header = "List of Resources")
     } else {
         $formatted_header = "<h2>" . $header . "</h2>";
     }
-    $results = $db->prepare("select title,description,uri,contributer from pages where category=? order by id asc;");
+    $results = $db->prepare("select title,description,uri,contributor from pages where category=? order by id asc;");
     $results->execute([$category]);
     if ($results->rowCount()) {
         $output = $formatted_header . "<nav><ul>";
@@ -24,7 +24,7 @@ function create_resource_list($category, $header = "List of Resources")
             $output .=
                 $row->title === "-" ?
                     '<hr>':
-                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributer}'>{$row->title}</a></li>";
+                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}'>{$row->title}</a></li>";
         }
         $output .= '</ul></nav>';
     } else {
@@ -66,7 +66,7 @@ function create_video_widget($id, $header = "Video Info")
     } else {
         $formatted_header = "<h3>" . $header . "</h3>";
     }
-    $results = $db->prepare("select published, description, uri, contributer from videos where id=? limit 1");
+    $results = $db->prepare("select published, description, uri, contributor from videos where id=? limit 1");
     $results->execute([$id]);
     $row = $results->fetchObject();
     if ($results->rowCount()) {
@@ -79,9 +79,9 @@ function create_video_widget($id, $header = "Video Info")
             '<table><tr><td><strong>Published on: </strong></td><td>' .
             $row->published .
             '</td></tr><tr><td><strong>Contributer: </strong></td><td><a href="/profile/' .
-            $row->contributer .
-            '" title="View this contributer\'s profile"> '.
-            $row->contributer .
+            $row->contributor .
+            '" title="View this contributor\'s profile"> '.
+            $row->contributor .
             '</a></td></tr></table><section>' .
             $row->description .
             '</section></aside>';
@@ -128,7 +128,7 @@ function create_title($title, $description)
 function create_article_info($id)
 {
     global $db;
-    $results = $db->prepare("select title, published, contributer, editted from articles where id=? limit 1");
+    $results = $db->prepare("select title, published, contributor, editted from articles where id=? limit 1");
     $results->execute([$id]);
     $row = $results->fetchObject();
     if ($results->rowCount()) {
@@ -145,9 +145,9 @@ function create_article_info($id)
                 '</td></tr>';
         }
         $output .= '<tr><td><strong>Author: </strong></td><td><a href="/profile/' .
-            $row->contributer .
-            '" title="View this contributer\'s profile">'.
-            $row->contributer .
+            $row->contributor .
+            '" title="View this contributor\'s profile">'.
+            $row->contributor .
             '</a></td></tr></table><hr></section>';
     } else {
         $output = '<aside class="article-info"><p>Looks like we don\'t have any info on this article. This probably means this page is currently under construction, or the database is down. <strong>Please stand by!</strong></aside>';
@@ -156,17 +156,17 @@ function create_article_info($id)
 }
 
 /**
- * Generates HTML for a list of contributers with an optional search term.
+ * Generates HTML for a list of contributors with an optional search term.
  *
  * @param string $searchTerm
  * @return string
  */
-function create_contributer_list() {
+function create_contributor_list() {
     global $db;
-    $results = $db->prepare("select username, fullName, imguri from contributers;");
+    $results = $db->prepare("select username, fullName, imguri from contributors;");
     $results->execute([]);
     if($results->rowCount()) {
-        $output = '<table class="contributer-list"><strong><tr><td>UserName</td><td>FullName</td></tr></strong>';
+        $output = '<table class="contributor-list"><strong><tr><td>UserName</td><td>FullName</td></tr></strong>';
        while($row = $results->fetchObject()) {
             $output = $output.
                 '<tr class="table-row-hilight"><td><a href="/profile/'.
