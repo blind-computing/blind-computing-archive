@@ -24,7 +24,7 @@ function create_resource_list($category, $header = "List of Resources")
             $output .=
                 $row->title === "-" ?
                     '<hr>':
-                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}'>{$row->title}</a></li>";
+                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}'>{$row->title}</a>.</li>";
         }
         $output .= '</ul></nav>';
     } else {
