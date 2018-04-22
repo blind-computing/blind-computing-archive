@@ -71,7 +71,7 @@ function create_video_widget($id, $header = "Video Info")
     $row = $results->fetchObject();
     if ($results->rowCount()) {
         $output =
-            '<section><iframe class="video-embed" src="' .
+            '<section><iframe style="float:left;" width="60%" height="480" src="' .
             $row->uri .
             '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe></section>' .
             '<aside class="video-info">' .

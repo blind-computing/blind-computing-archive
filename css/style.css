@@ -66,33 +66,21 @@ body,html {
 }
 
 .video-info {
-	display:inline;
-	width:30%;
-	float:right;
+	display: inline;
+	width: 30%;
+	float: right;
 }
 
-
-.feedburnerFeedBlock {
-	background-color:white;
-	color:black;
-}
 
 hr {
-	background-color:black;
-	height:2px;
+	background-color: black;
+	height: 2px;
 	width: 100%;
 }
 
 .headerstyle-hr {
-	background-color:black;
-	height:1px;
-}
-.video-embed {
-	display:inline;
-	overflow:show;
-	width:60%;
-	height:auto;
-	float:left;
+	background-color: black;
+	height: 1px;
 }
 
 .small-header {
