@@ -12,7 +12,7 @@ include("includes/nav.inc.php");
 <main id="content"
 <section>
 <h2>Join The IRC Channel</h2>
-<p>  IRC. It's the number one place for any geek to go if they're looking to chat about practically anything. And with an almost 30 year history, it's no doubt! This page lists our IRC settings to get you chatting in no time!</p>
+<p>  IRC. It's the number one place for any geek to go if they're looking to chat about practically anything. And with an almost 30 year history, it's no surprise! This page lists our IRC settings to get you chatting in no time!</p>
 </section><section>
 <h3>IRC Channel Details</h3>
 <table>
