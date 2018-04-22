@@ -78,7 +78,7 @@ function create_video_widget($id, $header = "Video Info")
             $formatted_header .
             '<table><tr><td><strong>Published on: </strong></td><td>' .
             $row->published .
-            '</td></tr><tr><td><strong>Contributer: </strong></td><td><a href="/profile/' .
+            '</td></tr><tr><td><strong>Contributor: </strong></td><td><a href="/profile/' .
             $row->contributor .
             '" title="View this contributor\'s profile"> '.
             $row->contributor .
