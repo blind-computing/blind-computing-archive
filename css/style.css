@@ -53,6 +53,14 @@ body,html {
 
 .homepageleftcontainer {
     width: 50%;
+    display: inline;
+    float: left;
+}
+
+.homepagerightcontainer {
+    width: 45%;
+    display: inline;
+    float: right;
 }
 
 #navigation {
