@@ -51,6 +51,10 @@ body,html {
 	border-sizing: border-box;
 }
 
+.homepageleftcontainer {
+    width: 50%;
+}
+
 #navigation {
 	margin:10px 0px;
 }
