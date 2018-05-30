@@ -6,3 +6,4 @@ Disallow: /.git
 Disallow: /.gitignore
 Disallow: /LICENSE
 Disallow: /README.MD
+Disallow: /login.php
