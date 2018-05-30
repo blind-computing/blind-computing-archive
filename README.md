@@ -12,7 +12,7 @@ You can visit the blind computing website by [clicking here](https://blindcomput
 
 ## How to Contribute
 
-  If you're a programmer, you're allready in the right place. Currently, the site uses the _master_ branch to get its files,  as the php-write is now complwete. If I decide to rewrite in the future (and if that ever happens, it'll be __long__ in the future) this will change.
+  If you're a programmer, you're allready in the right place. Currently, the site uses the _master_ branch to get its files,  as the php-rewrite is now complete. If I decide to rewrite in the future (and if that ever happens, it'll be __long__ in the future) this will change.
 
 ### List of Branches
 
