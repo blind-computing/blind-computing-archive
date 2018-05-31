@@ -146,7 +146,7 @@ function create_article_info($id)
         }
         $output .= '<tr><td><strong>Author: </strong></td><td><a href="/profile/' .
             $row->contributor .
-            '" title="View this contributor\'s profile">'.
+            '" title="View this contributor\'s profile" target="blank">'.
             $row->contributor .
             '</a></td></tr></table><hr></section>';
     } else {
