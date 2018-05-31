@@ -16,7 +16,7 @@ function create_resource_list($category, $header = "List of Resources")
     } else {
         $formatted_header = "<h2>" . $header . "</h2>";
     }
-    $results = $db->prepare("select title,description,uri,contributor from pages where category=? order by id asc;");
+    $results = $db->prepare("select title,description,uri,contributor,target from pages where category=? order by id asc;");
     $results->execute([$category]);
     if ($results->rowCount()) {
         $output = $formatted_header . "<nav><ul>";
@@ -24,7 +24,7 @@ function create_resource_list($category, $header = "List of Resources")
             $output .=
                 $row->title === "-" ?
                     '<hr>':
-                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}'>{$row->title}</a>.</li>";
+                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}' target='{$row->target}'>{$row->title}</a>.</li>";
         }
         $output .= '</ul></nav>';
     } else {
