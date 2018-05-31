@@ -80,7 +80,7 @@ function create_video_widget($id, $header = "Video Info")
             $row->published .
             '</td></tr><tr><td><strong>Contributor: </strong></td><td><a href="/profile/' .
             $row->contributor .
-            '" title="View this contributor\'s profile"> '.
+            '" title="View this contributor\'s profile" target="blank"> '.
             $row->contributor .
             '</a></td></tr></table><section>' .
             $row->description .
