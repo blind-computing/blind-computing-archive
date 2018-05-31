@@ -23,9 +23,9 @@
         </div>
         <div class="homepagerightcontainer">
           <iframe style="float:left;" width="100%" height="480" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>
-        </div>
         <h2>Latest News</h2>
-        <script src="http://feeds.feedburner.com/Blind-computingBlog?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Blind-computingBlog"></a><br/>Powered by FeedBurner</p> </noscript>
+          <p>Stay up to date with the latest news from Blind Computing by <a target="blank" href="http://blind-computing.blogspot.com">Visiting the blog</a>, <a target="blank" href="https://www.twitter.com/blind_comp">Following us on twitter</a> or <a target="blank" href="https://www.facebook.com/groups/347355422340125/">Joining our facebook group</a>.
+        </div>
       </main>
   </body>
 </html>
