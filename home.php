@@ -24,6 +24,8 @@
         <div class="homepagerightcontainer">
           <iframe style="float:left;" width="100%" height="480" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>
         </div>
+        <h2>Latest News</h2>
+        <script src="http://feeds.feedburner.com/Blind-computingBlog?format=sigpro" type="text/javascript" ></script><noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/Blind-computingBlog"></a><br/>Powered by FeedBurner</p> </noscript>
       </main>
   </body>
 </html>
