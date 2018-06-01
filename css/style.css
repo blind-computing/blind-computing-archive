@@ -154,3 +154,11 @@ padding:2px 0px 10px 2px;
     margin: 0px;
     padding: 15px;
 }
+
+.half-width {
+    border-sizing: border-box;
+    width: 45%;
+    float: left;
+    margin: 0px;
+    padding: 15px;
+}
