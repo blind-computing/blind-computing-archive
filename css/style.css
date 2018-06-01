@@ -1,3 +1,7 @@
+* {
+    border-sizing: border-box;
+}
+
 body,html {
 	margin: 0px;
 	font-family: Helvetica;
@@ -40,8 +44,9 @@ body,html {
 }
 
 .main-header {
-	text-align: center;
-	margin:10px;
+    text-align: center;
+    margin: 10px;
+    width: 100%;
 }
 
 #content {
@@ -140,4 +145,12 @@ padding:2px 0px 10px 2px;
 .profile-img-sidebar {
 	width: 128px;
 	height: 128px;
+}
+
+.third-width {
+    border-sizing: border-box;
+    width: 30%;
+    float: left;
+    margin: 0px;
+    padding: 15px;
 }
