@@ -30,7 +30,7 @@
 
 <h3>Contents</h3>
  
-<ol>
+<ol role="directory">
 <li><a href="#similarities">similarities between both devices</a></li>
 <li><a href="#bntnotes">notes on the braillenote touch</a></li>
 <li><a href="#esynotes">Notes on the esytime</a></li>
