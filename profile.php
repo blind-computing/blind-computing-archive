@@ -44,6 +44,9 @@
               $twitterUsername = substr(parse_url($user->twitter,PHP_URL_PATH),1);
               echo '<tr><td><strong>Twitter: </strong></td><td><a href="'.$user->twitter.'" title="Go to the Twitter Profile for '.$user->username.'">@'.$twitterUsername.'</a></td></tr>';
             }
+            if($user->discordID != NULL && $user->discordName != NULL) {
+              echo '<tr><td><strong>Discord: </strong></td><td>@'.$user->discordName.'#'.$user->discordID.'</a></td></tr>';
+            }
             if($user->youtube != NULL) {
               echo '<tr><td><strong>YouTube: </strong></td><td><a href="'.$user->youtube.'" title="Go to '.$user->username.'\'s YouTube Channel">'.$user->username.'\'s Channel</a></td></tr>';
             }
