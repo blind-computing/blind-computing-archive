@@ -72,22 +72,11 @@ body,html {
 	margin:10px 0px;
 }
 
-#forum_embed {
-	overflow:auto;
-	height:93%;
-	width:82%;
-	float:right;
-	padding:0px;;
-	margin:0px;
-	border-sizing:border-box;
-}
-
 .video-info {
 	display: inline;
-	width: 30%;
+	width: 40%;
 	float: right;
 }
-
 
 hr {
 	background-color: black;
