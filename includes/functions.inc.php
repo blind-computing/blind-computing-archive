@@ -56,7 +56,8 @@ function create_category_page($title, $description, $category, $header = "List o
  *
  * @param $id
  * @param string $header
- * @return string
+* @param boolean use_peertube
+* @return string
  */
 function create_video_widget($id, $header = "Video Info")
 {
@@ -66,14 +67,25 @@ function create_video_widget($id, $header = "Video Info")
     } else {
         $formatted_header = "<h3>" . $header . "</h3>";
     }
-    $results = $db->prepare("select published, description, uri, contributor from videos where id=? limit 1");
+    $results = $db->prepare("select published, description, youtube_id, peertube_id, use_peertube, contributor from videos where id=? limit 1");
     $results->execute([$id]);
     $row = $results->fetchObject();
     if ($results->rowCount()) {
-        $output =
-            '<section><iframe style="float:left;" width="60%" height="480" src="' .
-            $row->uri .
-            '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe></section>' .
+        $output = '<section>';
+        if ($row->youtube_id != NULL && $row->use_peertube != true) {
+          $output .=
+            '<iframe style="float:left;" width="60%" height="360" src="https://www.youtube-nocookie.com/embed/' .
+            $row->youtube_id .
+            '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>';
+        } else if ($row->peertube_id != NULL) {
+          $output = $output.
+            '<iframe style="float:left;" width="60%" height="360" sandbox="allow-same-origin allow-scripts" src="https://peertube.linuxrocks.online/videos/embed/' .
+            $row->peertube_id .
+            '" frameborder="0" allowfullscreen>Loading ...</iframe>';
+        } else {
+          die("Error: No video ID provided in database!");
+        }
+        $output = $output.'</section>' .
             '<aside class="video-info">' .
             $formatted_header .
             '<table><tr><td><strong>Published on: </strong></td><td>' .
@@ -98,6 +110,7 @@ function create_video_widget($id, $header = "Video Info")
  * @param $description
  * @param $id
  * @param string $header
+* @param boolean use_peertube
  * @return string
  */
 function create_video_page($title, $description, $id, $header = "Video Info")
