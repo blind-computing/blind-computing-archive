@@ -3,7 +3,7 @@
 }
 
 body,html {
-	margin: 0px;
+	margin: 0;
 	font-family: Helvetica;
 	background-color: white;
 	width: 100%;
@@ -11,8 +11,8 @@ body,html {
 }
 
 .navbar {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
 	overflow: hidden;
 	background-color: #ebebeb;
@@ -31,7 +31,7 @@ body,html {
   	padding: 14px 16px;
   	text-decoration: none;
   	font-size: 12pt;
-  	margin: 0px;
+  	margin: 0;
 }
 
 .navItem:hover, .activePage{
@@ -58,22 +58,19 @@ body,html {
 
 .homepageleftcontainer {
     width: 50%;
-    display: inline;
     float: left;
 }
 
 .homepagerightcontainer {
     width: 45%;
-    display: inline;
     float: right;
 }
 
 #navigation {
-	margin:10px 0px;
+	margin: 10px 0;
 }
 
 .video-info {
-	display: inline;
 	width: 40%;
 	float: right;
 }
@@ -96,26 +93,23 @@ hr {
 .contributor-info {
 	width: 20%;
 	float: left;
-	display: inline;
-	margin:0px;
+	margin: 0;
 }
 
 .contributor-description {
 	width:80%;
 	float:right;
-	display:inline;
 }
 
 .contributor-list {
 	width: 100%;
 	margin: 2px;
-	padding: auto;
 }
 
 .table-row-hilight {
 	height: 20px;
-padding:2px 0px 10px 2px;
-	overflow: show;
+padding: 2px 0 10px 2px;
+	overflow: visible;
 }
 
 .table-row-hilight:hover {
@@ -127,7 +121,6 @@ padding:2px 0px 10px 2px;
 	width: 16px;
 	height: 16px;
 	float: left;
-	display: inline;
 	border-radius: 3px;
 }
 
@@ -140,7 +133,7 @@ padding:2px 0px 10px 2px;
     border-sizing: border-box;
     width: 30%;
     float: left;
-    margin: 0px;
+    margin: 0;
     padding: 15px;
 }
 
@@ -148,6 +141,6 @@ padding:2px 0px 10px 2px;
     border-sizing: border-box;
     width: 45%;
     float: left;
-    margin: 0px;
+    margin: 0;
     padding: 15px;
 }
