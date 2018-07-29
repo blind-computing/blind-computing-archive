@@ -20,6 +20,7 @@ Branch | Description
 ------ | -----------
 master | _currently_ the main branch of the project. It holds the new, rewritten version of the site.
 mysql-file | contains an __sql dump__ of the database. I try to keep this up-to-date, but it doesn't always happen, so if you find something on the site that's not in the .sql file, please __let me know by opening an issue or via [email](mailto:mikeybuchan@hotmail.co.uk)__.
+nginx-conf | contains __most__ of the nginx configuration files used to run the site.
 old-version | Holds the extremely old PHP version of the site before the first rewrite. This is a __protected branch__ and should _not_ be tampered with.
 rewrite-2018-01-9 | The old __bash based__ version of the site. This is also a protected branch that should _not_ be messed with.
 
