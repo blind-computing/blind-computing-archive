@@ -1,0 +1,54 @@
+server {
+
+        root /var/www/blind-computing;
+        index home.php index.php index.html index.htm index.nginx-debian.html;
+
+        server_name blindcomputing.org www.blindcomputing.org;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    location ~ /\.git {
+        deny all;
+    }
+
+    include redirects.conf;
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/blindcomputing.org/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/blindcomputing.org/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.blindcomputing.org) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = blindcomputing.org) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        server_name blindcomputing.org www.blindcomputing.org;
+    return 404; # managed by Certbot
+
+
+
+
+}
