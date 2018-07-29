@@ -16,8 +16,8 @@ You can visit the blind computing website by [clicking here](https://blindcomput
 
 ### List of Branches
 
-Branch | Description
------- | -----------
+__Branch__ | __Description__
+---------- | ---------------
 master | _currently_ the main branch of the project. It holds the new, rewritten version of the site.
 mysql-file | contains an __sql dump__ of the database. I try to keep this up-to-date, but it doesn't always happen, so if you find something on the site that's not in the .sql file, please __let me know by opening an issue or via [email](mailto:mikeybuchan@hotmail.co.uk)__.
 nginx-conf | contains __most__ of the nginx configuration files used to run the site.
