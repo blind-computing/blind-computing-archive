@@ -24,7 +24,7 @@
         </div></div>
         <div class="halfwidth">
           <div class="padinner">
-            <iframe style="float:left;" width="100%" height="480" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>
+            <iframe style="float:left; width: 44vw; height: 360px;" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>
             <h2>Latest News</h2>
             <p>Stay up to date with the latest news from Blind Computing by <a target="blank" href="http://blind-computing.blogspot.com">Visiting the blog</a>, <a target="blank" href="https://www.twitter.com/blind_comp">Following us on twitter</a> or <a target="blank" href="https://www.facebook.com/groups/347355422340125/">Joining our facebook group</a>.
         </div></div>
