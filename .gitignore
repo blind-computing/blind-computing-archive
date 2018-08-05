@@ -2,6 +2,10 @@
 test.*
 # Don't update the database file, as it points to the beta database
 includes/db.connect.inc.php
-.idea
-# Don't track openid.php, as this is a library
-includes/openid.php
+
+composer.phar
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+x# composer.lock
