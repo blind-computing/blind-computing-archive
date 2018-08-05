@@ -57,16 +57,6 @@ body,html {
     border-sizing: border-box;
 }
 
-.homepageleftcontainer {
-    width: 50%;
-    float: left;
-}
-
-.homepagerightcontainer {
-    width: 45%;
-    float: right;
-}
-
 #navigation {
     margin: 10px 0;
 }
@@ -132,16 +122,23 @@ padding: 2px 0 10px 2px;
 
 .third-width {
     border-sizing: border-box;
-    width: 30%;
+    -moz-border-sizing: border-box;
+    -webkit-border-sizing: border-box;
+    width: 33.33%;
+    width: calc(100% / 3);
     float: left;
     margin: 0;
-    padding: 15px;
 }
 
-.half-width {
+.padinner {
+    padding: 3.5vw;
+}
+
+.halfwidth {
     border-sizing: border-box;
-    width: 45%;
+    -moz-border-sizing: border-box;
+    -webkit-border-sizing: border-box;
+    width: 50%;
     float: left;
     margin: 0;
-    padding: 15px;
 }
