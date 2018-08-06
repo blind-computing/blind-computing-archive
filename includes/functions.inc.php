@@ -188,7 +188,7 @@ function create_contributor_list() {
             if($row->imguri != NULL) {
                 $output = $output.'<img src="'.
                     $row->imguri.
-                    '" class="profile-img-small" aria-labelledby="profile picture for '.
+                    '" class="profile-img-small" aria-label="profile picture for '.
                     $row->username.
                     '."> ';
             }

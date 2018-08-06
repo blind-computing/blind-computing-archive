@@ -26,7 +26,7 @@
             $user = $userResults->fetchObject();
             echo '<aside class="contributor-info"><center><h2 class="contributor-header">'.$user->username.'</h2>';
             if($user->imguri != NULL) {
-              echo '<img alt="profile picture for '.$user->username.'." src="'.$user->imguri.'" class="profile-img-sidebar" width="128px" height="128px">';
+              echo '<img aria-label="profile picture for '.$user->username.'." src="'.$user->imguri.'" class="profile-img-sidebar" width="128px" height="128px">';
             }
             echo '</center><hr><table>';
             if($user->fullName != NULL) {
