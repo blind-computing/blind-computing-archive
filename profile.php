@@ -56,6 +56,7 @@
         }
       ?>
       <section id="contributor-description">
+        <div class="padinner">
         <?php
           if($user->description != NULL) {
             echo '<h3>Description</h3>';
@@ -63,6 +64,7 @@
           } else
             echo '<p>This contributor has not submitted a description yet.</p>';
         ?>
+        </div>
       </section>
     </main>
   </body>
