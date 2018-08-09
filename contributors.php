@@ -12,7 +12,8 @@ include_once("includes/functions.inc.php");
     $(document).ready(function() {
         //initialise data tables
         $('.dataTable').DataTable( {
-            "aaSorting": []
+            "aaSorting": [],
+            "pageLength": 25
         });
     })
 </script>
