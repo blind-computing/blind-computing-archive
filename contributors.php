@@ -6,6 +6,16 @@ $id = 28;
 include_once("includes/headers.inc.php");
 include_once("includes/functions.inc.php");
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //initialise data tables
+        $('.dataTable').DataTable( {
+            "aaSorting": []
+        });
+    })
+</script>
 </head><body>
 <?php
 include("includes/nav.inc.php");

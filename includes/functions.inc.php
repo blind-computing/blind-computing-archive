@@ -179,7 +179,7 @@ function create_contributor_list() {
     $results = $db->prepare("select username, fullName, imguri from contributors;");
     $results->execute([]);
     if($results->rowCount()) {
-        $output = '<table class="contributor-list"><strong><tr><td>UserName</td><td>FullName</td></tr></strong>';
+        $output = '<table class="contributor-list dataTable"><thead><tr><th>UserName</th><th>FullName</th></tr></thead><tbody>';
        while($row = $results->fetchObject()) {
             $output = $output.
                 '<tr class="table-row-hilight"><td><a href="/profile/'.
@@ -198,7 +198,7 @@ function create_contributor_list() {
                 $row->fullName.
                 '</td></tr>';
         }
-        $output = $output.'</table>';
+        $output = $output.'</tbody></table>';
     }
     return $output;
 }
