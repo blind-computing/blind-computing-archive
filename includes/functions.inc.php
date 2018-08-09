@@ -74,12 +74,12 @@ function create_video_widget($id, $header = "Video Info")
         $output = '<section>';
         if ($row->youtube_id != NULL && $row->use_peertube != true) {
           $output .=
-            '<iframe style="float:left;" width="60%" height="360" src="https://www.youtube-nocookie.com/embed/' .
+            '<iframe style="float:left;" width="55%" height="360" src="https://www.youtube-nocookie.com/embed/' .
             $row->youtube_id .
             '" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>';
         } else if ($row->peertube_id != NULL) {
           $output = $output.
-            '<iframe style="float:left;" width="60%" height="360" sandbox="allow-same-origin allow-scripts" src="https://peertube.linuxrocks.online/videos/embed/' .
+            '<iframe style="float:left;" width="55%" height="360" sandbox="allow-same-origin allow-scripts" src="https://peertube.linuxrocks.online/videos/embed/' .
             $row->peertube_id .
             '" frameborder="0" allowfullscreen>Loading ...</iframe>';
         } else {
