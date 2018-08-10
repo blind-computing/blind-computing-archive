@@ -27,7 +27,7 @@
             $user = $userResults->fetchObject();
             echo '<header class="profile-info">';
             if($user->imguri != NULL) {
-              echo '<img class="profile-img" aria-label="Profile picture for '.$user->username.'." src="'.$user->imguri.'">';
+              echo '<img class="profile-img" width="15%" aria-label="Profile picture for '.$user->username.'." src="'.$user->imguri.'">';
             }
             echo '<h2 class="profile-header">'.$user->username.'\'s Profile</h2>';
             if($user->fullName != NULL) {
