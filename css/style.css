@@ -81,15 +81,34 @@ hr {
     font-size:18px;
 }
 
-.contributor-info {
-    width: 20%;
-    float: left;
+.profile-info {
+    width: 100%;
     margin: 0;
+    margin-bottom: 4em;
 }
 
-.contributor-description {
-    width:80%;
-    float:right;
+.profile-header {
+    font-size: 2em;
+}
+
+.profile-subheader {
+    font-size: 1.5em;
+}
+
+.profile-information {
+    width: 100%;
+}
+
+.profile-th {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 20%;
+    padding-left: 0.5em;
+}
+
+.profile-description {
+    width: 95%;
 }
 
 .contributor-list {
@@ -115,9 +134,10 @@ padding: 2px 0 10px 2px;
     border-radius: 3px;
 }
 
-.profile-img-sidebar {
-    width: 128px;
-    height: 128px;
+.profile-img {
+    width: 15%;
+    float: left;
+    margin:0.5em 2em 1em 0.5em;
 }
 
 .third-width {
