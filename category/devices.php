@@ -10,9 +10,10 @@ include_once("../includes/headers.inc.php");
 include("../includes/nav.inc.php");
 ?>
 <main id="content">
-<?php include_once("../includes/functions.inc.php"); ?>
-<h2>Devices</h2
-<p>Whether it's braille notetakers, embossers, mainstream accessible gadgets or otherwise, this page covers a range of devices that can help out the blind and visually impaired. It includes thoughts, reviews, hand's on, rambling and much more!</p>
+<?php 
+  include_once("../includes/functions.inc.php");
+  echo create_title("Devices", "<p>Whether it's braille notetakers, embossers, mainstream accessible gadgets or otherwise, this page covers a range of devices that can help out the blind and visually impaired. It includes thoughts, reviews, hand's on, rambling and much more!</p>");
+?>
 <h2>List of Resources</h2>
 <div class="third-width">
 <div class="padinner">
