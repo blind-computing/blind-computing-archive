@@ -17,10 +17,14 @@ function create_resource_list($category, $header = "List of Resources")
     if ($results->rowCount()) {
         $output = $formatted_header . "<nav><ul>";
         while ($row = $results->fetchObject()) {
+            $feed_text = $row->feed != NULL ?
+              "[<a href='{$row->feed}' title='Direct link to the RSS feed'>RSS</a>]":
+              "";
             $output .=
                 $row->title === "-" ?
                     '<hr>':
-                    "<li> {$row->description} <a href='{$row->uri}' title='credit: {$row->contributor}' target='{$row->target}'>{$row->title}</a>.</li>";
+                    "<li> {$row->description} 
+                      <a href='{$row->uri}' title='credit: {$row->contributor}' target='{$row->target}'>{$row->title}</a> {$feed_text}.</li>";
         }
         $output .= '</ul></nav>';
     } else {
