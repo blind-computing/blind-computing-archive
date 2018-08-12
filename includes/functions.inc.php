@@ -129,7 +129,7 @@ function create_video_page($title, $description, $id, $header = "Video Info")
  */
 function create_title($title, $description)
 {
-    return "<h2>{$title}</h2><section id='description'>{$description}</section> ";
+    return "<section id='description'><details open><summary><h2>{$title}</h2></summary>{$description}</details></section>\n";
 }
 
 /**
