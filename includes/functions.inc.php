@@ -11,12 +11,8 @@ require_once("db.connect.inc.php");
 function create_resource_list($category, $header = "List of Resources")
 {
     global $db;
-    if ($header === "") {
-        $formatted_header = "";
-    } else {
-        $formatted_header = "<h2>" . $header . "</h2>";
-    }
-    $results = $db->prepare("select title,description,uri,contributor,target from pages where category=? order by id asc;");
+    $formatted_header = $header === ""?"":"<h2>" . $header . "</h2>";
+    $results = $db->prepare("select title,description,uri,feed,contributor,target from pages where category=? order by id asc;");
     $results->execute([$category]);
     if ($results->rowCount()) {
         $output = $formatted_header . "<nav><ul>";
