@@ -18,7 +18,7 @@ function create_resource_list($category, $header = "List of Resources")
         $output = $formatted_header . "<nav><ul>";
         while ($row = $results->fetchObject()) {
             $feed_text = $row->feed != NULL ?
-              "[<a href='{$row->feed}' title='Direct link to the RSS feed'>RSS</a>]":
+              "[<a href='{$row->feed}' title='Direct link to the RSS feed' target='{$row->target}'>RSS</a>]":
               "";
             $output .=
                 $row->title === "-" ?
