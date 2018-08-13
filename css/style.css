@@ -139,7 +139,6 @@ padding: 2px 0 10px 2px;
     float: left;
     margin:0.5em 2em 1em 0.5em;
 }
-
 .third-width {
     border-sizing: border-box;
     -moz-border-sizing: border-box;
@@ -161,4 +160,10 @@ padding: 2px 0 10px 2px;
     width: 50%;
     float: left;
     margin: 0;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
 }
