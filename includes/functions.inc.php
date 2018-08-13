@@ -88,9 +88,11 @@ function create_video_widget($id, $header = "Video Info")
         $output = $output.'</section>' .
             '<aside class="video-info">' .
             $formatted_header .
-            '<table><tr><td><strong>Published on: </strong></td><td>' .
+            '<table><tr><th>Published on: </th><td><time datetime="' .
             $row->published .
-            '</td></tr><tr><td><strong>Contributor: </strong></td><td><a href="/profile/' .
+            '">' .
+            $row->published .
+            '</time></td></tr><tr><th>Contributor: </th><td><a href="/profile/' .
             $row->contributor .
             '" title="View this contributor\'s profile" target="blank"> '.
             $row->contributor .
@@ -148,16 +150,20 @@ function create_article_info($id)
         $output =
             '<section class="article-info"><h2>' .
             $row->title .
-            '</h2><table><tr><td><strong>Published on: </strong></td><td>' .
+            '</h2><table><tr><th>Published on: </th><td><time datetime="' .
             $row->published .
-            '</td></tr>';
+            '">' .
+            $row->published .
+            '</time></td></tr>';
         if ($row->editted != null) {
             $output .=
-                '<tr><td><strong>Editted on: </strong></td><td>' .
+                '<tr><th>Editted on: </th><td><time datetime="' .
                 $row->editted .
-                '</td></tr>';
+                '">' .
+                $row->editted .
+                '</time></td></tr>';
         }
-        $output .= '<tr><td><strong>Author: </strong></td><td><a href="/profile/' .
+        $output .= '<tr><th>Author: </th><td><a href="/profile/' .
             $row->contributor .
             '" title="View this contributor\'s profile" target="blank">'.
             $row->contributor .
