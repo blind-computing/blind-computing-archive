@@ -61,6 +61,14 @@ body,html {
     margin: 10px 0;
 }
 
+.hlogo {
+    max-width: 45v%
+    text-align: center;
+    border: none;
+    margin: 0;
+    margin-bottom: 1.5em;
+}
+
 .video-info {
     width: 40%;
     float: right;
