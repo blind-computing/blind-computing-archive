@@ -1,4 +1,4 @@
-<p align="center"><img src="logo/horizontal.png" alt="blind-computing" height="100px"></p>
+![the blind computing logo](logo/horizontal.png)
 
 # blind-computing
 A website devoted to exposing facts and information about computing in the blind/vi world
