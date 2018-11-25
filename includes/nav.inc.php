@@ -16,7 +16,7 @@ if(isset($title)) {
     // get all the main pages.
     $pages = page::get_pages_from_category("main");
     if($pages != null) {
-        foreach($page as $pages) {
+        foreach($pages as $page) {
             echo $page->get_navlink();
         }
     } else {
