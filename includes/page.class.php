@@ -47,6 +47,8 @@
         
         // this function returns html for a navigation link for the main navbar.
         public function get_navlink() {
+            global $title;
+            
             $output = "<a href='{$this->uri}' title='{$this->pageDescription}'><li class='navItem ";
             if(strtolower($title) == strtolower($this->navTitle)) {
                 $output .= "activePage";
