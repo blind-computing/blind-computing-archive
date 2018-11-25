@@ -12,6 +12,8 @@
         public $uri;
         public $tags;
         public $category;
+        public $position;
+        public $separatorAfter;
         
         // this function returns all page object from a specific category.
         public static function get_pages_from_category(string $category) {
@@ -19,7 +21,7 @@
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT * FROM pages WHERE category=?;");
+            $page_results = $db->prepare("SELECT * FROM pages WHERE category=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([strtolower($category)]) && $page_results->rowCount()) {
                 // get the objects.
                 $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
@@ -35,7 +37,7 @@
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT * FROM pages WHERE id=?;");
+            $page_results = $db->prepare("SELECT * FROM pages WHERE id=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([$id]) && $page_results->rowCount()) {
                 // get the object.
                 $page = $page_results->fetchObject("page");
@@ -49,11 +51,14 @@
         public function get_navlink() {
             global $title;
             
-            $output = "<a href='{$this->uri}' title='{$this->pageDescription}'><li class='navItem ";
+            $output = "<a href='{$this->uri}' title='{$this->navTooltip}'><li class='navItem ";
             if(strtolower($title) == strtolower($this->navTitle)) {
                 $output .= "activePage";
             }
             $output .= "'>{$this->navTitle}</li></a>";
+            if($this->separatorAfter) {
+                $output .= "<strong>  |  </strong>";
+            }
             return $output;
         }
     }
