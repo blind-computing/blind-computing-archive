@@ -14,7 +14,7 @@ if(isset($title)) {
 <nav><ul class="navbar">
 <?php
     // get all the main pages.
-    $pages = page::get_pages_from_category("main");
+    $pages = page::get_pages_from_category_id(0);
     if($pages != null) {
         foreach($pages as $page) {
             echo $page->get_navlink();

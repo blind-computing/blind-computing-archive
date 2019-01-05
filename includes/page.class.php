@@ -11,17 +11,19 @@
         public $pageDescription;
         public $uri;
         public $tags;
-        public $category;
         public $position;
         public $separatorAfter;
+        public $categoryID;
+        public $categoryName;
+        public $categoryMetadata;
         
         // this function returns all page object from a specific category.
-        public static function get_pages_from_category(string $category) {
+        public static function get_pages_from_category_id($category) {
             // make the db global.
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT * FROM pages WHERE category=? ORDER BY position ASC;");
+            $page_results = $db->prepare("SELECT pages.*,categories.categoryName,categories.categoryMetadata FROM pages,categories WHERE pages.categoryID=? AND categories.id=pages.categoryID ORDER BY position ASC;");
             if($query_successful = $page_results->execute([strtolower($category)]) && $page_results->rowCount()) {
                 // get the objects.
                 $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
@@ -37,7 +39,7 @@
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT * FROM pages WHERE id=? ORDER BY position ASC;");
+            $page_results = $db->prepare("SELECT pages.*,categories.categoryName,categories.categoryMetadata FROM pages,categories WHERE pages.id=? AND pages.categoryID=categories.id LIMIT 1;");
             if($query_successful = $page_results->execute([$id]) && $page_results->rowCount()) {
                 // get the object.
                 $page = $page_results->fetchObject("page");
