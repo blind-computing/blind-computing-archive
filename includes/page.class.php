@@ -17,8 +17,14 @@
         public $separatorAfter;
         public $categoryID;
         public $metadata;
+        public $data;
         
-        // this function returns all page objects from a specific category.
+        // this is the constructor for the page class.
+            public function __construct() {
+            $this->data = json_decode($this->metadata);
+        }
+        
+    // this function returns all page objects from a specific category.
         public static function get_pages_from_category_id($category) {
             // make the db global.
             global $db;
