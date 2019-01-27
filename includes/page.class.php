@@ -90,5 +90,25 @@
             
             return $output;
         }
+
+        // this function returns headers for a given page that change based on the page's metadata.
+        // This will be echoed in the <head> tag of the html.
+        public function get_header() {
+            // output the page title.
+            $output = "<title>" . $this->pageTitle . " | " . ucwords(site::name) . "</title>
+                <meta charset='UTF-8'>
+                <meta name='description' content='" . $this->pageDescription . "'>
+                <meta name='keywords' content='" . $this->tags . "'>";
+            // depending on whether this is a page that has a specific contributor, set the author piece of metadata accordingly.
+            if(isset($this->data->contributor)) {
+                $output .= "<meta name='author' content='" . $this->data->contributor . "'>\n";
+            } else {
+                $output .= "<meta name='author' content='The Blind Computing Team'>\n";
+            }
+            $output .= "<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+               <link rel='stylesheet' type='text/css' href='/css/style.css'>";
+            
+            return $output;
+        }
     }
 ?>
