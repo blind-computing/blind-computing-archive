@@ -4,8 +4,16 @@
     
 // This site class holds many of the important properties and methods, all of which are static, that are essential for various things.
     class site {
-        public static $name = "Blind Computing";
-        public static $version = "4.0";
-        public static $domain = "https://blindcomputing.org";
+        const name = "Blind Computing";
+        const version = "4.0";
+        const domain = "https://blindcomputing.org";
+
+        // this function converts a standard name string into a url safe string.
+        public static function strtourl(string $str) {
+            return strtolower(
+                str_replace("/", "-",
+                str_replace(" ", "-",
+                str_replace("-", "_", $str))));
+        }
     }
 ?>
