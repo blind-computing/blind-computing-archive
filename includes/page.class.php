@@ -57,11 +57,9 @@
         }
         
         // this function returns html for a navigation link for the main navbar.
-        public function get_navlink() {
-            global $title;
-            
+        public function get_navlink(bool $is_active_page = false) {
             $output = "<a href='" . $this->get_uri . "' title='{$this->navTooltip}'><li class='navItem ";
-            if(strtolower($title) == strtolower($this->navTitle)) {
+            if($is_active_page) {
                 $output .= "activePage";
             }
             $output .= "'>{$this->navTitle}</li></a>";
@@ -72,9 +70,25 @@
         }
         
         // this function returns a URI for a given page.
-        public function get_uri() {
-            // currently not implemented.
-            return "";
+        public function get_uri(bool $local = true) {
+            // If we're dealing with a local uri, the returned string will not include the domain name or any subdomains.
+            if(!$local) {
+                $output = site::domain . "/";
+            } else {
+                $output = "/";
+            }
+            // the next part of the url depends on the page's type.
+            if($this->type === "main") {
+                $output .= "";
+            } else if($this->type == "software") {
+                $output .= "article/";
+            } else {
+                $output .= $this->type . "/";
+            }
+            // finally, urlencode the title of the page and add it to the end.
+            $output .= urlencode(site::strtourl($this->navTitle));
+            
+            return $output;
         }
     }
 ?>
