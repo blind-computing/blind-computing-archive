@@ -5,7 +5,8 @@
 
 <header id="headerbar">
 <h1 class="main-header">
-Blind Computing<?php 
+<img style="margin-top: 0.5em; display: inline; height: 1.3em;" src="/logo/horizontal.png" alt="Blind Computing" role="text" title="Credit: @reallinfo on Github.">
+<?php 
 if(isset($title)) {
     echo " | " . $title;
 } ?>
