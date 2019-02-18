@@ -78,13 +78,7 @@
                 $output = "/";
             }
             // the next part of the url depends on the page's type.
-            if($this->type === "main") {
-                $output .= "";
-            } else if($this->type == "software") {
-                $output .= "article/";
-            } else {
-                $output .= $this->type . "/";
-            }
+            $output .= site::page_type_mappings[$this->type];
             // finally, urlencode the title of the page and add it to the end.
             $output .= urlencode(site::strtourl($this->navTitle));
             
