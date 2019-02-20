@@ -24,7 +24,7 @@
           <section>
             <h2>Note on Browser Support</h2>
           <p>If you're on Linux or Windows, we recommend you view this site in mozilla firefox, found at <a href="https://firefox.com/download">the firefox download page</a>. Other browsers might work, but in general, firefox is more accessible anyway.</p>
-            <p> On a mac or iOS device, the built-in Safari browser seems to work fine as well. Chrome appears to be the second choice.</p>
+            <p> On a mac or iOS device, the built-in Safari browser seems to work fine as well. <a href=https://www.google.com/chrome/"" title="Go to the Google Chrome Download page">Chrome</a> appears to be the second choice.</p>
           </section>
         </div></div>
         <div class="halfwidth">
