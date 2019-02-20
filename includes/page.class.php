@@ -49,7 +49,7 @@ require_once 'globals.inc.php';
             
             // create the query.
             $page_results = $db->prepare("SELECT * FROM pages WHERE type='main' OR type='category' ORDER BY position ASC;");
-            if($query_successful = $page_results->execute([$type]) && $page_results->rowCount()) {
+            if($query_successful = $page_results->execute([]) && $page_results->rowCount()) {
                 // get the objects.
                 $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
                 return $pages;
