@@ -21,11 +21,11 @@
             <h2>how to contribute</h2>
             <p>Please see the <a href="/contributing.php">contributing page</a> for more information.</p>
           </section>
-          <section>
-            <h2>Note on Browser Support</h2>
+          <section><details>
+            <summary><h2>Note on Browser Support</h2></summary>
           <p>If you're on Linux or Windows, we recommend you view this site in mozilla firefox, found at <a href="https://firefox.com/download">the firefox download page</a>. Other browsers might work, but in general, firefox is more accessible anyway.</p>
-            <p> On a mac or iOS device, the built-in Safari browser seems to work fine as well. <a href=https://www.google.com/chrome/"" title="Go to the Google Chrome Download page">Chrome</a> appears to be the second choice.</p>
-          </section>
+          <p> On a mac or iOS device, the built-in Safari browser seems to work fine as well. <a href=https://www.google.com/chrome/"" title="Go to the Google Chrome Download page">Chrome</a> appears to be the second choice.</p>
+          </details></section>
         </div></div>
         <div class="halfwidth">
           <div class="padinner">
