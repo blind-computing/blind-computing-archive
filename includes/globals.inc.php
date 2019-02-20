@@ -13,9 +13,10 @@
             "category" => "category/",
             "article" => "article/",
             "video" => "video/",
-            "software-showcase" => "software/",
-            "forum-thread" => "thread",
-            "project" => "project/"
+            "software-review" => "software/",
+            "thread" => "thread/",
+            "software-:w
+            project" => "project/"
         );
 
         // this function converts a standard name string into a url safe string.
