@@ -1,3 +1,4 @@
+/* Everything has a border-sizing of border-box so that borders are accounted for in the width and height of elements. */
 * {
     border-sizing: border-box;
 }
@@ -8,7 +9,7 @@ body,html {
     background-color: white;
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 14pt;
 }
 
 .navbar {
@@ -25,14 +26,15 @@ body,html {
     font-weight: bold;
 }
 
+/* For each navigation item on the main navbar. */
 .navItem {
     display: inline-block;
     color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 12pt;
-      margin: 0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.85em;
+    margin: 0;
 }
 
 .navItem:hover, .activePage{
@@ -46,12 +48,13 @@ body,html {
 
 .main-header {
     text-align: center;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
 #content {
-    width: 95%;
+    width: 95vw;
     margin: auto;
     padding-top:10px;
     border-sizing: border-box;
@@ -62,7 +65,7 @@ body,html {
 }
 
 .hlogo {
-    max-width: 45v%
+    max-width: 45%
     text-align: center;
     border: none;
     margin: 0;
@@ -86,7 +89,7 @@ hr {
 }
 
 .small-header {
-    font-size:18px;
+    font-size: 1.1em;
 }
 
 .profile-info {
@@ -126,7 +129,7 @@ hr {
 
 .table-row-hilight {
     height: 20px;
-padding: 2px 0 10px 2px;
+    padding: 2px 0 10px 2px;
     overflow: visible;
 }
 
@@ -135,9 +138,15 @@ padding: 2px 0 10px 2px;
     color: white;
 }
 
+th {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+}
+
 .profile-img-small {
-    width: 16px;
-    height: 16px;
+    width: 1em;
+    height: 1em;
     float: left;
     border-radius: 3px;
 }
@@ -147,6 +156,7 @@ padding: 2px 0 10px 2px;
     float: left;
     margin:0.5em 2em 1em 0.5em;
 }
+
 .third-width {
     border-sizing: border-box;
     -moz-border-sizing: border-box;
@@ -155,10 +165,6 @@ padding: 2px 0 10px 2px;
     width: calc(100% / 3);
     float: left;
     margin: 0;
-}
-
-.padinner {
-    padding: 2.5vw;
 }
 
 .half-width {
@@ -170,8 +176,6 @@ padding: 2px 0 10px 2px;
     margin: 0;
 }
 
-th {
-    font-weight: bold;
-    font-size: 1.2em;
-    text-align: left;
+.padinner {
+    padding: 2.5vw;
 }
