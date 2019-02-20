@@ -1,6 +1,8 @@
 <?php
     // include the database.
     require_once 'db.connect.inc.php';
+    // Also include the globals file.
+require_once 'globals.inc.php';
     // this class handles the display of page links to any page on the site.
     class page {
         // property definitions.
