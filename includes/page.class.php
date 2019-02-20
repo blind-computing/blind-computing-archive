@@ -114,9 +114,11 @@ require_once 'globals.inc.php';
             }
             // the next part of the url depends on the page's type.
             $output .= site::page_type_mappings[$this->type];
-            // finally, urlencode the title of the page and add it to the end.
-            $output .= urlencode(site::strtourl($this->navTitle));
-            
+            // Since the Home page requires nothing but '/', only urlencode the name and add it to the end if this is not the Home page.
+            if($this->pageTitle !== "Home") {
+                // urlencode the title of the page and add it to the end.
+                $output .= urlencode(site::strtourl($this->navTitle));
+            }
             return $output;
         }
 
