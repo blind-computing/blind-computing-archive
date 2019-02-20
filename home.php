@@ -29,7 +29,7 @@
         </div></div>
         <div class="halfwidth">
           <div class="padinner">
-            <img aria-label="The Blind Computing Logo" title="Credit: @reallinfo on Github" class="hlogo" src="logo/horizontalv2.png" style="width:45%;">
+            <img alt="The Blind Computing Logo" title="Credit: @reallinfo on Github" class="hlogo" src="logo/horizontalv2.png" style="width:45%;">
             <section aria-label="Video: An introduction to Blind Computing"><iframe style="float:left; width: 44vw; height: 360px;" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0" allow="encrypted-media" allowfullscreen="yes">Loading...</iframe></section>
             <section aria-labelledby="latest-news-heading">
             <h2 id="latest-news-heading">Latest News</h2>
