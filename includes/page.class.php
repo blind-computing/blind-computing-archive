@@ -32,7 +32,7 @@ require_once 'globals.inc.php';
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT *FROM pages WHERE type=? ORDER BY position ASC;");
+            $page_results = $db->prepare("SELECT * FROM pages WHERE type=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([$type]) && $page_results->rowCount()) {
                 // get the objects.
                 $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
@@ -41,14 +41,31 @@ require_once 'globals.inc.php';
                 return null;
             }
         }
+
+        // this function returns all page objects that should be on the global site navigation bar.
+        public static function get_nav_pages() {
+            // make the db global.
+            global $db;
             
+            // create the query.
+            $page_results = $db->prepare("SELECT * FROM pages WHERE type='main' OR type='category' ORDER BY position ASC;");
+            if($query_successful = $page_results->execute([$type]) && $page_results->rowCount()) {
+                // get the objects.
+                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
+                return $pages;
+            } else {
+                return null;
+            }
+        }
+
+        
         // this function returns all page objects from a specific category.
         public static function get_pages_from_category_id($category) {
             // make the db global.
             global $db;
             
             // create the query.
-            $page_results = $db->prepare("SELECT *FROM pages WHERE categoryID=? ORDER BY position ASC;");
+            $page_results = $db->prepare("SELECT * FROM pages WHERE categoryID=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([$category]) && $page_results->rowCount()) {
                 // get the objects.
                 $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
