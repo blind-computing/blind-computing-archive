@@ -58,7 +58,7 @@
         
         // this function returns html for a navigation link for the main navbar.
         public function get_navlink(bool $is_active_page = false) {
-            $output = "<a href='" . $this->get_uri . "' title='{$this->navTooltip}'><li class='navItem ";
+            $output = "<a href='" . $this->get_uri() . "' title='{$this->navTooltip}'><li class='navItem ";
             if($is_active_page) {
                 $output .= "activePage";
             }
