@@ -24,9 +24,25 @@ require_once 'globals.inc.php';
         // this is the constructor for the page class.
             public function __construct() {
             $this->data = json_decode($this->metadata);
-        }
+            }
         
-    // this function returns all page objects from a specific category.
+        // this function returns all page objects that are of a specific type.
+        public static function get_pages_from_type(string $type) {
+            // make the db global.
+            global $db;
+            
+            // create the query.
+            $page_results = $db->prepare("SELECT *FROM pages WHERE type=? ORDER BY position ASC;");
+            if($query_successful = $page_results->execute([$type]) && $page_results->rowCount()) {
+                // get the objects.
+                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
+                return $pages;
+            } else {
+                return null;
+            }
+        }
+            
+        // this function returns all page objects from a specific category.
         public static function get_pages_from_category_id($category) {
             // make the db global.
             global $db;
