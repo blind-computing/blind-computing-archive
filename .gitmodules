@@ -1,0 +1,4 @@
+[submodule "dynamitab"]
+	path = dynamitab
+	url = https://gitlab.com/mcb2003/dynamitab.git
+	branch = stable
