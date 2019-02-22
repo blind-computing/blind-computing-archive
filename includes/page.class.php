@@ -27,7 +27,7 @@ require_once 'globals.inc.php';
             }
         
         // this function returns all page objects that are of a specific type.
-        public static function get_pages_from_type(string $type) {
+        public static function get_pages_from_type(string $type, string $class="page") {
             // make the db global.
             global $db;
             
@@ -35,7 +35,7 @@ require_once 'globals.inc.php';
             $page_results = $db->prepare("SELECT * FROM pages WHERE type=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([$type]) && $page_results->rowCount()) {
                 // get the objects.
-                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
+                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, $class);
                 return $pages;
             } else {
                 return null;
@@ -43,7 +43,7 @@ require_once 'globals.inc.php';
         }
 
         // this function returns all page objects that should be on the global site navigation bar.
-        public static function get_nav_pages() {
+        public static function get_nav_pages(string $class="page") {
             // make the db global.
             global $db;
             
@@ -51,7 +51,7 @@ require_once 'globals.inc.php';
             $page_results = $db->prepare("SELECT * FROM pages WHERE type='main' OR type='category' ORDER BY position ASC;");
             if($query_successful = $page_results->execute([]) && $page_results->rowCount()) {
                 // get the objects.
-                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
+                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, $class);
                 return $pages;
             } else {
                 return null;
@@ -60,7 +60,7 @@ require_once 'globals.inc.php';
 
         
         // this function returns all page objects from a specific category.
-        public static function get_pages_from_category_id($category) {
+        public static function get_pages_from_category_id($category, string $class="page") {
             // make the db global.
             global $db;
             
@@ -68,7 +68,7 @@ require_once 'globals.inc.php';
             $page_results = $db->prepare("SELECT * FROM pages WHERE categoryID=? ORDER BY position ASC;");
             if($query_successful = $page_results->execute([$category]) && $page_results->rowCount()) {
                 // get the objects.
-                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, "page");
+                $pages = $page_results->fetchAll(PDO::FETCH_CLASS, $class);
                 return $pages;
             } else {
                 return null;
@@ -76,7 +76,7 @@ require_once 'globals.inc.php';
         }
         
         // this function returns a page object from a specific id.
-        public static function get_page_from_id(string $id) {
+        public static function get_page_from_id($id, string $class="page") {
             // make the db global.
             global $db;
             
@@ -84,7 +84,7 @@ require_once 'globals.inc.php';
             $page_results = $db->prepare("SELECT * FROM pages WHERE id=? LIMIT 1;");
             if($query_successful = $page_results->execute([$id]) && $page_results->rowCount()) {
                 // get the object.
-                $page = $page_results->fetchObject("page");
+                $page = $page_results->fetchObject($class);
                 return $page;
             } else {
                 return null;
