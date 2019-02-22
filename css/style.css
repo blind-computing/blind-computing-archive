@@ -172,6 +172,7 @@ th {
     -moz-border-sizing: border-box;
     -webkit-border-sizing: border-box;
     width: 50%;
+    min-width: 450px;
     float: left;
     margin: 0;
 }
