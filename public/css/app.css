@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -10660,5 +10660,20 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+header.navcontainer {
+  width: 100vw;
+  border-bottom: 2px solid black;
+  background-color: #ebebeb;
+  padding-bottom: 0.5rem;
+}
+
+a.nav-link {
+  color: black;
+}
+
+a.nav-link.active {
+  background-color: lightgray;
 }
 
