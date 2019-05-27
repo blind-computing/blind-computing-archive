@@ -17,8 +17,17 @@
         <li class="nav-item"><a href="" class="nav-link">Community</a></li>
         <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
     </ul>
-    <!-- Account menu -->
-    <div class="ml-auto">
 
-    </div>
+    <ul class="nav navbar-nav ml-auto">
+        @guest
+        <li class="nav-item"><a href="{{ Route('login') }}" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="{{ Route('register') }}" class="nav-link">Register</a></li>
+        @endguest
+    </ul>
+    @if(Auth::user())
+    <!-- logout form -->
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;" aria-hidden="true">
+        @csrf
+    </form>
+    @endif
 </header>
