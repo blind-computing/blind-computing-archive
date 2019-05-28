@@ -9,6 +9,7 @@
 <body class="text-center">
     @include('partials._nav')
     <main class="container-fluid">
+        @include('partials._messages')
         @yield('content')
     </main>
 </body>
