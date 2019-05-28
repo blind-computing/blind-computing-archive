@@ -1,4 +1,4 @@
-<header class="navcontainer navbar navbar-expand-sm bg-light fixed-top">
+<header class="navcontainer navbar navbar-expand-sm bg-light">
     <!-- logo -->
     <img src="{{ Asset('images/logo/horizontal.png') }}" alt="Blind Computing" aria-label="Blind Computing Logo"
         class="nav-logo navbar-brand">
