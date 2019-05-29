@@ -19,10 +19,17 @@
     </ul>
 
     <ul class="nav navbar-nav ml-auto" role="navigation">
-        @guest
-        <li class="nav-item"><a href="{{ Route('login') }}" class="nav-link">Login</a></li>
-        <li class="nav-item"><a href="{{ Route('register') }}" class="nav-link">Register</a></li>
-        @endguest
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-controls="account-menu"
+                id="account-btn" aria-haspopup="true" title="Account Menu">Account</a>
+            <div class="dropdown-menu dropdown-menu-right" id="dropdown-menu" role="menu"
+                aria-describedby="account-btn">
+                @guest
+                <a role="menuitem" href="{{ Route('login') }}" class="dropdown-item">Login</a>
+                <a role="menuitem" href="{{ Route('register') }}" class="dropdown-item">Register</a>
+                @endguest
+            </div>
+        </li>
     </ul>
     @if(Auth::user())
     <!-- logout form -->
