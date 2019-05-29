@@ -21,12 +21,28 @@
     <ul class="nav navbar-nav ml-auto" role="navigation">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-controls="account-menu"
-                id="account-btn" aria-haspopup="true" title="Account Menu">Account</a>
+                id="account-btn" aria-haspopup="true" title="Account Menu">
+                @guest
+                Account
+                @else
+                {{ __('@' . Auth::user()->user_name ) }}
+                @endif
+            </a>
             <div class="dropdown-menu dropdown-menu-right" id="dropdown-menu" role="menu"
                 aria-describedby="account-btn">
                 @guest
                 <a role="menuitem" href="{{ Route('login') }}" class="dropdown-item">Login</a>
                 <a role="menuitem" href="{{ Route('register') }}" class="dropdown-item">Register</a>
+                @else
+                <a role="menuitem" href="/profile" class="dropdown-item">My Profile</a>
+                @if(Auth::user()->type == 'admin')
+                <div class="dropdown-divider"></div>
+                <a role="menuitem" href="/admin" class="dropdown-item">Admin Panel</a>
+                @endif
+                <div class="dropdown-divider"></div>
+                    <a role="menuitem" class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();">Log Out</a>
                 @endguest
             </div>
         </li>
