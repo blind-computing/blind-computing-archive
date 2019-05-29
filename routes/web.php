@@ -13,4 +13,9 @@
 
 Route::get('/', 'homeController@index')->name('home');
 
+// Notimplemented route (only in use for development purposes).
+Route::get('/404', function () {
+    return View('notimplemented');
+})->name('notimplemented');
+
 Auth::routes();
