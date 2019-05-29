@@ -1,7 +1,7 @@
 <header class="navcontainer navbar navbar-expand-sm bg-light">
     <!-- logo -->
     <img src="{{ Asset('images/logo/horizontal.png') }}" alt="Blind Computing" aria-label="Blind Computing Logo"
-        class="nav-logo navbar-brand">
+        class="nav-logo navbar-brand" title="Credit: @reallinfo on Github">
     <!-- nav toggler (for small screens) -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navliinks"
         aria-label="Expand/collapse the navigation bar">
