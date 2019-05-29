@@ -33,7 +33,7 @@ $nav_pages = [
 
     <ul class="nav navbar-nav ml-auto" role="navigation">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-controls="account-menu"
+            <a role="button" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-controls="account-menu"
                 id="account-btn" aria-haspopup="true" title="Account Menu">
                 @guest
                 Account
