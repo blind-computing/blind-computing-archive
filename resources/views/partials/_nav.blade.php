@@ -1,21 +1,33 @@
+@php
+/**
+* An associative array holding the names of each nav-link and their route names.
+@var Array
+*/
+$pages = [
+'Home' => 'home',
+'Devices' => 'notimplemented',
+'Operating Systems' => 'notimplemented',
+'Software' => 'notimplemented',
+'Downloads' => 'notimplemented',
+'Community' => 'notimplemented',
+'Blog' => 'notimplemented',
+];
+@endphp
+
 <header class="navcontainer navbar navbar-expand-sm bg-light">
     <!-- logo -->
     <img src="{{ Asset('images/logo/horizontal.png') }}" alt="Blind Computing" aria-label="Blind Computing Logo"
         class="nav-logo navbar-brand" title="Credit: @reallinfo on Github">
     <!-- nav toggler (for small screens) -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navliinks"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks"
         aria-label="Expand/collapse the navigation bar">
             <span class="navbar-toggler-icon"></span>
           </button>
     <!-- links -->
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
-        <li class="nav-item"><a href="{{ Route('home') }}" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Devices</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Operating Systems</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Software</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Downloads</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Community</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
+        @foreach($pages as $name=>$routeName)
+        <li class="nav-item"><a href="{{ Route($routeName) }}" class="nav-link">{{ $name }}</a></li>
+        @endforeach
     </ul>
 
     <ul class="nav navbar-nav ml-auto" role="navigation">
