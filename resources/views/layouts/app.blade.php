@@ -6,7 +6,7 @@
     <title>@yield('title') | {{ config('app.name', 'Blind Computing') }}</title>
 </head>
 
-<body class="text-center">
+<body class="text-left">
     @include('partials._nav')
     <main class="container-fluid">
         @include('partials._messages')
