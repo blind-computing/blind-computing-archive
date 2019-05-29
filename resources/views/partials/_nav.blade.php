@@ -9,7 +9,7 @@
           </button>
     <!-- links -->
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
-        <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="{{ Route('home') }}" class="nav-link active">Home</a></li>
         <li class="nav-item"><a href="" class="nav-link">Devices</a></li>
         <li class="nav-item"><a href="" class="nav-link">Operating Systems</a></li>
         <li class="nav-item"><a href="" class="nav-link">Software</a></li>
