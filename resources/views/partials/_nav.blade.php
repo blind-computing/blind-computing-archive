@@ -26,7 +26,8 @@ $pages = [
     <!-- links -->
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
         @foreach($pages as $name=>$routeName)
-        <li class="nav-item"><a href="{{ Route($routeName) }}" class="nav-link">{{ $name }}</a></li>
+        <li class="nav-item"><a href="{{ Route($routeName) }}"
+                class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
         @endforeach
     </ul>
 
