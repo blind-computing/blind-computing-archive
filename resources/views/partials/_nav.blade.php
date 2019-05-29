@@ -3,7 +3,7 @@
 * An associative array holding the names of each nav-link and their route names.
 @var Array
 */
-$pages = [
+$nav_pages = [
 'Home' => 'home',
 'Devices' => 'notimplemented',
 'Operating Systems' => 'notimplemented',
@@ -25,7 +25,7 @@ $pages = [
           </button>
     <!-- links -->
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
-        @foreach($pages as $name=>$routeName)
+        @foreach($nav_pages as $name=>$routeName)
         <li class="nav-item"><a href="{{ Route($routeName) }}"
                 class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
         @endforeach
