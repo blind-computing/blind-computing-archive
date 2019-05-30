@@ -4,6 +4,7 @@
 *
 * @var array
 */
+$nav_pages = [
 'Home' => 'home',
 'Devices' => 'notimplemented',
 'Operating Systems' => 'notimplemented',
