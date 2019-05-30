@@ -1,9 +1,9 @@
 @php
 /**
 * An associative array holding the names of each nav-link and their route names.
-@var Array
+*
+* @var array
 */
-$nav_pages = [
 'Home' => 'home',
 'Devices' => 'notimplemented',
 'Operating Systems' => 'notimplemented',
@@ -33,8 +33,8 @@ $nav_pages = [
 
     <ul class="nav navbar-nav ml-auto" role="navigation">
         <li class="nav-item dropdown">
-            <a role="button" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-controls="account-menu"
-                id="account-btn" aria-haspopup="true" title="Account Menu">
+            <a role="button" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+                aria-controls="account-menu" id="account-btn" aria-haspopup="true" title="Account Menu">
                 @guest
                 Account
                 @else
