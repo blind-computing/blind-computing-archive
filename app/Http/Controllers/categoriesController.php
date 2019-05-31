@@ -94,7 +94,19 @@ class categoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Get the pre-existinig category.
+        $category = Category::findOrFail($id);
+        $category->name = $request->name;
+        $category->description = $request->description;
+        // If the parent is none, set parent_id to null.
+        if ($request->parent == "0") {
+            $category->parent_id = null;
+        } else {
+            $category->parent_id = $request->parent;
+        }
+        $category->save();
+        return Redirect(Route('categories.index'))->with('success', 'Category updated successfully.');
+        // Update its properties.
     }
 
     /**
