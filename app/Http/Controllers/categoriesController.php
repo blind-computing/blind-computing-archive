@@ -27,7 +27,7 @@ class categoriesController extends Controller
      */
     public function create()
     {
-        //
+        return View('categories.create');
     }
 
     /**
