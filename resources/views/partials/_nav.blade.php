@@ -5,13 +5,13 @@
 * @var array
 */
 $nav_pages = [
-'Home' => 'home',
-'Devices' => 'notimplemented',
-'Operating Systems' => 'notimplemented',
-'Software' => 'notimplemented',
-'Downloads' => 'notimplemented',
-'Community' => 'notimplemented',
-'Blog' => 'notimplemented',
+'Home' => ['home'],
+'Devices' => ['category', 'devices'],
+'Operating Systems' => ['category', 'operating-systems'],
+'Software' => ['category', 'software'],
+'Downloads' => ['notimplemented'],
+'Community' => ['notimplemented'],
+'Blog' => ['category', 'blog'],
 ];
 @endphp
 
@@ -27,8 +27,13 @@ $nav_pages = [
     <!-- links -->
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
         @foreach($nav_pages as $name=>$routeName)
-        <li class="nav-item"><a href="{{ Route($routeName) }}"
-                class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
+        <li class="nav-item"><a href="
+            @if(count($routeName) > 1)
+{{ Route($routeName[0], $routeName[1]) }}
+            @else
+{{ Route($routeName[0]) }}
+            @endif
+            " class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
         @endforeach
     </ul>
 
