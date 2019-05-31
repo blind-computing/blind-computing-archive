@@ -75,7 +75,14 @@ class categoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Get the specified category.
+        $category = Category::findOrFail($id);
+        // Also get all categories for the parent select.
+        $categories = Category::where('parent_id', null)->orderBy('created_at', 'asc')->get();
+        return View('categories.edit', [
+            'category' => $category,
+            'categories' => $categories
+        ]);
     }
 
     /**
