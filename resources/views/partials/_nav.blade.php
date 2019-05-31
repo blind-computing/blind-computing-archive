@@ -20,12 +20,12 @@ $nav_pages = [
     <img src="{{ Asset('images/logo/horizontal.png') }}" alt="Blind Computing" aria-label="Blind Computing Logo"
         class="nav-logo navbar-brand" title="Credit: @reallinfo on Github">
     <!-- nav toggler (for small screens) -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navlinks"
         aria-label="Expand/collapse the navigation bar">
             <span class="navbar-toggler-icon"></span>
           </button>
     <!-- links -->
-    <ul class="navbar-nav nav" role="navigation" id="navlinks">
+    <ul class="navbar-nav nav navlinks" role="navigation">
         @foreach($nav_pages as $name=>$routeName)
         <li class="nav-item"><a href="
 {{ call_user_func_array('Route', $routeName) }}
@@ -33,7 +33,7 @@ $nav_pages = [
         @endforeach
     </ul>
 
-    <ul class="nav navbar-nav ml-auto" role="navigation">
+    <ul class="nav navbar-nav navlinks ml-auto" role="navigation">
         <li class="nav-item dropdown">
             <a role="button" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
                 aria-controls="account-menu" id="account-btn" aria-haspopup="true" title="
