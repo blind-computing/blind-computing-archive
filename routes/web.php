@@ -23,3 +23,6 @@ Auth::routes();
 // Resource routes:
 // Categories
 Route::resource('/admin/categories', 'CategoriesController');
+
+// Categories for end users (not admins)
+Route::get('/category/{name}', 'pagesController@showCategory')->name('category');
