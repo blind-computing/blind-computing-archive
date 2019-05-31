@@ -2,7 +2,7 @@
 
 @section('title', 'Home')
 @section('content')
-<h1>Welcome!</h1>
+<h1>Welcome to Blind Computing!</h1>
 <div class="row">
     <div class="col-sm-6">
         <h2>What is Blind Computing?</h2>
