@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Category;
 
 class categoriesController extends Controller
@@ -14,10 +15,15 @@ class categoriesController extends Controller
      */
     public function index()
     {
+        // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         $categories = Category::orderBy('created_at', 'asc')->get();
         return View('categories.index', [
             'categories' => $categories
         ]);
+    } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
+    }
     }
 
     /**
@@ -27,11 +33,16 @@ class categoriesController extends Controller
      */
     public function create()
     {
+                // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         // Get all toplevel categories (we only ever have one level of subcategory).
         $categories = Category::where('parent_id', null)->orderBy('created_at', 'asc')->get();
         return View('categories.create', [
             'categories' => $categories
         ]);
+     } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
+    }
     }
 
     /**
@@ -42,6 +53,8 @@ class categoriesController extends Controller
      */
     public function store(Request $request)
     {
+                        // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         // Create a new category object.
         $category = new Category();
         $category->name = $request->name;
@@ -54,6 +67,9 @@ class categoriesController extends Controller
         }
         $category->save();
         return Redirect(Route('categories.index'))->with('success', 'Category created successfully.');
+             } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
+    }
     }
 
     /**
@@ -79,6 +95,8 @@ class categoriesController extends Controller
      */
     public function edit($id)
     {
+                                // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         // Get the specified category.
         $category = Category::findOrFail($id);
         // Also get all categories for the parent select.
@@ -87,6 +105,9 @@ class categoriesController extends Controller
             'category' => $category,
             'categories' => $categories
         ]);
+                     } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
+    }
     }
 
     /**
@@ -98,6 +119,8 @@ class categoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
+                                        // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         // Get the pre-existinig category.
         $category = Category::findOrFail($id);
         $category->name = $request->name;
@@ -110,7 +133,9 @@ class categoriesController extends Controller
         }
         $category->save();
         return Redirect(Route('categories.index'))->with('success', 'Category updated successfully.');
-        // Update its properties.
+                             } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
+    }
     }
 
     /**
@@ -121,6 +146,8 @@ class categoriesController extends Controller
      */
     public function destroy($id)
     {
+                                                // Only if the user is an admin.
+        if(Auth::check() && Auth::user()->type == 'admin') {
         // Get the category.
         $category = Category::findOrFail($id);
         // Reparent any child categories that belong to this category.
@@ -133,5 +160,8 @@ class categoriesController extends Controller
         // delete it.
         $category->delete();
         return Redirect(Route('categories.index'))->with('success', 'Category deleted successfully.');
+                                 } else {
+        return Redirect(Route('home'))->with('error', 'You don\'t have permission to access the specified resource.');
     }
+}
 }
