@@ -50,6 +50,11 @@
                         <div class="col-md-6">
                             <select id="parent" class="form-control" name="parent" required>
                                 <option value="0">None</option>
+                                @if(isset($categories) && count($categories))
+                                @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                                @endif
                             </select> </div>
                     </div>
 

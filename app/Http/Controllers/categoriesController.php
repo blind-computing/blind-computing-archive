@@ -27,7 +27,11 @@ class categoriesController extends Controller
      */
     public function create()
     {
-        return View('categories.create');
+        // Get all toplevel categories (we only ever have one level of subcategory).
+        $categories = Category::where('parent_id', null)->orderBy('created_at', 'asc')->get();
+        return View('categories.create', [
+            'categories' => $categories
+        ]);
     }
 
     /**
