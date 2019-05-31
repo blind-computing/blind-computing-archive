@@ -19,3 +19,7 @@ Route::get('/404', function () {
 })->name('notimplemented');
 
 Auth::routes();
+
+// Resource routes:
+// Categories
+Route::resource('/admin/categories', 'CategoriesController');
