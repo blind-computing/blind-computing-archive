@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 
 class categoriesController extends Controller
 {
@@ -13,7 +14,10 @@ class categoriesController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::orderBy('created_at', 'asc')->get();
+        return View('categories.index', [
+            'categories' => $categories
+        ]);
     }
 
     /**
