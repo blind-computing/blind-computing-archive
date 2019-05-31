@@ -28,11 +28,7 @@ $nav_pages = [
     <ul class="navbar-nav nav" role="navigation" id="navlinks">
         @foreach($nav_pages as $name=>$routeName)
         <li class="nav-item"><a href="
-            @if(count($routeName) > 1)
-{{ Route($routeName[0], $routeName[1]) }}
-            @else
-{{ Route($routeName[0]) }}
-            @endif
+{{ call_user_func_array('Route', $routeName) }}
             " class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
         @endforeach
     </ul>
