@@ -117,6 +117,17 @@ class categoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Get the category.
+        $category = Category::findOrFail($id);
+        // Reparent any child categories that belong to this category.
+        if (count($category->children)) {
+            foreach ($category->children as $child) {
+                $child->parent_id = null;
+                $child->save();
+            }
+        }
+        // delete it.
+        $category->delete();
+        return Redirect(Route('categories.index'))->with('success', 'Category deleted successfully.');
     }
 }
