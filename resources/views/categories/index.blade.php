@@ -11,10 +11,10 @@
 @foreach($categories as $category)
 <div class="row">
     <div class="col-sm-9">
-        <h2>{{ $category->name }}</h2>
+        <h2><a href="{{ Route('categories.show', $category->id) }}">{{ $category->name }}</a></h2>
         <small class="text-muted"><strong>Parent:</strong>
             @if($category->parent_id != null)
-            <a href="#category{{ $category->parent->id }}">{{ $category->parent->name }}</a>
+            <a href="{{ Route('categories.show', $category->parent->id) }}">{{ $category->parent->name }}</a>
             @else
             None
             @endif
@@ -23,12 +23,12 @@
             {!! $category->description !!}
         </div>
     </div>
-    <div class="col-sm-3">
+    <form class="ml-auto mr-1" action="{{ Route('categories.destroy', $category->id) }}" method="post">
         <a href="{{ Route('categories.edit', $category->id) }}" class="btn btn-default" role="button"
             aria-label="edit"><i class="fas fa-edit"></i></a>
-        <a href="{{ Route('categories.delete', $category->id) }}" class="btn btn-default" role="button"
-            aria-label="delete"><i class="fas fa-trash"></i></a>
-    </div>
+        <button class="btn btn-default" aria-label="delete"><i class="fas fa-trash"></i></button>
+        <input type="hidden" name="_method" value="delete">
+    </form>
 </div>
 @endforeach
 @else
