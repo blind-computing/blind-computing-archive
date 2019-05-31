@@ -11,6 +11,14 @@ class Category extends Model
      */
     public function parent()
     {
-        return $this->hasOne('App\Category', 'parent_id');
+        return $this->belongsTo('App\Category');
+    }
+
+    /**
+     * Get all categories with this one as their parent (if any)
+     */
+    public function children()
+    {
+        return $this->hasMany('App\Category', 'parent_id');
     }
 }
