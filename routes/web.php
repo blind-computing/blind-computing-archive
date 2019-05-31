@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'homeController@index')->name('home');
+Route::get('/', 'pagesController@index')->name('home');
 
 // Notimplemented route (only in use for development purposes).
 Route::get('/404', function () {
