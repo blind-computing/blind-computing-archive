@@ -24,10 +24,11 @@
         </div>
     </div>
     <form class="ml-auto mr-1" action="{{ Route('categories.destroy', $category->id) }}" method="post">
+        @csrf
         <a href="{{ Route('categories.edit', $category->id) }}" class="btn btn-default" role="button"
             aria-label="edit"><i class="fas fa-edit"></i></a>
-        <button class="btn btn-default" aria-label="delete"><i class="fas fa-trash"></i></button>
         <input type="hidden" name="_method" value="delete">
+        <button class="btn btn-danger" aria-label="delete"><i class="fas fa-trash"></i></button>
     </form>
 </div>
 @endforeach
