@@ -11,6 +11,7 @@
 |
 */
 
+// Home page.
 Route::get('/', 'pagesController@index')->name('home');
 
 // Notimplemented route (only in use for development purposes).
@@ -18,7 +19,10 @@ Route::get('/404', function () {
     return View('notimplemented');
 })->name('notimplemented');
 
+// User related routes.
 Auth::routes();
+// User Profiles.
+Route::get('/profile/{user_name}', 'usersController@profile')->name('profile');
 
 // Resource routes:
 // Categories
