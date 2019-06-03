@@ -8,7 +8,7 @@
 @section('content')
 @php
 // If this is the user's own profile, all information is shown, otherwise, only public information.
-$personal_profile = Auth::check() && Auth::user()->id = $user->id? true:false;
+$personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name;
 
 @endphp
 @if(isset($user))
@@ -80,7 +80,7 @@ $personal_profile = Auth::check() && Auth::user()->id = $user->id? true:false;
             </tbody>
         </table>
     </div>
-    @if(Auth::check() && Auth::user()->id === $user->id)
+    @if($personal_profile)
     <div class="ml-auto mr-1">
         <a href="/account-setings" class="btn btn-primary" role="button">Edit Profile</a>
     </div>
