@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class usersController extends Controller
@@ -12,8 +13,12 @@ class usersController extends Controller
      * @param string $username
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function profile(string $username)
+    public function profile(string $username = null)
     {
+        // If null, return the currently logged in user.
+        if ($username == null && Auth::check()) {
+            $username = Auth::user()->user_name;
+        }
         // Get the user in question (if they exist).
         $user = User::where('user_name', $username)->take(1)->get();
         if (count($user)) {

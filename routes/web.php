@@ -22,7 +22,7 @@ Route::get('/404', function () {
 // User related routes.
 Auth::routes();
 // User Profiles.
-Route::get('/profile/{user_name}', 'usersController@profile')->name('profile');
+Route::get('/profile/{user_name?}', 'usersController@profile')->name('profile');
 
 // Resource routes:
 // Categories
