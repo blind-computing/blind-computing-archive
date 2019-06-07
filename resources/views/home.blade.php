@@ -30,8 +30,10 @@
             choice.</p>
     </div>
     <div class="col-sm-6">
-        <iframe style="width: 100%; height: 50vh;" src="https://www.youtube.com/embed/tH9dlnxqtcU" frameborder="0"
-            allow="encrypted-media" allowfullscreen="yes">Loading...</iframe>
+        @component('components.yt_embed', [
+        'video_id' => 'tH9dlnxqtcU'
+        ])
+        @endcomponent
 
         <h2>Latest News</h2>
         <p>Stay up to date with the latest news from Blind Computing by <a target="blank"
