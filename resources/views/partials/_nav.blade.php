@@ -29,7 +29,10 @@ $nav_pages = [
         @foreach($nav_pages as $name=>$routeName)
         <li class="nav-item"><a href="
 {{ call_user_func_array('Route', $routeName) }}
-            " class="nav-link {{ Route::currentRouteNamed($routeName)? ' active': '' }}">{{ $name }}</a></li>
+            " class="nav-link
+            {{ (sizeof($routeName) == 1 && Route::currentRouteNamed($routeName))
+             || (sizeof($routeName) == 2 && Route::currentRouteNamed($routeName[1])) ? 'active': '' }}">
+                {{ $name }}</a></li>
         @endforeach
     </ul>
 
