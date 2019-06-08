@@ -24,7 +24,9 @@ Auth::routes();
 // User Profiles.
 Route::get('/profile/{user_name?}', 'usersController@profile')->name('profile');
 // The Edit Profile page.
-Route::get('/edit-profile', 'usersController@edit_profile');;
+Route::get('/edit-profile', 'usersController@edit_profile')->name('edit-profile');
+// Update an edited profile
+Route::match(['put', 'patch'], '/profile', 'usersController@update_profile')->name('update-profile');
 
 // Resource routes:
 // Categories
