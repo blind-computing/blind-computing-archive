@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use App\User;
 
 class usersController extends Controller
@@ -53,11 +54,20 @@ class usersController extends Controller
         // Retrieve the logged in user from the db.
         $user = User::find(Auth::user()->id);
         // Upload and sort out the profile picture (if any)
-        $profilepicture_url = asset('/storage/' . request()->file('profilepicture')->store('profile_pictures', 'public'));
+        if(request()->file('profilepicture') != null)
+        {
+        $profilepicture = '/storage/' . request()->file('profilepicture')->store('profile_pictures', 'public');
+        // Delete the old picture if it isn't the default
+        if($user->profile_picture != 'images/profile_default.png')
+        {
+$path = implode('/', array_slice(explode('/', $user->profile_picture), 2));
+            Storage::disk('public')->delete($path);
+        }
+    }
         // Update all of the user's metadata.
         $user->full_name = request('fullname');
         $user->user_name = request('username');
-        $user->profile_picture = $profilepicture_url;
+        request()->file('profilepicture') != null && $user->profile_picture = $profilepicture;
         $user->email = request('email');
         $user->public_email = request('publicemail') == "on"? true: false;
         $user->twitter = request('twitter');
