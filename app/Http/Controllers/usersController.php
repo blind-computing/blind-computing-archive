@@ -52,9 +52,12 @@ class usersController extends Controller
     {
         // Retrieve the logged in user from the db.
         $user = User::find(Auth::user()->id);
+        // Upload and sort out the profile picture (if any)
+        $profilepicture_url = asset('/storage/' . request()->file('profilepicture')->store('profile_pictures', 'public'));
         // Update all of the user's metadata.
         $user->full_name = request('fullname');
         $user->user_name = request('username');
+        $user->profile_picture = $profilepicture_url;
         $user->email = request('email');
         $user->public_email = request('publicemail') == "on"? true: false;
         $user->twitter = request('twitter');
