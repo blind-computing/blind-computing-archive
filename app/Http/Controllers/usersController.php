@@ -51,8 +51,21 @@ class usersController extends Controller
      */
     public function update_profile()
     {
-        // Retrieve the logged in user from the db.
+                // Retrieve the logged in user from the db.
         $user = User::find(Auth::user()->id);
+        // Validate the incoming data.
+        request()->validate([
+'fullname' => ['required', 'string', 'max:255'],
+'username' => ['required', 'string', 'max:255'],
+'profilepicture' => ['nullable', 'sometimes', 'file', 'image', 'dimensions:max_width=700,max_height=700'],
+'email' => ['required', 'email'],
+'twitter' => ['nullable', 'sometimes', 'string', 'max:15', 'regex:/[a-zA-Z0-9_]{1,15}/'],
+'mastodon' => ['nullable', 'sometimes', 'string', 'regex:/[a-zA-Z0-9_]+@[a-zA-Z0-9_\.]+/'],
+'discord' => ['nullable', 'sometimes', 'string', 'max:37', 'regex:/[^#]{2,32}#\d{4}/'],
+'github' => ['nullable', 'sometimes', 'string', 'max:38', 'regex:/([a-zA-Z0-9](?:-?[a-zA-Z0-9]){1,38})/'],
+'youtube' => ['nullable', 'sometimes', 'url', 'regex:/((http|https):\/\/|)(www\.|)youtube\.com\/(channel\/|user\/)[a-zA-Z0-9\-]{1,}/'],
+'bio' => ['nullable', 'sometimes', 'string']
+        ]);
         // Upload and sort out the profile picture (if any)
         if(request()->file('profilepicture') != null)
         {
