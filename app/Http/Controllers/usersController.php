@@ -30,4 +30,17 @@ class usersController extends Controller
             return abort(404);
         }
     }
+
+    /**
+     * Show the page for editing your profile.
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function edit_profile()
+    {
+        if (Auth::check()) {
+            return View('users.edit_profile');
+        } else {
+            return Redirect('/')->with('error', 'You don\'t have permission to access the specified resource.');
+        }
+    }
 }

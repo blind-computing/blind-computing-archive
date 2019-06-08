@@ -82,7 +82,7 @@ $personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name
     </div>
     @if($personal_profile)
     <div class="ml-auto mr-1">
-        <a href="/account-setings" class="btn btn-primary" role="button">Edit Profile</a>
+        <a href="/edit-profile" class="btn btn-primary" role="button">Edit Profile</a>
     </div>
     @endif
 </div>

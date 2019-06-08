@@ -23,6 +23,8 @@ Route::get('/404', function () {
 Auth::routes();
 // User Profiles.
 Route::get('/profile/{user_name?}', 'usersController@profile')->name('profile');
+// The Edit Profile page.
+Route::get('/edit-profile', 'usersController@edit_profile');;
 
 // Resource routes:
 // Categories
