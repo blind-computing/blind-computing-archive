@@ -21,8 +21,13 @@
     </div>
     <div class="col">
         <div class="form-group row">
-            <input type="text" class="form-control form-control-lg col-md-10" id="fullname" name="fullname"
+            <input type="text" class="form-control form-control-lg col-md-10 @error('fullname') is-invalid @enderror" id="fullname" name="fullname"
                 value="{{ Auth::user()->full_name }}" aria-label="Full Name" placeholder="Full Name">
+                @error('fullname')
+                            <div class="col-md-2 invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </div>
+                            @enderror
         </div>
         <div class="form-group row">
             <div class="input-group col-md-10">
@@ -30,18 +35,30 @@
                 <div class="input-group-prepend">
                     <label id="username-lbl2" class="input-group-text">@</label>
                 </div>
-                <input type="text" class="form-control" id="username" name="username"
+                <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username"
                     value="{{ Auth::user()->user_name  }}" placeholder="username"
                     aria-labelledby="username-lbl1 username-lbl2">
             </div>
+            @error('username')
+                            <div class="col-md-2 invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </div>
+                            @enderror
         </div>
         <div class="card">
             <div class="card-header" role="heading" aria-level="2">Social & Contact Info</div>
             <div class="card-body">
                 <div class="form-group row">
                     <label for="email" class="form-label col-md-2">Email Address:</label>
-                    <input type="email" class="form-control col-md-6" id="email" name="email"
+                    <div class="col-md-6">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"
                         value="{{ Auth::user()->email }}" placeholder="someone@example.com" required>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
                     <div class="form-check col-md-4">
                         <label for="publicemail" class="form-check-label">
                             <input type="checkbox" class="form-check-input" id="publicemail" name="publicemail"
@@ -50,57 +67,52 @@
                         </label>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label id="twitter-lbl1" class="form-label col-md-2">Twitter:</label>
-                    <div class="input-group col-md-6">
-                        <div class="input-group-prepend">
-                            <label id="twitter-lbl2" class="input-group-text">@</label>
-                        </div>
-                        <input type="text" class="form-control" id="twitter" value="{{ Auth::user()->twitter }}"
-                            aria-labelledby="twitter-lbl1 twitter-lbl2" placeholder="twitter_handle"
-                            pattern="[a-zA-Z0-9_]{1,15}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label id="mastodon-lbl1" class="form-label col-md-2">Mastodon</label>
-                    <div class="input-group col-md-6">
-                        <div class="input-group-prepend">
-                            <label id="mastodon-lbl2" class="input-group-text">@</label>
-                        </div>
-                        <input type="text" class="form-control" id="mastodon" value="{{ Auth::user()->mastodon }}"
-                            aria-labelledby="mastodon-lbl1 mastodon-lbl2" placeholder="mastodon_user@some.server"
-                            pattern="[a-zA-Z0-9_]+@[a-zA-Z0-9_\.]+">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label id="discord-lbl1" class="form-label col-md-2">Discord</label>
-                    <div class="input-group col-md-6">
-                        <div class="input-group-prepend">
-                            <label id="discord-lbl2" class="input-group-text">@</label>
-                        </div>
-                        <input type="text" class="form-control" id="discord" value="{{ Auth::user()->discord }}"
-                            aria-labelledby="discord-lbl1 discord-lbl2" placeholder="someone#1234"
-                            pattern="[^#]{2,32}#\d{4}">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label id="github-lbl1" class="form-label col-md-2">Github</label>
-                    <div class="input-group col-md-6">
-                        <div class="input-group-prepend">
-                            <label id="github-lbl2" class="input-group-text">@</label>
-                        </div>
-                        <input type="text" class="form-control" id="github" value="{{ Auth::user()->github }}"
-                            aria-labelledby="github-lbl1 github-lbl2" placeholder="someuser"
-                            pattern=([a-zA-Z0-9](?:-?[a-zA-Z0-9]){1,38})"">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="youtube" class="form-label col-md-2">YouTube</label>
-                    <input type="url" class="form-control col-md-6" id="youtube" value="{{ Auth::user()->youtube }}"
-                        placeholder="https://youtube.com/channel/user-id12345"
-                        pattern="((http|https):\/\/|)(www\.|)youtube\.com\/(channel\/|user\/)[a-zA-Z0-9\-]{1,}">
-                </div>
-            </div>
+                @component('components.profile_form_row', [
+                'name' => 'twitter',
+                'placeholder' => 'twitter_handle',
+                'label' => 'Twitter',
+                'pattern' => '[a-zA-Z0-9_]{1,15}',
+                'prepend_at' => true
+                ])
+                {{ Auth::user()->twitter }}
+                @endcomponent
+                @component('components.profile_form_row', [
+                'name' => 'mastodon',
+                'placeholder' => 'mastodon_user@some.server',
+                'label' => 'Mastodon',
+                'pattern' => '[a-zA-Z0-9_]+@[a-zA-Z0-9_\.]+',
+                'prepend_at' => true
+                ])
+                {{ Auth::user()->mastodon }}
+                @endcomponent
+                @component('components.profile_form_row', [
+                'name' => 'discord',
+                'placeholder' => 'Someone#1234',
+                'label' => 'Discord',
+                'pattern' => '[^#]{2,32}#\d{4}',
+                'prepend_at' => true
+                ])
+                {{ Auth::user()->discord }}
+                @endcomponent
+                @component('components.profile_form_row', [
+                'name' => 'github',
+                'placeholder' => 'someuser',
+                'label' => 'Github',
+                'pattern' => '([a-zA-Z0-9](?:-?[a-zA-Z0-9]){1,38})',
+                'prepend_at' => true
+                ])
+                {{ Auth::user()->github }}
+                @endcomponent
+                @component('components.profile_form_row', [
+                'type' => 'url',
+                'name' => 'youtube',
+                'placeholder' => 'https://youtube.com/channel/user-id12345',
+                'label' => 'YouTube',
+                'pattern' => '((http|https):\/\/|)(www\.|)youtube\.com\/(channel\/|user\/)[a-zA-Z0-9\-]{1,}',
+                'prepend_at' => false
+                ])
+                {{ Auth::user()->youtube }}
+                @endcomponent
         </div>
     </div>
 </div>
