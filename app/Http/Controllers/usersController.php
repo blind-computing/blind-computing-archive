@@ -46,10 +46,9 @@ class usersController extends Controller
 
     /**
      * Store updated information for a user.
-     * @param $data
      * @return \Illuminate\Contracts\Support\Renderable     
      */
-    public function update_profile($data)
+    public function update_profile()
     {
         //
     }
