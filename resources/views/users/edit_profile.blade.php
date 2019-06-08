@@ -6,7 +6,7 @@
     <a href="{{ Route('profile') }}" class="btn btn-secondary mr-2" role="button">Back</a>
     <h1>Edit Profile</h1>
     <div class="ml-auto mr-2">
-        <form action="/profile" method="post">
+        <form action="/profile" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <button type="submit" class="btn btn-primary">Save</button>
