@@ -50,6 +50,19 @@ class usersController extends Controller
      */
     public function update_profile()
     {
-        //
+        // Retrieve the logged in user from the db.
+        $user = User::find(Auth::user()->id);
+        // Update all of the user's metadata.
+        $user->full_name = request('fullname');
+        $user->user_name = request('username');
+        $user->email = request('email');
+        $user->twitter = request('twitter');
+        $user->mastodon = request('mastodon');
+        $user->discord = request('discord');
+        $user->github = request('github');
+        $user->youtube = request('youtube');
+        $user->bio = request('bio');
+        $user->save();
+        return Redirect('/profile')->with('success', 'Profile updated successfully');
     }
 }
