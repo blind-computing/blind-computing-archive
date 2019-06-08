@@ -56,6 +56,7 @@ class usersController extends Controller
         $user->full_name = request('fullname');
         $user->user_name = request('username');
         $user->email = request('email');
+        $user->public_email = request('publicemail') == "on"? true: false;
         $user->twitter = request('twitter');
         $user->mastodon = request('mastodon');
         $user->discord = request('discord');
