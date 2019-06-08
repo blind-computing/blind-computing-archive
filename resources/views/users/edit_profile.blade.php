@@ -22,7 +22,7 @@
     <div class="col">
         <div class="form-group row">
             <input type="text" class="form-control form-control-lg col-md-10 @error('fullname') is-invalid @enderror" id="fullname" name="fullname"
-                value="{{ Auth::user()->full_name }}" aria-label="Full Name" placeholder="Full Name">
+                value="{{ Auth::user()->full_name }}" aria-label="Full Name" placeholder="Full Name" required>
                 @error('fullname')
                             <div class="col-md-2 invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -37,7 +37,7 @@
                 </div>
                 <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username"
                     value="{{ Auth::user()->user_name  }}" placeholder="username"
-                    aria-labelledby="username-lbl1 username-lbl2">
+                    aria-labelledby="username-lbl1 username-lbl2" required>
             </div>
             @error('username')
                             <div class="col-md-2 invalid-feedback" role="alert">
