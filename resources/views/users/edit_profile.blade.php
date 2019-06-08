@@ -14,7 +14,7 @@
 </div>
 <div class="row">
     <div class="col-sm-2">
-        <img src="{{ Auth::user()->profile_picture }}" aria-label="Profile picture for {{ Auth::user()->full_name }}"
+        <img src="{{ asset(Auth::user()->profile_picture) }}" aria-label="Profile picture for {{ Auth::user()->full_name }}"
             style="width: 100%;">
         <input type="file" class="form-control-file border" name="profilepicture" title="choose a new profile picture.">
         <p>Select a new profile picture. Images must be less than 700&times;700. All common formats are supported.</p>

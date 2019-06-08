@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('profile_picture')->default(Asset('images/profile_default.png'));
+            $table->string('profile_picture')->default('images/profile_default.png');
             $table->text('bio')->nullable();
             $table->enum('type', ['user', 'contributer', 'admin', 'banned'])->default('user');
             // Social accounts:

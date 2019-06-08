@@ -14,7 +14,7 @@ $personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name
 @if(isset($user))
 <div class="row">
     <div class="col-2">
-        <img src="{{ $user->profile_picture }}" aria-label="Profile picture for {{ $user->full_name }}"
+        <img src="{{ asset($user->profile_picture) }}" aria-label="Profile picture for {{ $user->full_name }}"
             style="width: 100%;">
     </div>
     <div class="col">
