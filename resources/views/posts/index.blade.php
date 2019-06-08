@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @if (Auth::user() && Auth::user()->type == 'admin')
 @section('title', 'Admin | Posts')
