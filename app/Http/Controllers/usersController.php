@@ -43,4 +43,14 @@ class usersController extends Controller
             return Redirect('/')->with('error', 'You don\'t have permission to access the specified resource.');
         }
     }
+
+    /**
+     * Store updated information for a user.
+     * @param $data
+     * @return \Illuminate\Contracts\Support\Renderable     
+     */
+    public function update_profile($data)
+    {
+        //
+    }
 }
