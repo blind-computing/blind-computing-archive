@@ -20,6 +20,7 @@ $personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name
     <div class="col">
         <h1>{{ __($user->full_name) }}</h1>
         <strong>{{ __('@' . $user->user_name ) }}</strong>
+ (<strong>{{ $user->type }}</strong>)
         <table>
             <tbody>
                 @if($user->public_email || $personal_profile)
@@ -42,7 +43,7 @@ $personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name
                 @endif
                 @if($user->mastodon)
                 <tr>
-                    <th>Mastodonn:</th>
+                    <th>Mastodon:</th>
                     <td>
                         @php
                         $mastodon = explode('@', $user->mastodon);
