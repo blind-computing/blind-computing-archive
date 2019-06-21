@@ -12,5 +12,5 @@ yarn-error.log
 
 # Vim stuff
 .*.un~
-.*~
+*~
 .*.swp
