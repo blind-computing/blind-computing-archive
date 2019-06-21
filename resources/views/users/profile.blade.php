@@ -20,7 +20,9 @@ $personal_profile = Auth::check() && Auth::user()->user_name == $user->user_name
     <div class="col">
         <h1>{{ __($user->full_name) }}</h1>
         <strong>{{ __('@' . $user->user_name ) }}</strong>
- (<strong>{{ $user->type }}</strong>)
+@if($user->type != 'user')
+ (<strong>{{ ucfirstt($user->type) }}</strong>)
+@endif
         <table>
             <tbody>
                 @if($user->public_email || $personal_profile)
