@@ -18,6 +18,7 @@
 @foreach($category->children as $subcategory)
 <section class="col-sm">
     <a href="{{ Route('category', $subcategory->name) }}" title="Click to see the entire category"><h2>{{ $subcategory->name }}</h2></a>
+@if($subcategory->posts->count())
 @foreach($subcategory->top_posts() as $post)
 @component('components.post_widget', [
     'post' => $post
@@ -26,6 +27,9 @@
 @endforeach
 @if($subcategory->top_posts()->count() < $subcategory->posts->count())
 <a href="{{ Route('category', $subcategory->name) }}">See more</a>
+@endif
+@else
+    <p>No posts were found in this category.</p>
 @endif
 </section>
 @endforeach
