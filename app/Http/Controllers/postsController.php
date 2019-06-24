@@ -116,7 +116,7 @@ class PostsController extends Controller
             $post->title = $request['title'];
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
-            $post->category = $request['category'];
+            $post->category_id = $request['category'];
             $post->save();
             return Redirect('/posts')->with('success', 'Post edited.');
         } else {
