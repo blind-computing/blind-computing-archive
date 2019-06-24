@@ -17,13 +17,16 @@
 <div class="row">
 @foreach($category->children as $subcategory)
 <div class="col-md">
-    <a href="{{ Route('category', $subcategory->name) }}"><h2>{{ $subcategory->name }}</h2></a>
+    <a href="{{ Route('category', $subcategory->name) }}" title="Click to see the entire category"><h2>{{ $subcategory->name }}</h2></a>
 @foreach($subcategory->posts()->where('pinned', true)->get() as $post)
 @component('components.post_widget', [
     'post' => $post
 ])
 @endcomponent
 @endforeach
+@if($subcategory->posts()->where('pinned', true)->count() < $subcategory->posts->count())
+<a href="{{ Route('category', $subcategory->name) }}">See more</a>
+@endif
 </div>
 @endforeach
 </div>
