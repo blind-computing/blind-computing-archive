@@ -84,7 +84,7 @@ class categoriesController extends Controller
         $category = Category::findOrFail($id);
             // Also get all of its posts, both pinned and not pinned.
         $pinned_posts = $category->posts()->where('pinned', true)->orderBy('created_at', 'asc')->get();
-        $unpinned_posts = $category->posts()->where('pinned', false)->orderBy('created_at', 'desc')->get();
+        $unpinned_posts = $category->posts()->where('pinned', false)->orderBy('created_at', 'desc')->paginate(10);
         return View('categories.show', [
             'category' => $category,
             'pinned_posts' => $pinned_posts,
