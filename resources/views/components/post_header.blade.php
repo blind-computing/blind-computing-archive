@@ -17,10 +17,10 @@
     </div>
 
     @if(Auth::check() && Auth::user()->type == 'admin')
-    <form class="ml-auto mr-1" action="{{ Route('categories.destroy', $post->id) }}" method="post">
+    <form class="ml-auto mr-1" action="{{ Route('posts.destroy', $post->id) }}" method="post">
         @method('delete')
         @csrf
-        <a href="{{ Route('categories.edit', $post->id) }}" class="btn btn-default" role="button"
+        <a href="{{ Route('posts.edit', $post->id) }}" class="btn btn-default" role="button"
             aria-label="edit"><i class="fas fa-edit"></i></a>
         <button class="btn btn-danger" aria-label="delete"><i class="fas fa-trash"></i></button>
     </form>
