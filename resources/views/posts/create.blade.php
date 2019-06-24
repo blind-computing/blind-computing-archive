@@ -2,42 +2,79 @@
 
 @section('title', 'Admin | New Post')
 @section('content')
+<div class="row justify-content-center">
+<div class="card-header col-md-10 justify-content-center" role="heading" aria-level="2">
 <h1>Create Post</h1>
-<ul class="nav nav-tabs nav-justified" role="tablist">
-    <li id="article-tab" role="tab" aria-controls="article-pane" class="nav-item active"><a data-toggle="tab" href="#article-pane" class="nav-link">Article</a></li>
-    <li id="video-tab" role="tab" aria-controls="video-pane" class="nav-item"><a data-toggle="tab" href="#video-pane" class="nav-link">Video</a></li>
-    <li id="download-tab" role="tab" aria-controls="download-pane" class="nav-item"><a data-toggle="tab" href="#download-pane" class="nav-link">Download</a></li>
-</ul>
-<div class="tab-content">
-@component('components.post_form', [
-'type' => 'article',
-'active' => true,
-])
-@slot('extra_options')
-test
-@endslot
-@endcomponent
-@component('components.post_form', [
-'type' => 'video',
-'active' => false,
-])
-@slot('extra_options')
-test
-@endslot
-@endcomponent
-@component('components.post_form', [
-'type' => 'download',
-'active' => false,
-])
-@slot('extra_options')
-test
-@endslot
-@endcomponent
 </div>
-<script type="text/javascript">
-$('[data-toggle="tab"]').click(function(){
-$('[data-toggle="tab"]').set('aria-selected', 'false');
-$(this).set('aria-selected', 'true');
-});
-</script>
+            <div class="card-body">
+                <form method="POST" action="/posts">
+                    @csrf
+
+                    <div class="form-group row">
+                        <label for="title" class="col-md-4 col-form-label text-md-right">Title</label>
+
+                        <div class="col-md-6">
+                            <input id="title" type="text" class="form-control @error('title') is-invalid @enderror"
+                                name="title" value="" required autocomplete="off" placeholder="Post Title">
+
+                            @error('title')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="body" class="col-md-4 col-form-label text-md-right">Body</label>
+
+                        <div class="col-md-6">
+                            <textarea id="body" class="form-control ckeditor @error('body') is-invalid @enderror"
+                                name="body" required autocomplete="off" rows="10"></textarea>
+
+                            @error('body')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="pinned" id="pinned">
+
+                                <label class="form-check-label" for="pinned">
+                                    {{ __('Pin this post') }}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                                @if(isset($categories) && count($categories))
+                    <div class="form-group row">
+                        <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
+
+                        <div class="col-md-6">
+                            <select id="category" class="form-control" name=""category" required>
+                                @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
+                            </select> </div>
+                    </div>
+                                @endif
+
+<div class="row form-group mb-0 text-align-center justify-content-center">
+                    <div class="mr-2 ml-auto mb-0">
+                    <a href="{{ Route('posts.index') }}" class="btn btn-secondary" role="button">Cancel</a>
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('Publish') }}
+                        </button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
 @endsection

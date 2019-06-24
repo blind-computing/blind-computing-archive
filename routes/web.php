@@ -36,4 +36,4 @@ Route::resource('/admin/categories', 'CategoriesController');
 Route::get('/category/{name}', 'pagesController@showCategory')->name('category');
 
 // Posts:
-Route::resource('/admin/posts', 'PostsController');
+Route::resource('/admin/posts', 'postsController');
