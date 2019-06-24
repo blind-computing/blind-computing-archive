@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get all posts authored by a user.
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post', 'author_id');
+    }
 }

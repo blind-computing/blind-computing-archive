@@ -30,7 +30,10 @@ Route::match(['put', 'patch'], '/profile', 'usersController@update_profile')->na
 
 // Resource routes:
 // Categories
-Route::resource('/admin/categories', 'CategoriesController');
+Route::resource('/admin/categories', 'categoriesController');
 
 // Categories for end users (not admins)
 Route::get('/category/{name}', 'pagesController@showCategory')->name('category');
+
+// Posts:
+Route::resource('/admin/posts', 'postsController');
