@@ -55,6 +55,7 @@ class PostsController extends Controller
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
             $post->author_id = Auth::user()->id;
+            $post->category_id = $request['category'];
             $post->save();
             return Redirect('posts')->with('success', 'Post published.');
         } else {

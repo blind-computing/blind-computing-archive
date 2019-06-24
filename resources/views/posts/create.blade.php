@@ -7,7 +7,7 @@
 <h1>Create Post</h1>
 </div>
             <div class="card-body">
-                <form method="POST" action="/posts">
+                <form method="POST" action="{{ Route('posts.store') }}">
                     @csrf
 
                     <div class="form-group row">
@@ -57,7 +57,7 @@
                         <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
 
                         <div class="col-md-6">
-                            <select id="category" class="form-control" name=""category" required>
+                            <select id="category" class="form-control" name="category" required>
                                 @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
