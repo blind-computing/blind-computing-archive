@@ -29,7 +29,7 @@
 @endif
 @if($unpinned_posts->count())
 @each('components.post_widget_horizontal', $unpinned_posts, 'post')
-
+{{ $unpinned_posts->links() }}
 @endif
 @endif
 @else
