@@ -2,7 +2,7 @@
     <div class="row">
     <div class="col-sm-9">
         @if($linked)
-        <a href="{{ Route('post', $post->name) }}">
+        <a href="{{ Route('posts.show', $post->id) }}">
             <h2>
                 @else
                 <h1>
@@ -43,6 +43,10 @@
             <td class="col"><time datetime="{{ $post->updated_at }}">{{ $post->updated_at }}</time></td>
 </tr>
 @endif
+        <tr class="row">
+            <th class="col-3">Category:</th>
+            <td class="col"><a href="{{ Route('category', $post->category->name) }}">{{ $post->category->name }}</a></td>
+        </tr>
     </tbody>
 </table>
 </div>
