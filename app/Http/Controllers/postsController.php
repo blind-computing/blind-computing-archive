@@ -71,7 +71,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
         return View('posts.show', [
             'post' => $post
         ]);
@@ -87,7 +87,7 @@ class PostsController extends Controller
     {
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
-            $post = Post::find($id);
+            $post = Post::findOrFail($id);
             $categories = Category::where('parent_id', '!=', 0)->orderBy('parent_id', 'asc')->get();
             return View('posts.edit', [
                 'categories' => $categories,
@@ -109,7 +109,7 @@ class PostsController extends Controller
     {
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
-            $post = Post::find($id);
+            $post = Post::findOrFail($id);
             $post->title = $request['title'];
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
@@ -130,7 +130,7 @@ class PostsController extends Controller
     {
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
-            $post = Post::find($id);
+            $post = Post::findOrFail($id);
             $post->delete();
             return Redirect('/posts')->with('success', 'Post deleted.');
         } else {
