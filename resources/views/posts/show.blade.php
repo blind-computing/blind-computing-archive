@@ -7,4 +7,6 @@
     'linked' => false
 ])
 @endcomponent
+<hr>
+{!! $post->body !!}
 @endsection
