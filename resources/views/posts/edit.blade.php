@@ -5,7 +5,7 @@
 @if (isset($post))
 <div class="row justify-content-center">
 <div class="card-header col-md-10 justify-content-center" role="heading" aria-level="2">
-<h1>Create Post</h1>
+<h1>Edit Post</h1>
 </div>
             <div class="card-body">
                 <form method="POST" action="/posts">
@@ -64,7 +64,7 @@
                                 @foreach($categories as $category)
                                 <option value="{{ $category->id }}"
 @if($post->category_id == $category->id)
- selected
+ selected="selected"
 @endif
 >{{ $category->name }}</option>
                                 @endforeach
