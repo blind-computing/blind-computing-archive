@@ -22,10 +22,14 @@
 @else
     {{-- display the posts --}}
 {{-- check if we have any pinned poss and display them at the top --}}
-@if($category->posts()->where('pinned', true)->count())
+@if($pinned_posts->count())
 <section class="card-deck" aria-label="Pinned Posts">
-@each('components.post_widget', $category->posts()->where('pinned', true)->get(), 'post')
-</section>
+@each('components.post_widget', $pinned_posts, 'post')
+</section><hr>
+@endif
+@if($unpinned_posts->count())
+@each('components.post_widget_horizontal', $unpinned_posts, 'post')
+{{ $unpinned_posts->links() }}
 @endif
 @endif
 @else

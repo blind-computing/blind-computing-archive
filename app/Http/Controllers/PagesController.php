@@ -31,8 +31,13 @@ class pagesController extends Controller
         // Get the category by name.
         $category = Category::where('name', $name)->take(1)->get();
         if (count($category)) {
+            // Also get all of its posts, both pinned and not pinned.
+        $pinned_posts = $category[0]->posts()->where('pinned', true)->orderBy('created_at', 'asc')->get();
+        $unpinned_posts = $category[0]->posts()->where('pinned', false)->orderBy('created_at', 'desc')->paginate(10);
             return View('categories.show', [
-                'category' => $category[0]
+                'category' => $category[0],
+                'pinned_posts' => $pinned_posts,
+                'unpinned_posts' => $unpinned_posts
             ]);
         } else {
             return abort(404);
