@@ -88,7 +88,9 @@ class PostsController extends Controller
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
             $post = Post::find($id);
+            $categories = Category::where('parent_id', '!=', 0)->orderBy('parent_id', 'asc')->get();
             return View('posts.edit', [
+                'categories' => $categories,
                 'post' => $post
             ]);
         } else {
