@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Html2Text;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -38,13 +39,13 @@ class Post extends Model
     public function preview()
     {
         // First, convert the body to plane text.
-        $body_Text = (new Html2Text\Html2Text($this->body))->getText();
+        $body_text = (new Html2Text\Html2Text($this->body))->getText();
         // Next get the plane text body as an array of words.
         $body_array = explode($body_text, ' ');
         // If this is less than 20, just return the body (it's short enough).
         if(count($body_array) <= 20)
         {
-            return $this->body_text;
+            return $body_text;
         }
         // If not (it's longer) take only the first 20 words.
         return implode(array_slice($body_array, 0, 19), ' ') . ' ...';
