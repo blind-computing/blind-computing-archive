@@ -16,18 +16,18 @@
 @if($category->parent_id == null && count($category->children))
 <div class="row">
 @foreach($category->children as $subcategory)
-<div class="col-md">
+<section class="col-sm">
     <a href="{{ Route('category', $subcategory->name) }}" title="Click to see the entire category"><h2>{{ $subcategory->name }}</h2></a>
-@foreach($subcategory->posts()->where('pinned', true)->get() as $post)
+@foreach($subcategory->top_posts() as $post)
 @component('components.post_widget', [
     'post' => $post
 ])
 @endcomponent
 @endforeach
-@if($subcategory->posts()->where('pinned', true)->count() < $subcategory->posts->count())
+@if($subcategory->top_posts()->count() < $subcategory->posts->count())
 <a href="{{ Route('category', $subcategory->name) }}">See more</a>
 @endif
-</div>
+</section>
 @endforeach
 </div>
 @endif
