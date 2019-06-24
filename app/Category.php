@@ -21,4 +21,13 @@ class Category extends Model
     {
         return $this->hasMany('App\Category', 'parent_id');
     }
+
+    /**
+     * Get the posts categorised under this category.
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+
 }
