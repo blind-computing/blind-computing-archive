@@ -16,10 +16,13 @@ class PostsController extends Controller
      */
     public function index()
     {
+        // Only allow this if the user is an admin.
+        if (Auth::user() && Auth::user()->type == 'admin') {
         $posts = Post::orderBy('created_at', 'desc')->paginate(10);
         return View('posts.index', [
             'posts' => $posts
         ]);
+        }
     }
 
     /**
@@ -113,6 +116,7 @@ class PostsController extends Controller
             $post->title = $request['title'];
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
+            $post->category = $request['category'];
             $post->save();
             return Redirect('/posts')->with('success', 'Post edited.');
         } else {
