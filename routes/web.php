@@ -37,3 +37,6 @@ Route::get('/category/{name}', 'pagesController@showCategory')->name('category')
 
 // Posts:
 Route::resource('/admin/posts', 'postsController');
+// Posts for end users (not admins)
+Route::get('/post/{name}', 'PagesController@showPost')->name('post');
+

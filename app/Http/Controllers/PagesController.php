@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Post;
 
 class pagesController extends Controller
 {
@@ -38,6 +39,28 @@ class pagesController extends Controller
                 'category' => $category[0],
                 'pinned_posts' => $pinned_posts,
                 'unpinned_posts' => $unpinned_posts
+            ]);
+        } else {
+            return abort(404);
+        }
+    }
+
+/**
+     * Show a post.
+     * This works much like postsController@show, but isn't hidden behind the admin panel and has a different route to make it more friendly.
+     * @param string $name
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function showPost(string $name)
+    {
+        // Replace the - char with a space in the name.
+        // This makes much nicer looking links.
+        $name = str_replace('-', ' ', $name);
+        // Get the post by title.
+        $post = Post::where('title', $name)->take(1)->get();
+        if (count($post)) {
+            return View('posts.show', [
+                'post' => $post[0]
             ]);
         } else {
             return abort(404);
