@@ -22,4 +22,13 @@ class Post extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    /**
+     * Get the category that this post belongs to.
+     */
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
 }
