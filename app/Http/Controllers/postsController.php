@@ -60,7 +60,7 @@ class PostsController extends Controller
             $post->author_id = Auth::user()->id;
             $post->category_id = $request['category'];
             $post->save();
-            return Redirect('posts')->with('success', 'Post published.');
+            return Redirect(Route('posts.index'))->with('success', 'Post published.');
         } else {
             return Redirect('/')->with('error', 'You don\'t have permission to access the specified page.');
         }
@@ -118,7 +118,7 @@ class PostsController extends Controller
             $post->pinned = $request['pinned'] == 'on' ? true : false;
             $post->category_id = $request['category'];
             $post->save();
-            return Redirect('/posts')->with('success', 'Post edited.');
+            return Redirect(Route('posts.index'))->with('success', 'Post edited.');
         } else {
             return Redirect('/')->with('error', 'You don\'t have permission to access the specified page.');
         }
@@ -136,7 +136,7 @@ class PostsController extends Controller
         if (Auth::user() && Auth::user()->type == 'admin') {
             $post = Post::findOrFail($id);
             $post->delete();
-            return Redirect('/posts')->with('success', 'Post deleted.');
+            return Redirect(Route('posts.index'))->with('success', 'Post deleted.');
         } else {
             return Redirect('/')->with('error', 'You don\'t have permission to access the specified page.');
         }
