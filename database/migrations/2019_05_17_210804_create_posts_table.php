@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->mediumText('body');
-            $table->enum('type', ['article', 'video', 'download'])->default('article');
             $table->string('yt_video_id', 11)->nullable();
             $table->bigInteger('author_id', false, true);
             $table->bigInteger('category_id', false, true);
