@@ -1,5 +1,7 @@
 <div class="card @if($post->pinned)bg-light  @endif">
-    <div class="card-header"><a href="{{ Route('post', $post->title) }}"><h3 class="card-title">{{ $post->title }}</h3></a></div>
+    <div class="card-header">
+<a href="{{ Route('post', $post->title) }}"><h3 class="card-title">@if($post->pinned)📍@endif {{ $post->title }}</h3></a>
+</div>
     <div class="card-body">
 <p class="card-text">{{ $post->preview() }}</p>
 </div>
