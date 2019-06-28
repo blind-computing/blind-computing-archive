@@ -20,8 +20,9 @@
 @each('components.category_column', $category->children, 'category')
 </div>
 @else
-    {{-- display the posts --}}
-{{-- check if we have any pinned poss and display them at the top --}}
+    {{-- display the posts if we have any --}}
+@if($category->posts->count())
+{{-- check if we have any pinned posts and display them at the top --}}
 @if($pinned_posts->count())
 <section class="card-deck" aria-label="Pinned Posts">
 @each('components.post_widget', $pinned_posts, 'post')
@@ -31,6 +32,10 @@
 @each('components.post_widget_horizontal', $unpinned_posts, 'post')
 {{ $unpinned_posts->links() }}
 @endif
+@else
+<p>No posts were found in this category.</p>
+@endif
+{{-- there are no posts --}}
 @endif
 @else
 <p>Something went wrong. Please try again.</p>
