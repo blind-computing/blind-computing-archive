@@ -31,7 +31,7 @@
     <tbody>
         <tr class="row">
             <th class="col-3">Author:</th>
-            <td class="col">{{ $post->author->full_name }} <a href="{{ Route('profile', $post->author->user_name) }}">{{ '(@' . $post->author->user_name . ')' }}</a></td>
+            <td class="col"><a href="{{ Route('profile', $post->author->user_name) }}" title="View {{ $post->author->full_name. "'s" }} profile">{{ '(@' . $post->author->user_name . ')' }}</a></td>
         </tr>
         <tr class="row">
             <th class="col-3">Published On:</th>
