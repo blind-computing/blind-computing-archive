@@ -1,7 +1,7 @@
 <section class="col-sm">
     <a href="{{ Route('category', $category->name) }}" title="Click to see the entire category"><h2>{{ $category->name }}</h2></a>
 @if($category->posts->count())
-@each('components.post_widget', $category->top_posts(), 'post');
+@each('components.post_widget', $category->top_posts(), 'post')
 @if($category->top_posts()->count() < $category->posts->count())
 <a href="{{ Route('category', $category->name) }}">See more</a>
 @endif

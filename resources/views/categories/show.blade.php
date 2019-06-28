@@ -17,7 +17,7 @@
 @if($category->parent_id == null && count($category->children))
 {{-- display the subcategories --}}
 <div class="row">
-@each('components.category_column', $category->children, 'category');
+@each('components.category_column', $category->children, 'category')
 </div>
 @else
     {{-- display the posts --}}
