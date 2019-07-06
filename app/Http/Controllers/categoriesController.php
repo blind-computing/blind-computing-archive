@@ -58,6 +58,7 @@ class categoriesController extends Controller
         // Create a new category object.
         $category = new Category();
         $category->name = $request->name;
+        $category->slug = $request->slug;
         $category->description = $request->description;
         // If the parent is none, set parent_id to null.
         if ($request->parent == "0") {
@@ -129,6 +130,7 @@ class categoriesController extends Controller
         // Get the pre-existinig category.
         $category = Category::findOrFail($id);
         $category->name = $request->name;
+        $category->slug = $request->slug;
         $category->description = $request->description;
         // If the parent is none, set parent_id to null.
         if ($request->parent == "0") {
