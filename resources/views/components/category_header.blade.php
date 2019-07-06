@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-9">
         @if($linked)
-        <a href="{{ Route('category', $category->name) }}">
+        <a href="{{ Route('category', $category->slug) }}">
             <h2>
                 @else
                 <h1>
@@ -21,6 +21,8 @@
             @else
             None
             @endif
+            <br>
+<strong>URL Slug:</strong> {{ $category->slug }}
         </small>
         @endif
     </div>

@@ -24,13 +24,10 @@ class pagesController extends Controller
      * @param string $name
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function showCategory(string $name)
+    public function showCategory(string $slug)
     {
-        // Replace the - char with a space in the name.
-        // This makes much nicer looking links.
-        $name = str_replace('-', ' ', $name);
-        // Get the category by name.
-        $category = Category::where('name', $name)->take(1)->get();
+        // Get the category by its slug.
+        $category = Category::where('slug', $slug)->take(1)->get();
         if (count($category)) {
             // Also get all of its posts, both pinned and not pinned.
         $pinned_posts = $category[0]->posts()->where('pinned', true)->orderBy('created_at', 'asc')->get();
