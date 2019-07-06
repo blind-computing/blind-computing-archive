@@ -67,7 +67,7 @@
                         <option value="0">None</option>
                         @if(isset($categories) && count($categories))
                         @foreach($categories as $parent_category)
-                        <option value="{{ $parent_category->id }}" {{ $category->parent_id == $parent_category->id ? 'selected':'' }}>{{ $parent_category->name }}</option>
+                        <option value="{{ $parent_category->id }}" {{ isset($category) && $category->parent_id == $parent_category->id ? 'selected':'' }}>{{ $parent_category->name }}</option>
                         @endforeach
                         @endif
                     </select> </div>
