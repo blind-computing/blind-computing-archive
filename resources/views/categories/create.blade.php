@@ -5,7 +5,8 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
 @component('components.category_form', [
-    'action' => 'create'
+    'action' => 'create',
+    'categories' => $categories
 ])
 @endcomponent
     </div>

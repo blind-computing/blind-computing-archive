@@ -6,6 +6,7 @@
     <div class="col-md-8">
 @component('components.category_form', [
     'action' => 'edit',
+    'categories' => $categories,
     'category' => $category
 ])
 @endcomponent
