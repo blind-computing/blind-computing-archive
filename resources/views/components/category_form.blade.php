@@ -2,11 +2,13 @@
     <div class="card-header" role="heading" aria-level="1">{{ __(ucfirst($action) . ' Category') }}</div>
 
     <div class="card-body">
-        <form method="POST" action="{{ route('categories.store') }}">
-            @csrf
 @if($action == 'edit')
+        <form method="POST" action="{{ route('categories.update', $category->id) }}">
 @method('put')
+@else
+        <form method="POST" action="{{ route('categories.store') }}">
 @endif
+            @csrf
 
             <div class="form-group row">
                 <label for="name"
