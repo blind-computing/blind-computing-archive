@@ -26,6 +26,7 @@
     </form>
     @endif
 </div>
+@if($show_info)
 <div class="post-info">
 <table>
     <tbody>
@@ -37,7 +38,6 @@
         <tr class="row">
             <th class="col-3">URL Slug:</th>
             <td class="col">{{ $post->slug }}</td>
-        </tr>
 @endif
         <tr class="row">
             <th class="col-3">Published On:</th>
@@ -56,5 +56,6 @@
     </tbody>
 </table>
 </div>
+@endif
 </div>
 </div>
