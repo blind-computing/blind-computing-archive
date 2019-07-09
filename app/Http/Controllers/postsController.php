@@ -34,7 +34,7 @@ class PostsController extends Controller
     {
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
-            $categories = Category::where('parent_id', '!=', 0)->orderBy('parent_id', 'asc')->get();
+            $categories = Category::all();
             return View('posts.create', [
                 'categories' => $categories
             ]);
@@ -91,7 +91,7 @@ class PostsController extends Controller
         // Only allow this if the user is an admin.
         if (Auth::user() && Auth::user()->type == 'admin') {
             $post = Post::findOrFail($id);
-            $categories = Category::where('parent_id', '!=', 0)->orderBy('parent_id', 'asc')->get();
+            $categories = Category::all();
             return View('posts.edit', [
                 'categories' => $categories,
                 'post' => $post
