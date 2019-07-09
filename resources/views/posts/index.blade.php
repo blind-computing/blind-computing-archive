@@ -16,7 +16,8 @@
         @foreach ($posts as $post)
         @component('components.post_header', [
     'post' => $post,
-    'linked' => true
+    'linked' => true,
+    'show_info' => true
 ])
 @endcomponent
         @endforeach

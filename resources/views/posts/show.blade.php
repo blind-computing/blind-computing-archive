@@ -5,7 +5,8 @@
 @isset($post)
 @component('components.post_header', [
     'post' => $post,
-    'linked' => false
+    'linked' => false,
+    'show_info' => true
 ])
 @endcomponent
 <hr>
