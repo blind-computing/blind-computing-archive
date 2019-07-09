@@ -48,13 +48,10 @@ class pagesController extends Controller
      * @param string $name
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function showPost(string $name)
+    public function showPost(string $slug)
     {
-        // Replace the - char with a space in the name.
-        // This makes much nicer looking links.
-        $name = str_replace('-', ' ', $name);
-        // Get the post by title.
-        $post = Post::where('title', $name)->take(1)->get();
+        // Get the post by its slug.
+        $post = Post::where('slug', $slug)->take(1)->get();
         if (count($post)) {
             return View('posts.show', [
                 'post' => $post[0]
