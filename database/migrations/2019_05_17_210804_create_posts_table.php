@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
+            $table->string('slug');
             $table->mediumText('body');
             $table->boolean('pinned');
             $table->string('yt_video_id', 11)->nullable();
