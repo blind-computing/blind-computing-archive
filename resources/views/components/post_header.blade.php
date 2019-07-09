@@ -28,33 +28,13 @@
 </div>
 @if($show_info)
 <div class="post-info">
-<table>
-    <tbody>
-        <tr class="row">
-            <th class="col-3">Author:</th>
-            <td class="col"><a href="{{ Route('profile', $post->author->user_name) }}" title="View {{ $post->author->full_name. "'s" }} profile">{{ '(@' . $post->author->user_name . ')' }}</a></td>
-        </tr>
 @if(auth::check() && auth::user()->type == 'admin')
-        <tr class="row">
-            <th class="col-3">URL Slug:</th>
-            <td class="col">{{ $post->slug }}</td>
+<strong>URL Slug:</strong> {{ $post->slug }}<br>
 @endif
-        <tr class="row">
-            <th class="col-3">Published On:</th>
-            <td class="col"><time datetime="{{ $post->created_at }}">{{ $post->created_at }}</time></td>
-</tr>
-@if($post->created_at != $post->updated_at)
-        <tr class="row">
-            <th class="col-3">Edited On:</th>
-            <td class="col"><time datetime="{{ $post->updated_at }}">{{ $post->updated_at }}</time></td>
-</tr>
+Published on <time datetime="{{ $post->created_at }}">{{ $post->created_at }}</time> by <a href="{{ Route('profile', $post->author->user_name) }}" title="View {{ $post->author->full_name . "'s" }} profile">{{ '(@' . $post->author->user_name . ')' }}</a> in category <a href="{{ Route('category', $post->category->slug) }}">{{ $post->category->name }}</a>
+@if($post->updated_at != null)
+<br>Edited on <time datetime="{{ $post->updated_at }}">{{ $post->updated_at }}</time>
 @endif
-        <tr class="row">
-            <th class="col-3">Category:</th>
-            <td class="col"><a href="{{ Route('category', $post->category->name) }}">{{ $post->category->name }}</a></td>
-        </tr>
-    </tbody>
-</table>
 </div>
 @endif
 </div>
