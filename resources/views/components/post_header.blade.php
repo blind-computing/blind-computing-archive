@@ -33,6 +33,12 @@
             <th class="col-3">Author:</th>
             <td class="col"><a href="{{ Route('profile', $post->author->user_name) }}" title="View {{ $post->author->full_name. "'s" }} profile">{{ '(@' . $post->author->user_name . ')' }}</a></td>
         </tr>
+@if(auth::check() && auth::user()->type == 'admin')
+        <tr class="row">
+            <th class="col-3">URL Slug:</th>
+            <td class="col">{{ $post->slug }}</td>
+        </tr>
+@endif
         <tr class="row">
             <th class="col-3">Published On:</th>
             <td class="col"><time datetime="{{ $post->created_at }}">{{ $post->created_at }}</time></td>
