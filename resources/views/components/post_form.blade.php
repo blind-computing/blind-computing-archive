@@ -26,6 +26,21 @@
                     </div>
 
                     <div class="form-group row">
+                        <label for="slug" class="col-md-4 col-form-label text-md-right">Slug</label>
+
+                        <div class="col-md-6">
+                            <input id="slug" type="text" class="form-control @error('slug') is-invalid @enderror"
+                                name="slug" value="{{ isset($post)? $post->slug: '' }}" required autocomplete="off" title="The part of the URL specific to this post">
+
+                            @error('slug')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="body" class="col-md-4 col-form-label text-md-right">Body</label>
 
                         <div class="col-md-6">
