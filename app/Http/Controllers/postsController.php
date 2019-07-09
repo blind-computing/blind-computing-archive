@@ -55,6 +55,7 @@ class PostsController extends Controller
         if (Auth::user() && Auth::user()->type == 'admin') {
             $post = new Post();
             $post->title = $request['title'];
+            $post->slug = $request['slug'];
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
             $post->author_id = Auth::user()->id;
@@ -114,6 +115,7 @@ class PostsController extends Controller
         if (Auth::user() && Auth::user()->type == 'admin') {
             $post = Post::findOrFail($id);
             $post->title = $request['title'];
+            $post->slug = $request['slug'];
             $post->body = $request['body'];
             $post->pinned = $request['pinned'] == 'on' ? true : false;
             $post->category_id = $request['category'];
