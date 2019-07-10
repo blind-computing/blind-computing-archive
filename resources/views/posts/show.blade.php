@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
+@if(Route::currentRouteName() == 'post' && isset($post))
+@section('title', $post->title)
+@else
 @section('title', 'Admin | View Post')
+@endif
 @section('content')
 @isset($post)
 @component('components.post_header', [
