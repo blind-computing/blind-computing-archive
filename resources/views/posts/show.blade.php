@@ -10,7 +10,7 @@
 @component('components.post_header', [
     'post' => $post,
     'linked' => false,
-    'show_info' => $post->yt_video_id != null
+    'show_info' => $post->yt_video_id == null
 ])
 @endcomponent
 <hr>
