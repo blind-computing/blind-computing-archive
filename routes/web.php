@@ -13,6 +13,8 @@
 
 // Home page.
 Route::get('/', 'pagesController@index')->name('home');
+// The contributing page.
+Route::get('/contributing', 'pagesController@contributing')->name('contributing');
 
 // Notimplemented route (only in use for development purposes).
 Route::get('/404', function () {
