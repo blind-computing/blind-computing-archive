@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->mediumText('body');
             $table->boolean('pinned');
             $table->string('yt_video_id', 11)->nullable();
+            $table->mediumText('video_preamble')->nullable();
             $table->bigInteger('author_id', false, true);
             $table->bigInteger('category_id', false, true);
             $table->timestamps();
