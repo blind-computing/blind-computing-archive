@@ -60,4 +60,14 @@ class pagesController extends Controller
             return abort(404);
         }
     }
+
+    /**
+     * Display the contributing page.
+     */
+    public function contributing()
+    {
+        // Display the contributing view.
+        return View('contributing');
+    }
 }
+?>
