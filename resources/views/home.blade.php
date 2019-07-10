@@ -18,7 +18,7 @@
             broader scope of topics that are not necessarily related to the braille note.</p>
 
         <h2>how to contribute</h2>
-        <p>Please see the <a href="/contributing">contributing page</a> for more information.</p>
+        <p>Please see the <a href="{{ Route('contributing') }}">contributing page</a> for more information.</p>
 
         <h2>Note on Browser Support</h2>
         <p>If you're on Linux or Windows, we recommend you view this site in mozilla firefox, found at <a
